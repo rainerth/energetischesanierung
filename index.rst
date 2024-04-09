@@ -1,18 +1,26 @@
 .. EnergetischeSanierung documentation master file, created by
    sphinx-quickstart on Tue Apr  9 22:52:23 2024.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
 
-Welcome to EnergetischeSanierung's documentation!
-=================================================
+
+
+Energetische Sanierung eines Einfamilienhauses
+==============================================
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Inhaltsverzeichnis:
+
+   einleitung/index.rst
+   grundlagen/index.rst
+   planung/index.rst
+   durchfuehrung/index.rst
+   ergebnisse/index.rst
+   diskussion/index.rst
+   literaturverzeichnis/index.rst
+   anhang/index.rst
 
 
-
-Indices and tables
+Index und Tabellen
 ==================
 
 * :ref:`genindex`
