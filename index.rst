@@ -18,6 +18,7 @@ Energetische Sanierung eines Einfamilienhauses
    diskussion/index.rst
    literaturverzeichnis/index.rst
    anhang/index.rst
+   glossar.rst
 
 
 Index und Tabellen
