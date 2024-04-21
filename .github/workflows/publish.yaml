@@ -5,7 +5,7 @@ on:
     branches:
       - main
 
-runs:
+jobs:
   publish_sphinx_docs:
     runs-on: ubuntu-latest
     permissions:
