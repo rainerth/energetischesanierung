@@ -113,9 +113,10 @@ smartquotes = True
 #
 # html_theme = 'nature'
 # html_theme = 'classic'
-html_theme = 'sphinx_book_theme'
+# html_theme = 'sphinx_book_theme'
 # html_theme = "sphinx_rtd_theme"
 # panels_add_bootstrap_css = False
+html_theme = 'furo'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -306,25 +307,6 @@ if docscope == 'internal' or docscope == 'public':
 
 	# https://sphinx-book-theme.readthedocs.io/en/latest/customize/sidebar-primary.html
 
-	html_theme_options = {
-		"use_fullscreen_button" : True,
-		"use_download_button": True,
-		"repository_provider": "github",
-		"repository_url": "https://github.com/rainerth/familyhistorythieringer",
-		"repository_branch": "develop",
-		"use_issues_button": True,
-		"use_edit_page_button": True,
-		"extra_footer": "<p>{0}<br /><b>{1}</b></p>".format(
-			datetime.now().strftime(today_fmd),
-			releaselevelstring
-		),
-		"home_page_in_toc": True,
-		"show_navbar_depth": 1
-	}
-
-	html_sidebars = {
-		"**": ["navbar-logo.html", "search-field.html","sbt-sidebar-nav.html"]
-	}
 else:
 	# Release Setting, activate this to test for no warnings with ``make clean html``  before git push
 	exclude_patterns = [
@@ -340,20 +322,6 @@ else:
 
 	# https://sphinx-book-theme.readthedocs.io/en/latest/customize/sidebar-primary.html
 
-	html_theme_options = {
-		"use_fullscreen_button" : False,
-		"use_download_button": False,
-		"extra_footer": "<p>{0}<br /><b>{1}</b></p>".format(
-			datetime.now().strftime(today_fmd),
-			releaselevelstring
-		),
-		"home_page_in_toc": True,
-		"show_navbar_depth": 1
-	}
-
-	html_sidebars = {
-		"**": ["search-field.html","sbt-sidebar-nav.html"]
-	}
 
 
 # Global text replacements
