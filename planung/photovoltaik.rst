@@ -9,6 +9,7 @@ Dimensionierung der Module und des Wechselrichters
 .. seealso::
 
 	* `Datenblatt DEYE 12k-SG04LP3-EU <https://1drv.ms/b/s!AuFD38gz1WT71SGN35NFi_l0BMt-?e=RhQygr>`_
+	* `Handbuch DEYE 12k-SG04LP3-EU <https://1drv.ms/b/s!AuFD38gz1WT71SIVEYCjjWFMLwpx?e=PyeXZm>`_
 	* `Datenblatt Heckert Solar NEMO® 2.0 60 M <https://1drv.ms/b/s!AuFD38gz1WT71R8Qvu89cLpJEBCr?e=Wov4ra>`_
 
 
