@@ -38,6 +38,7 @@ extensions = [
 	'sphinx.ext.todo',
 	'sphinx.ext.ifconfig',
 	'sphinx.ext.intersphinx',
+	'sphinx.ext.githubpages',
 	'releases',
 	'myst_parser'
 ]

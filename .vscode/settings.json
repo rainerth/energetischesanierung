@@ -3,6 +3,9 @@
 	"cSpell.words": [
 		"Entlüfter",
 		"Kollektorkreise",
+		"Photovoltaikmoduls",
 		"Ringspeicherkollektors"
-	]
+	],
+	"esbonio.server.enabled": true,
+	"esbonio.server.enabledInPyFiles": true
 }
