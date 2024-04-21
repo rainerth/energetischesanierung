@@ -2,12 +2,12 @@
 
 Beschreibung und Dokumentation der energetischen Sanierung eines Einfamilienhauses Baujahr 1992.
 
-(Energetische Sanierung)[https://rainerth.github.io/energetischesanierung/]
+[Energetische Sanierung](https://rainerth.github.io/energetischesanierung/)
 
-(Photovoltaik)[https://rainerth.github.io/energetischesanierung/planung/photovoltaik.html]
+[Photovoltaik](https://rainerth.github.io/energetischesanierung/planung/photovoltaik.html)
 
 ## Technik hinter der Dokumentation
-Das Generieren der Dokumentation auf GitHub Pages ist ein großer Vorteil. Mit jedem Einchecken in Main wird die Dokumentation automatisch gebaut und unter (rainerth.github.io/energetischesanierung)[https://rainerth.github.io/energetischesanierung] veröffentlicht. 
+Das Generieren der Dokumentation auf GitHub Pages ist ein großer Vorteil. Mit jedem Einchecken in Main wird die Dokumentation automatisch gebaut und unter [rainerth.github.io/energetischesanierung](https://rainerth.github.io/energetischesanierung) veröffentlicht. 
 
 Diese Quellen haben dabei sehr geholfen: 
 
