@@ -36,11 +36,7 @@ extensions = [
 	'sphinx.ext.imgconverter',
 	'sphinx.ext.graphviz',
 	'sphinx.ext.todo',
-	'sphinx.ext.ifconfig',
-	'sphinx.ext.intersphinx',
 	'sphinx.ext.githubpages',
-	'releases',
-	'myst_parser'
 ]
 
 intersphinx_mapping = {
