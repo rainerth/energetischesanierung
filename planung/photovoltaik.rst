@@ -50,9 +50,9 @@ Daraus ergeben sich diese Maximalwerte:
 
 .. admonition:: Ergebnis
 
-	Die Leerlaufspannung von 780,9 V liegt innerhalb des maximalen DC-Eingangsspannungsbereichs des Wechselrichters von 200-650 V pro String.
+	Die Leerlaufspannung von 780,9 V liegt innerhalb des maximalen DC-Eingangsspannungsbereichs des Wechselrichters von 800 V pro String.
 
-	Die Spannung bei Maximalleistung von 638,45 V liegt ebenfalls innerhalb dieses Bereichs.
+	Die Spannung bei Maximalleistung von 638,45 V liegt ebenfalls innerhalb dieses Bereichs und ist auch innerhalb des MPPT Spannungsbereichs von 200 - 650 V
 
 	Durch Verwendung des Systems auf der Nordseite ist davon auszugehen, dass ein ausreichender Abstand zur maximalen Leistung besteht, sodass keine Einbußen in Lebensdauer und Leistung erwartet werden.
 
