@@ -8,6 +8,8 @@ Planung
 
    photovoltaik
    akku
+   inverter
+   anmeldung
    einspeisung
    kollektor
    waermepumpe

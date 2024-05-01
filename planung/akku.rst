@@ -2,8 +2,23 @@
 Akkuspeicher
 ############
 
+
 Händler
 =======
+
+`Delongtop <https://www.delongtop.com>`_
+----------------------------------------
+
+`5pcs ESS DL-LFP-HS51200 <https://www.delongtop.com/product/48v-51-2v-200ah-10kwh-stackable-lithium-battery-dl-lfp-hs51200/>`_
+
+
+.. figure:: images/Stackable-Lithium-Battery-With-Grade-A-Battery-Cells-01.webp
+   :alt: Delongtop
+   :align: center
+
+   Delongtop 48V/51.2v 200ah 10kwh Stackable Lithium Battery ESS DL-LFP-HS51200
+
+
 
 `Sheyzen: SOEC Energy <https://www.soecenergy.com/>`_
 -----------------------------------------------------
@@ -21,24 +36,45 @@ BMS
 JK BMS t.b.d.
 
 
-Wechselrichter
-==============
 
-DEYE SUN-12K-SG04LP3-EU / Wifi
-------------------------------
+.. list-table::
+   :widths: 25 25 25 25
+   :header-rows: 1
+   :stub-columns: 1
 
-3-phasiger Hybrid-Wechselrichter. Interessant, da der bestehende Wechselrichter am Generatoreingang angeschlossen werden kann. Die Nord-PV-Anlage kann dann vermutlich an den PV-Eingang ran, mehr als 12kW sind da nicht zu erwarten.
+   * -
+     - Energie [kWh]
+     - Nennspannung:
+     - Spalte 4
+   * - Zeile 2, Zelle 1
+     - Zeile 2, Zelle 2
+     - Zeile 2, Zelle 3
+     - Zeile 2, Zelle 4
+   * - Zeile 3, Zelle 1
+     - Zeile 3, Zelle 2
+     - Zeile 3, Zelle 3
+     - Zeile 3, Zelle 4
+   * - Zeile 4, Zelle 1
+     - Zeile 4, Zelle 2
+     - Zeile 4, Zelle 3
+     - Zeile 4, Zelle 4
+   * - Zeile 5, Zelle 1
+     - Zeile 5, Zelle 2
+     - Zeile 5, Zelle 3
+     - Zeile 5, Zelle 4
+   * - Zeile 6, Zelle 1
+     - Zeile 6, Zelle 2
+     - Zeile 6, Zelle 3
+     - Zeile 6, Zelle 4
 
-.. seealso::
-
-	* https://www.youtube.com/watch?v=i1oa_EbWJPI
-	* https://www.youtube.com/watch?v=Hj5VTs9gGPg
-	* `Deye Benutzerhandbuch <https://de.deyeinverter.com/deyeinverter/2023/03/24/rand/9271/%E3%80%90B%E3%80%91%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%E4%B9%A6-%E5%82%A8%E8%83%BD%E4%B8%89%E7%9B%B8-SUN-(5-12)K-SG04LP3-EU-%E5%BE%B7%E4%B8%9A%E5%BE%B7%E8%AF%AD.pdf>`_
 
 
+Batterieverordnung
+==================
 
-.. figure:: images/deye-wr-integration.png
-   :alt: DEYE SUN-12K-SG04LP3-EU / Wifi
-   :align: center
+Ab dem 18.02.2024 gilt EU-weit die neue unionsrechtliche Batterieverordnung, die in allen Mitgliedsstaaten die von Batterien ausgehende Umweltbelastung durch engmaschigere Erfassungs-, ausgeweitete Verwertungs- und nachhaltigere Produktionsmaßnahmen reduzieren soll. Für Batterieerzeuger, -importeure und -händler tritt zum 18.08.2024 ein erstes Pflichtpaket in Kraft, das neue Kennzeichnungs- und Compliance-Anforderungen einführt. Welche neuen Pflichten Marktakteure künftig berücksichtigen müssen, zeigt ein Beitrag von `Phil Salewski <https://www.it-recht-kanzlei.de/eu-batterieverordnung-pflichten-erzeuger-haendler-einfuehrer-august-2024.html>`_.
 
-   DEYE SUN-12K-SG04LP3-EU / Wifi
+Kurzum: Ab dem 18.8.2024 wird der Kauf von PV-Speichern stärker reglementiert.
+
+
+
