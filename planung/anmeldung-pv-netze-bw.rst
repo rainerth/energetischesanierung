@@ -4,6 +4,7 @@ Anmeldung der Anlagen
 
 Die PV Anlage muss vor Inbetriebnahme bei Netze-BW angemeldet werden. Die Anmeldung erfolgt über das Online-Portal der Netze-BW. Die Anmeldung ist kostenfrei.
 
+.. figure:: images/netze-bw-antrag-01.png
 
 1. Ermittlung der Gesamtleistung der PV-Module
 ==============================================
@@ -72,11 +73,11 @@ Leistungsangaben der Erzeugungsanlage(n)
 Geplante (Modul-) Leistung PAGen (Summenleistung aller Module)
 
 
-Bemessungsscheinleistung aller geplanten Erzeugungseinheiten (Umrichterscheinleistung) ΣS r,E
+Bemessungsscheinleistung aller geplanten Erzeugungseinheiten (Umrichterscheinleistung) ΣS :sub:`r,E`
 
 Die Bemessungsscheinleistung aller geplanten Erzeugungseinheiten (Umrichterscheinleistung) ΣS r,E beträgt 10 kW.
 
-Maximale Wirkleistung aller geplanten Erzeugungseinheiten (Umrichterwirkleistung) ΣP Emax
+Maximale Wirkleistung aller geplanten Erzeugungseinheiten (Umrichterwirkleistung) ΣP :sub:`Emax`
 
 
 Anschlusswirkleistung der existierenden Anlage
