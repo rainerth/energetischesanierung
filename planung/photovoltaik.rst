@@ -35,7 +35,7 @@ Gegebene Daten:
 - MPP-Spannungsbereich des Wechselrichters: **200-650 V** pro String
 - **3 Strings** insgesamt
 
-Opimaler Aufbau bei diesen Komponenten:
+Optimaler Aufbau bei diesen Komponenten:
 
 - Spalten: **14**
 - Reihen: **4**
@@ -55,6 +55,34 @@ Daraus ergeben sich diese Maximalwerte:
 	Die Spannung bei Maximalleistung von 638,45 V liegt ebenfalls innerhalb dieses Bereichs und ist auch innerhalb des MPPT Spannungsbereichs von 200 - 650 V
 
 	Durch Verwendung des Systems auf der Nordseite ist davon auszugehen, dass ein ausreichender Abstand zur maximalen Leistung besteht, sodass keine Einbußen in Lebensdauer und Leistung erwartet werden.
+
+
+Anordnung der Module auf dem Dach
+----------------------------------
+
+Eine Anordnung der 3 Strings von Ost nach West (vertikale Ausrichtung) ist empfehlenswert, um die Sonneneinstrahlung in den Morgen- und Abendstunden optimal zu nutzen. Da das Dach nach Norden ausgerichtet ist, kann die vertikale Anordnung helfen, die Effizienz zu steigern, indem sie eine breitere Abdeckung des Himmels ermöglicht.
+
+Das Programm Sunny Design von SMA hilft bei der genauen Planung und Ausrichtung der Module auf dem Dach helfen. Es berücksichtigt die spezifischen Gegebenheiten des Standorts und zeigt Ihnen die optimale Anordnung der Module, um die Leistung zu maximieren.
+
+.. figure:: ./images/sma-sunnydesign-modulausrichtung.png
+	:width: 800px
+	:align: center
+	:alt: Modulausrichtung
+
+	Modulausrichtung mit Sunny Design
+
+
+Arbeitsmodus des Wechselrichters
+--------------------------------
+
+Verkauf zuerst:
+	Die PV-Energie wird zur Versorgung der Last und zum Aufladen der Batterie verwendet. Überschüssige Energie wird in das Netz eingespeist.
+
+	Die Priorität der Stromquelle für die Last ist: 1. Solarmodule, 2. Netz, 3. Batterie.
+
+
+Null-Export an CT 
+
 
 Zugrundeliegende Überlegungen
 =============================
@@ -125,3 +153,20 @@ Für Ihre spezifische Situation, in der die Anlage nach Norden ausgerichtet ist 
 
 - Allerdings, da die erwartete Durchschnittsleistung der Module unter den maximalen Bedingungen bleibt, könnten die Spitzen der Modulspannung, die den :term:`MPPT`-Bereich überschreiten, nicht häufig genug auftreten, um ernsthafte Probleme zu verursachen, solange sie nur knapp über dem Limit liegen.
 
+
+
+Anordnung der Module und Strings
+--------------------------------
+
+Für ein Setup mit vier Reihen à 14 Modulen und insgesamt 56 Modulen, die auf drei Strings aufgeteilt werden müssen, hier einige Überlegungen:
+
+Anordnung der Strings:
+	Das System hat 2 Strings mit jeweils 19 Modulen und einen String mit 18 Modulen.
+	Da keine Verschattung vorliegt und die Module in Nordausrichtung montiert werden, ist es wichtig, eine möglichst effiziente Nutzung der Modulfläche zu gewährleisten.
+
+Vertikale vs. horizontale Anordnung:
+	Vertikale Anordnung (von Ost nach West): Diese Anordnung könnte vorteilhaft sein, um das Licht in den Morgen- und Abendstunden besser einzufangen, wenn die Sonne tiefer steht. Da die Module in Nordrichtung ausgerichtet sind, kann die vertikale Anordnung helfen, die Effizienz zu steigern, indem sie eine breitere Abdeckung des Himmels ermöglicht.
+	Horizontale Anordnung (von oben nach unten): Diese Konfiguration kann die Installation vereinfachen, da sie oft leichter an die typische Form von Dachziegeln angepasst werden kann. Sie bietet jedoch möglicherweise nicht die optimale Ausnutzung der verfügbaren Sonneneinstrahlung, besonders früh und spät am Tag.
+
+Empfehlung:
+	Aufgrund der Nordausrichtung und der Möglichkeit, das Licht am Morgen und Abend optimal zu nutzen, wäre eine vertikale Anordnung der Strings empfehlenswert. Dadurch könnten die Module effektiver die verfügbare Sonneneinstrahlung zu diesen Zeiten einfangen.
