@@ -85,3 +85,26 @@ Anschlusswirkleistung der existierenden Anlage
 
 [X] Es ist ein Speichersystem geplant:
 Maximale Wirkleistung aller geplanten Speicher ΣPEmax
+
+
+
+
+## Messkonzepte
+
+Im Rahmen der Beantragung muss ein Messkonzept angegeben werden. Hier ist die Auswahl: 
+
+.. figure:: images/messkonzept-1-6-0.png
+
+.. figure:: images/messkonzept-1-6-1.png
+
+.. figure:: images/messkonzept-13-17.png
+
+.. figure:: images/messkonzept-7-11-und-40-0.png
+
+.. figure:: images/messkonzept-7-11-und-40-1.png
+
+.. figure:: images/messkonzept-speicher-0.png
+
+.. figure:: images/messkonzept-speicher-1.png
+
+

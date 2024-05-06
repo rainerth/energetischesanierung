@@ -81,7 +81,11 @@ Verkauf zuerst:
 	Die Priorität der Stromquelle für die Last ist: 1. Solarmodule, 2. Netz, 3. Batterie.
 
 
-Null-Export an CT 
+Null-Export zur Last:
+	Der Wechselrichter versorgt nur die angeschlossene Ersatzlast mit Strom.
+
+Null-Export an CT:
+	Der Wechselrichter versorgt nicht nur die angeschlossene Haushaltslast mit Strom. Wenn die PV-Leistung und die Batterieleistung nicht ausreichen, wird die Energie des Netzes als Ergänzung genutzt. **Der Wechselrichter gibt keinen Strom an das Netz ab.** 
 
 
 Zugrundeliegende Überlegungen
