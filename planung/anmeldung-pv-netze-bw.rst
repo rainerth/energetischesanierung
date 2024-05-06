@@ -113,7 +113,7 @@ Sintfluten / schießendes Wasser tritt bei Starkregen nicht auf. Ohne Druck schi
 
 
 Antrag: Leistungsangaben der Erzeugungsanlage(n)
-===============================================
+================================================
 
 Die Leistungsangaben der Erzeugungsanlage(n) müssen im Antrag angegeben werden:
 
@@ -184,7 +184,7 @@ Im Rahmen der Beantragung muss ein Messkonzept angegeben werden. Dies ist die Au
 
 	Zuleitung -> UV, darin parallel RCD und Sicherung(en) für WR. Am RCD wird der Bestand mit neuer Sicherung angeschlossen.
 
-	Quelle: `Photovoltaikforum <https://www.photovoltaikforum.com/wissen/entry/2-faq-wertvolle-informationen-zu-pv-anlagengr%C3%B6%C3%9Fe-stromspeicher-wirtschaftlichkeit/#25c7c7c0-beispiel-f%C3%BCr-46-module-%C3%A0-400-wp>`_
+	Quelle: `Photovoltaikforum: WR dezentral <https://www.photovoltaikforum.com/wissen/entry/2-faq-wertvolle-informationen-zu-pv-anlagengr%C3%B6%C3%9Fe-stromspeicher-wirtschaftlichkeit/#25c7c7c0-beispiel-f%C3%BCr-46-module-%C3%A0-400-wp>`_
 
 
 .. hint::
@@ -195,16 +195,16 @@ Im Rahmen der Beantragung muss ein Messkonzept angegeben werden. Dies ist die Au
 
 	KEINEN Auftrag zur Inbetriebsetzung / kaufmännischen Abnahme / Netzeinbindung / kaufmännischen Inbetriebnahme an den VNB und keine Kosten für Zählerwechsel unterschreiben!
 
-	Quelle: `Photovoltaikforum <https://www.photovoltaikforum.com/wissen/entry/2-faq-wertvolle-informationen-zu-pv-anlagengr%C3%B6%C3%9Fe-stromspeicher-wirtschaftlichkeit/>`_
+	Quelle: `Photovoltaikforum: VDE Formular <https://www.photovoltaikforum.com/wissen/entry/2-faq-wertvolle-informationen-zu-pv-anlagengr%C3%B6%C3%9Fe-stromspeicher-wirtschaftlichkeit/>`_
 
 
 .. attention::
 
 	Warnung: Netze BW GmbH versucht spätestens bei einer zweiten Anlage unnötige Zähler vorzuschreiben und für Betreiber nachteiligen Vertrag zu erwirken.
 
-	Von NetzeBW gewünschte Vereinbarungen wie "Die 'Allgemeinen Bestimmungen für die Stromeinspeisung in das Netz der Netze BW GmbH' sind Bestandteil dieser Erklärung" keinesfalls unterschreiben!
+	Von Netze BW gewünschte Vereinbarungen wie "Die 'Allgemeinen Bestimmungen für die Stromeinspeisung in das Netz der Netze BW GmbH' sind Bestandteil dieser Erklärung" keinesfalls unterschreiben!
 
-	Quelle: `Photovoltaikforum <https://www.photovoltaikforum.com/wissen/entry/2-faq-wertvolle-informationen-zu-pv-anlagengr%C3%B6%C3%9Fe-stromspeicher-wirtschaftlichkeit/#25c7c7c0-beispiel-f%C3%BCr-46-module-%C3%A0-400-wp>`_
+	Quelle: `Photovoltaikforum: Netze BW <https://www.photovoltaikforum.com/wissen/entry/2-faq-wertvolle-informationen-zu-pv-anlagengr%C3%B6%C3%9Fe-stromspeicher-wirtschaftlichkeit/#25c7c7c0-beispiel-f%C3%BCr-46-module-%C3%A0-400-wp>`_
 
 .. seealso::
 
