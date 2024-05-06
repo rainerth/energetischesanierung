@@ -72,21 +72,6 @@ Das Programm Sunny Design von SMA hilft bei der genauen Planung und Ausrichtung 
 	Modulausrichtung mit Sunny Design
 
 
-Arbeitsmodus des Wechselrichters
---------------------------------
-
-Verkauf zuerst:
-	Die PV-Energie wird zur Versorgung der Last und zum Aufladen der Batterie verwendet. Überschüssige Energie wird in das Netz eingespeist.
-
-	Die Priorität der Stromquelle für die Last ist: 1. Solarmodule, 2. Netz, 3. Batterie.
-
-
-Null-Export zur Last:
-	Der Wechselrichter versorgt nur die angeschlossene Ersatzlast mit Strom.
-
-Null-Export an CT:
-	Der Wechselrichter versorgt nicht nur die angeschlossene Haushaltslast mit Strom. Wenn die PV-Leistung und die Batterieleistung nicht ausreichen, wird die Energie des Netzes als Ergänzung genutzt. **Der Wechselrichter gibt keinen Strom an das Netz ab.** 
-
 
 Zugrundeliegende Überlegungen
 =============================

@@ -24,7 +24,7 @@ Glossar
 
 	Summenleistung aller Module
 		Die Summe der Leistung aller Module, welche an den Wechselrichter angeschlossen sind.
-	
+
 
 	Bemessungsscheinleistung
 		Bemessungsscheinleistung aller geplanten Erzeugungseinheiten (Umrichterscheinleistung) ΣS :sub:`r,E`
@@ -37,3 +37,9 @@ Die Bemessungsscheinleistung aller geplanten Erzeugungseinheiten (Umrichterschei
 
 Anschlusswirkleistung der existierenden Anlage
 
+
+
+CT
+	Stromwandler (CT = Current Tranformer) erzeugen einen Ausgang proportional zum Stromfluss durch die Primärwicklung als Resultat eines konstanten Potentials an der Primärwicklung
+
+	.. seealso:: https://www.electronics-tutorials.ws/de/transformatoren/stromwandler.html
