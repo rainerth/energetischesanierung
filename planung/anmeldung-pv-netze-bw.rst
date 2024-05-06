@@ -101,6 +101,16 @@ Für eine PV-Anlage mit der Ausrichtung Nord und einer Dachneigung von 30 Grad i
 
 	P\ :sub:`total` = 56 x 334,99W * 0,6050 = 11352,47W = 11,35kW
 
+Windlastberechnung
+------------------
+
+
+In Windzone 1 und 2 kann sehr nah an Traufe, Ortgänge und First gebaut werden. Wenige cm Abstand genügen, es geht sogar ohne Abstand.
+
+Sintfluten / schießendes Wasser tritt bei Starkregen nicht auf. Ohne Druck schießt Wasser nicht. Es tropft an der Modulkante ab und läuft zwischen Modulabständen aufs Dach.
+
+`Windzone ermitteln <https://www.dehn.de/de/produkte/blitzschutz-erdung/windzone>`_ : Bösingen liegt in der Windzone 1.
+
 
 Antrag: Leistungsangaben der Erzeugungsanlage(n)
 ===============================================
