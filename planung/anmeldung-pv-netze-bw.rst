@@ -142,8 +142,6 @@ Anschlusswirkleistung der existierenden Anlage
 Maximale Wirkleistung aller geplanten Speicher ΣPEmax
 
 
-
-
 Messkonzepte
 =============
 
@@ -164,6 +162,9 @@ Im Rahmen der Beantragung muss ein Messkonzept angegeben werden. Dies ist die Au
 
 .. figure:: images/messkonzept-speicher-1.png
 
+.. hint::
+
+	`Photovoltaikforum: VEREINFACHUNG des Messkonzeptes bei mehreren PV-Anlagen, auch mit Eigenverbrauchsvergütung, Direktverbrauch etc. kombinierbar <https://www.photovoltaikforum.com/thread/95564-unterschied-messkonzept-7-1-7-2/?postID=1513946#post1513946>`_
 
 .. hint::
 
@@ -185,7 +186,7 @@ Im Rahmen der Beantragung muss ein Messkonzept angegeben werden. Dies ist die Au
 
 .. seealso::
 
-	* https://www.photovoltaikforum.com/wissen/entry/2-faq-wertvolle-informationen-zu-pv-anlagengr%C3%B6%C3%9Fe-stromspeicher-wirtschaftlichkeit/
-	* https://www.clearingstelle-eeg-kwkg.de/haeufige-rechtsfrage/68
+	* `Photovoltaikforum FAQ <https://www.photovoltaikforum.com/wissen/entry/2-faq-wertvolle-informationen-zu-pv-anlagengr%C3%B6%C3%9Fe-stromspeicher-wirtschaftlichkeit/>`_
+	* `Bundesnetzagentur EEG-Förderung <https://www.bundesnetzagentur.de/DE/Fachthemen/ElektrizitaetundGas/ErneuerbareEnergien/EEG_Foerderung/start.html>`_
+	* `Clearingstelle EEG <https://www.clearingstelle-eeg-kwkg.de/haeufige-rechtsfrage/68>`_
 
-  
