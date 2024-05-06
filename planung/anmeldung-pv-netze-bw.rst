@@ -186,6 +186,18 @@ Im Rahmen der Beantragung muss ein Messkonzept angegeben werden. Dies ist die Au
 
 	Quelle: `Photovoltaikforum <https://www.photovoltaikforum.com/wissen/entry/2-faq-wertvolle-informationen-zu-pv-anlagengr%C3%B6%C3%9Fe-stromspeicher-wirtschaftlichkeit/#25c7c7c0-beispiel-f%C3%BCr-46-module-%C3%A0-400-wp>`_
 
+
+.. hint::
+
+	Anmeldung der Anlage beim VNB durch Elektriker nur mittels `Formular VDE E.8 <https://www.vde.com/resource/blob/1785304/b8f1b3ae3d7abfc10dffe0adb38aad7e/vde-ar-n-4105-formulare-anhang-e-data.pdf>`_ SOFORT MIT Inbetriebnahme.
+
+	Darauf ergänzen: "Anlage speist ein". (Vergütungsanspruch vor Einspeisemitteilung an Netzbetreiber?) KEINE VNB-Formulare verwenden! Sätze wie "Die Anlage kann gemäß NAV und TAB in Betrieb gesetzt werden" in "Anmeldung zum Netzanschluss" oder sind schädlich!
+
+	KEINEN Auftrag zur Inbetriebsetzung / kaufmännischen Abnahme / Netzeinbindung / kaufmännischen Inbetriebnahme an den VNB und keine Kosten für Zählerwechsel unterschreiben!
+
+	Quelle: `Photovoltaikforum <https://www.photovoltaikforum.com/wissen/entry/2-faq-wertvolle-informationen-zu-pv-anlagengr%C3%B6%C3%9Fe-stromspeicher-wirtschaftlichkeit/>`_
+
+
 .. attention::
 
 	Warnung: Netze BW GmbH versucht spätestens bei einer zweiten Anlage unnötige Zähler vorzuschreiben und für Betreiber nachteiligen Vertrag zu erwirken.
