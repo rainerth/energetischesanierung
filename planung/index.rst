@@ -9,7 +9,7 @@ Planung
    photovoltaik
    akku
    inverter
-   anmeldung
+   anmeldung-pv-netze-bw
    einspeisung
    kollektor
    waermepumpe

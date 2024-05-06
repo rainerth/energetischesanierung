@@ -89,9 +89,11 @@ Maximale Wirkleistung aller geplanten Speicher ΣPEmax
 
 
 
-## Messkonzepte
+Messkonzepte
+=============
 
-Im Rahmen der Beantragung muss ein Messkonzept angegeben werden. Hier ist die Auswahl: 
+
+Im Rahmen der Beantragung muss ein Messkonzept angegeben werden. Dies ist die Auswahl:
 
 .. figure:: images/messkonzept-1-6-0.png
 
