@@ -3,8 +3,8 @@ Anmeldung der Anlagen
 ######################
 
 
-Antrag auf Anschluss einer PV-Anlage per Mail
-=============================================
+Schritt 1: Antrag auf Anschluss einer PV-Anlage per Mail
+========================================================
 
 Auf Anraten von Beiträgen im Photovoltaikforum erfolgt die Anmeldung im ersten Schritt über eine Mail an kontakt ät netze-bw.de. Die Anmeldung über das Online-Portal der Netze-BW benötigt viele Kenntnisse, die zum aktuellen Zeitpunkt noch nicht vorliegen und vermutlich auch nur vom Elektrofachbetrieb beigesteuert werden können.
 
@@ -34,12 +34,23 @@ Auf Anraten von Beiträgen im Photovoltaikforum erfolgt die Anmeldung im ersten 
 
 	Adresse
 
-Antrag über das Online-Portal
-=============================
+Schritt 2: Antrag über das Online-Portal
+========================================
 
 Die PV Anlage muss vor Inbetriebnahme bei Netze-BW angemeldet werden. Die Anmeldung erfolgt über das Online-Portal der Netze-BW. Die Anmeldung ist kostenfrei.
 
 .. figure:: images/netze-bw-antrag-01.png
+
+.. hint::
+
+	Die Anmeldung der Anlage beim Verteilnetzbetreiber (:abbr:`VNB (Verteilnetzbetreiber)`) durch den Elektriker besser nur mittels `Formular VDE E.8 <https://www.vde.com/resource/blob/1785304/b8f1b3ae3d7abfc10dffe0adb38aad7e/vde-ar-n-4105-formulare-anhang-e-data.pdf>`_ SOFORT mit der Inbetriebnahme.
+
+	Darauf ergänzen: "**Anlage speist ein**". **KEINE VNB-Formulare verwenden**! Sätze wie "Die Anlage kann gemäß :abbr:`NAV (Niederspannungsanschlussverordnung)` und :abbr:`TAB (Technischen Anschlussbedingungen Niederspannung)` in Betrieb gesetzt werden" in "``Anmeldung zum Netzanschluss``" sind schädlich!
+
+	KEINEN Auftrag zur Inbetriebsetzung / kaufmännischen Abnahme / Netzeinbindung / kaufmännischen Inbetriebnahme an den VNB und keine Kosten für Zählerwechsel unterschreiben!
+
+	Quelle: `Photovoltaikforum: VDE Formular <https://www.photovoltaikforum.com/wissen/entry/2-faq-wertvolle-informationen-zu-pv-anlagengr%C3%B6%C3%9Fe-stromspeicher-wirtschaftlichkeit/>`_
+
 
 Ermittlung der Gesamtleistung der PV-Module
 ===========================================
@@ -54,7 +65,7 @@ wo n die Anzahl der Module und P\ :sub:`modul` die Nennleistung eines Moduls in 
 
 .. epigraph::
 
-	P\ :sub:`total` = 52 x 330W = 17160 = 17,16kW
+	P\ :sub:`total` = 52 x 330 W = 17160 = **17,16 kW**
 
 
 Berücksichtigung der PV-Modul-Leistungstoleranz
@@ -66,7 +77,7 @@ Die Leistungstoleranz der Heckert 330 W Module beträgt `0 / +4,99 Wp`. Die maxi
 
 .. epigraph::
 
-	P\ :sub:`total` = P\ :sub:`AGen` = 56 x 334,99W = 18747,44W = 18,75kW
+	P\ :sub:`total` = P\ :sub:`AGen` = 52 x 334,99 W = 17419,48 W = **17,42 kW**
 
 
 Wahl der Wechselrichterleistung
@@ -99,7 +110,8 @@ Für eine PV-Anlage mit der Ausrichtung Nord und einer Dachneigung von 30 Grad i
 
 .. epigraph::
 
-	P\ :sub:`total` = 56 x 334,99W * 0,6050 = 11352,47W = 11,35kW
+	P\ :sub:`total` = 52 x 334,99 W * 0,6050 = 10538,7854 W = **10,54 kW**
+
 
 Windlastberechnung
 ------------------
@@ -186,16 +198,6 @@ Im Rahmen der Beantragung muss ein Messkonzept angegeben werden. Dies ist die Au
 
 	Quelle: `Photovoltaikforum: WR dezentral <https://www.photovoltaikforum.com/wissen/entry/2-faq-wertvolle-informationen-zu-pv-anlagengr%C3%B6%C3%9Fe-stromspeicher-wirtschaftlichkeit/#25c7c7c0-beispiel-f%C3%BCr-46-module-%C3%A0-400-wp>`_
 
-
-.. hint::
-
-	Anmeldung der Anlage beim VNB durch Elektriker nur mittels `Formular VDE E.8 <https://www.vde.com/resource/blob/1785304/b8f1b3ae3d7abfc10dffe0adb38aad7e/vde-ar-n-4105-formulare-anhang-e-data.pdf>`_ SOFORT MIT Inbetriebnahme.
-
-	Darauf ergänzen: "Anlage speist ein". (Vergütungsanspruch vor Einspeisemitteilung an Netzbetreiber?) KEINE VNB-Formulare verwenden! Sätze wie "Die Anlage kann gemäß NAV und TAB in Betrieb gesetzt werden" in "Anmeldung zum Netzanschluss" oder sind schädlich!
-
-	KEINEN Auftrag zur Inbetriebsetzung / kaufmännischen Abnahme / Netzeinbindung / kaufmännischen Inbetriebnahme an den VNB und keine Kosten für Zählerwechsel unterschreiben!
-
-	Quelle: `Photovoltaikforum: VDE Formular <https://www.photovoltaikforum.com/wissen/entry/2-faq-wertvolle-informationen-zu-pv-anlagengr%C3%B6%C3%9Fe-stromspeicher-wirtschaftlichkeit/>`_
 
 
 .. attention::

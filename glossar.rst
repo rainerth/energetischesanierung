@@ -43,3 +43,11 @@ CT
 	Stromwandler (CT = Current Tranformer) erzeugen einen Ausgang proportional zum Stromfluss durch die Primärwicklung als Resultat eines konstanten Potentials an der Primärwicklung
 
 	.. seealso:: https://www.electronics-tutorials.ws/de/transformatoren/stromwandler.html
+
+
+
+
+.. seealso::
+
+	`Bundesmuserwortlaut <https://www.bdew.de/media/documents/3000_BDEW_Bundesmusterwortlaut_TAB_2023_v20230502.pdf>`_
+
