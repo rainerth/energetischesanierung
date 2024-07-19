@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-07-19T23:11:11.083Z" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0" etag="EfJrBYV4_pDnVMGTsQDs" version="24.7.2" type="github">
+<mxfile host="app.diagrams.net" modified="2024-07-19T23:14:33.488Z" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0" etag="QQxw8x_TME1TEIRUMgr_" version="24.7.2" type="github">
   <diagram name="Page-1" id="099fd60b-425b-db50-ffb0-6b813814b670">
-    <mxGraphModel dx="1638" dy="895" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" background="none" math="0" shadow="0">
+    <mxGraphModel dx="592" dy="324" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -130,8 +130,8 @@
           <mxGeometry x="787" y="195" width="20" height="5" as="geometry" />
         </mxCell>
         <mxCell id="CiSqSBGC9Xxcwz4Uoogl-41" value="PV2" parent="0" />
-        <mxCell id="CiSqSBGC9Xxcwz4Uoogl-138" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;3 x Stromwandler (CT)&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;" vertex="1" parent="CiSqSBGC9Xxcwz4Uoogl-41">
-          <mxGeometry x="367" y="235.32" width="90" height="72" as="geometry" />
+        <mxCell id="CiSqSBGC9Xxcwz4Uoogl-138" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;3 x CT&lt;br&gt;&lt;/div&gt;&lt;div&gt;(Stromwandler)&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;align=left;" vertex="1" parent="CiSqSBGC9Xxcwz4Uoogl-41">
+          <mxGeometry x="517.5" y="390" width="90" height="72" as="geometry" />
         </mxCell>
         <mxCell id="CiSqSBGC9Xxcwz4Uoogl-60" value="&lt;div&gt;SUN-12K-SG04LP3-EU&lt;/div&gt;&lt;div&gt;&lt;i&gt;&lt;b&gt;max. 12kW to Grid &lt;/b&gt;&lt;/i&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;shadow=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="CiSqSBGC9Xxcwz4Uoogl-41">
           <mxGeometry x="940" y="310" width="140" height="140" as="geometry" />
@@ -198,8 +198,8 @@
         <mxCell id="CiSqSBGC9Xxcwz4Uoogl-136" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.transmission.3_line_bus;rotation=-45;" vertex="1" parent="CiSqSBGC9Xxcwz4Uoogl-41">
           <mxGeometry x="490" y="264" width="30" height="14.64" as="geometry" />
         </mxCell>
-        <mxCell id="CiSqSBGC9Xxcwz4Uoogl-137" value="" style="pointerEvents=1;verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.inductors.current_transformer_2;direction=north;" vertex="1" parent="CiSqSBGC9Xxcwz4Uoogl-41">
-          <mxGeometry x="380" y="237" width="64" height="47" as="geometry" />
+        <mxCell id="CiSqSBGC9Xxcwz4Uoogl-137" value="" style="pointerEvents=1;verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.inductors.current_transformer_2;direction=east;" vertex="1" parent="CiSqSBGC9Xxcwz4Uoogl-41">
+          <mxGeometry x="546" y="394.18" width="47" height="64" as="geometry" />
         </mxCell>
         <mxCell id="CiSqSBGC9Xxcwz4Uoogl-139" value="" style="endArrow=none;html=1;rounded=0;entryX=0.979;entryY=0.482;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0;exitY=0.25;exitDx=0;exitDy=0;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;dashed=1;endFill=0;startArrow=block;startFill=1;" edge="1" parent="CiSqSBGC9Xxcwz4Uoogl-41" source="CiSqSBGC9Xxcwz4Uoogl-60" target="CiSqSBGC9Xxcwz4Uoogl-137">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -208,7 +208,8 @@
             <Array as="points">
               <mxPoint x="910" y="345" />
               <mxPoint x="910" y="220" />
-              <mxPoint x="410" y="220" />
+              <mxPoint x="640" y="220" />
+              <mxPoint x="640" y="425" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -257,7 +258,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="CiSqSBGC9Xxcwz4Uoogl-32" value="&amp;lt;----&amp;gt;&lt;br&gt;&lt;div&gt;Z3&lt;/div&gt;" style="shape=ext;double=1;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="CiSqSBGC9Xxcwz4Uoogl-19">
-          <mxGeometry x="520" y="349" width="80" height="80" as="geometry" />
+          <mxGeometry x="520" y="290" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="CiSqSBGC9Xxcwz4Uoogl-33" value="" style="endArrow=classic;startArrow=none;html=1;rounded=0;startFill=0;" edge="1" parent="CiSqSBGC9Xxcwz4Uoogl-19">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
