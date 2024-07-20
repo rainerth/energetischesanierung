@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-07-20T21:26:17.019Z" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0" etag="8fuP2s3jF5WpgQbAQasw" version="24.7.2" type="github">
+<mxfile host="app.diagrams.net" modified="2024-07-20T21:26:46.498Z" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0" etag="2X0vBTLJe3Dn9flCrs3r" version="24.7.2" type="github">
   <diagram name="Page-1" id="099fd60b-425b-db50-ffb0-6b813814b670">
     <mxGraphModel dx="1071" dy="585" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
@@ -118,7 +118,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="CiSqSBGC9Xxcwz4Uoogl-120" value="&lt;b&gt;NEU: Norddach&lt;/b&gt;&lt;br&gt;56 x Heckert NeMo® 2.0 60 M 330W (5BB) MC4&lt;br&gt;&lt;div&gt;bei max. 70% Ausbeute Nord:&lt;br&gt;&lt;b&gt;&lt;i&gt;12,9 kWp&lt;/i&gt;&lt;/b&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="CiSqSBGC9Xxcwz4Uoogl-40">
-          <mxGeometry x="941" y="30" width="188" height="90" as="geometry" />
+          <mxGeometry x="921" y="30" width="188" height="90" as="geometry" />
         </mxCell>
         <mxCell id="CiSqSBGC9Xxcwz4Uoogl-121" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.transmission.2_line_bus;direction=west;rotation=-45;" vertex="1" parent="CiSqSBGC9Xxcwz4Uoogl-40">
           <mxGeometry x="706.0000000000001" y="193" width="20" height="5" as="geometry" />
@@ -161,7 +161,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="CiSqSBGC9Xxcwz4Uoogl-118" value="&lt;b&gt;Bestand aus 2019: Süddach&lt;/b&gt;&lt;br&gt;40 x Heckert NeMo®&amp;nbsp; 315W&lt;br&gt;&lt;div&gt;&lt;b&gt;&lt;i&gt;12,6 kWp&lt;/i&gt;&lt;/b&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="CiSqSBGC9Xxcwz4Uoogl-41">
-          <mxGeometry x="670" y="59" width="188" height="60" as="geometry" />
+          <mxGeometry x="664" y="59" width="188" height="60" as="geometry" />
         </mxCell>
         <mxCell id="CiSqSBGC9Xxcwz4Uoogl-125" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.transmission.2_line_bus;direction=west;rotation=-45;" vertex="1" parent="CiSqSBGC9Xxcwz4Uoogl-41">
           <mxGeometry x="959.5000000000001" y="210" width="20" height="5" as="geometry" />
