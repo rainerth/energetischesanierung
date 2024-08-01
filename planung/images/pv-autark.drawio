@@ -331,16 +331,18 @@
         <mxCell id="ymTq_LFzbMRqKzt_c4yw-0" />
         <mxCell id="ymTq_LFzbMRqKzt_c4yw-1" parent="ymTq_LFzbMRqKzt_c4yw-0" />
         <mxCell id="ymTq_LFzbMRqKzt_c4yw-2" value="&lt;div&gt;Netz des Verteilnetzbetreibers&lt;br&gt;&lt;/div&gt;" style="line;strokeWidth=2;direction=south;html=1;rotation=-90;align=left;textDirection=vertical-rl;horizontal=1;verticalAlign=top;spacingTop=13;spacingBottom=5;spacingLeft=7;" parent="ymTq_LFzbMRqKzt_c4yw-1" vertex="1">
-          <mxGeometry x="515" y="-25" width="10" height="350" as="geometry" />
+          <mxGeometry x="567.5" y="-80.5" width="10" height="455" as="geometry" />
         </mxCell>
         <mxCell id="ymTq_LFzbMRqKzt_c4yw-3" value="Eigentumsgrenze" style="line;strokeWidth=2;direction=south;html=1;rotation=-90;align=left;textDirection=vertical-rl;horizontal=1;verticalAlign=top;spacingTop=13;spacingBottom=5;spacingLeft=7;strokeColor=#FF3333;dashed=1;" parent="ymTq_LFzbMRqKzt_c4yw-1" vertex="1">
-          <mxGeometry x="505" y="30" width="10" height="340" as="geometry" />
+          <mxGeometry x="575" y="-40" width="10" height="480" as="geometry" />
         </mxCell>
         <mxCell id="ymTq_LFzbMRqKzt_c4yw-4" value="NVP" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="ymTq_LFzbMRqKzt_c4yw-1" vertex="1">
           <mxGeometry x="525" y="180" width="50" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="ymTq_LFzbMRqKzt_c4yw-5" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.586;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=oval;endFill=1;" parent="ymTq_LFzbMRqKzt_c4yw-1" source="ymTq_LFzbMRqKzt_c4yw-4" target="ymTq_LFzbMRqKzt_c4yw-2" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="ymTq_LFzbMRqKzt_c4yw-5" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;endArrow=oval;endFill=1;entryX=0.45;entryY=0.4;entryDx=0;entryDy=0;entryPerimeter=0;" parent="ymTq_LFzbMRqKzt_c4yw-1" source="ymTq_LFzbMRqKzt_c4yw-4" target="ymTq_LFzbMRqKzt_c4yw-2" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="550" y="144" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="ymTq_LFzbMRqKzt_c4yw-56" value="Zähler" parent="ymTq_LFzbMRqKzt_c4yw-0" />
         <mxCell id="ymTq_LFzbMRqKzt_c4yw-58" value="&lt;div&gt;&amp;lt;----&amp;gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Z2&lt;/b&gt;&lt;/div&gt;" style="shape=ext;double=1;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;verticalAlign=top;" parent="ymTq_LFzbMRqKzt_c4yw-56" vertex="1">
@@ -393,7 +395,7 @@
             <mxPoint x="491" y="701" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="8MDdlcKNSWUWweyi4eZG-29" value="Schaltschrank" style="swimlane;whiteSpace=wrap;html=1;startSize=23;" vertex="1" parent="ymTq_LFzbMRqKzt_c4yw-56">
+        <mxCell id="8MDdlcKNSWUWweyi4eZG-29" value="Zählerschrank" style="swimlane;whiteSpace=wrap;html=1;startSize=23;" vertex="1" parent="ymTq_LFzbMRqKzt_c4yw-56">
           <mxGeometry x="369" y="210" width="450" height="610" as="geometry" />
         </mxCell>
         <mxCell id="JHv-_JhhGN5gbRX45gf3-47" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.transmission.3_line_bus;rotation=-45;" parent="8MDdlcKNSWUWweyi4eZG-29" vertex="1">
