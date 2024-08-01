@@ -434,16 +434,16 @@
         <mxCell id="ymTq_LFzbMRqKzt_c4yw-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.363;entryY=0.001;entryDx=0;entryDy=0;entryPerimeter=0;" parent="ymTq_LFzbMRqKzt_c4yw-9" source="ymTq_LFzbMRqKzt_c4yw-25" target="ymTq_LFzbMRqKzt_c4yw-11" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ymTq_LFzbMRqKzt_c4yw-25" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/science-technology-outline-24-px/24/tech_solar_panelsolar_cellsolar_energy_panelsolar_system-128.png" parent="ymTq_LFzbMRqKzt_c4yw-9" vertex="1">
+        <mxCell id="ymTq_LFzbMRqKzt_c4yw-25" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/science-technology-outline-24-px/24/tech_solar_panelsolar_cellsolar_energy_panelsolar_system-128.png;imageBackground=default;" parent="ymTq_LFzbMRqKzt_c4yw-9" vertex="1">
           <mxGeometry x="987" y="200" width="60" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ymTq_LFzbMRqKzt_c4yw-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="ymTq_LFzbMRqKzt_c4yw-9" source="ymTq_LFzbMRqKzt_c4yw-27" target="ymTq_LFzbMRqKzt_c4yw-11" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ymTq_LFzbMRqKzt_c4yw-27" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/science-technology-outline-24-px/24/tech_solar_panelsolar_cellsolar_energy_panelsolar_system-128.png" parent="ymTq_LFzbMRqKzt_c4yw-9" vertex="1">
+        <mxCell id="ymTq_LFzbMRqKzt_c4yw-27" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/science-technology-outline-24-px/24/tech_solar_panelsolar_cellsolar_energy_panelsolar_system-128.png;imageBackground=default;" parent="ymTq_LFzbMRqKzt_c4yw-9" vertex="1">
           <mxGeometry x="1027" y="200" width="60" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ymTq_LFzbMRqKzt_c4yw-28" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/science-technology-outline-24-px/24/tech_solar_panelsolar_cellsolar_energy_panelsolar_system-128.png" parent="ymTq_LFzbMRqKzt_c4yw-9" vertex="1">
+        <mxCell id="ymTq_LFzbMRqKzt_c4yw-28" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/science-technology-outline-24-px/24/tech_solar_panelsolar_cellsolar_energy_panelsolar_system-128.png;imageBackground=default;" parent="ymTq_LFzbMRqKzt_c4yw-9" vertex="1">
           <mxGeometry x="1067" y="200" width="60" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ymTq_LFzbMRqKzt_c4yw-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.664;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="ymTq_LFzbMRqKzt_c4yw-9" source="ymTq_LFzbMRqKzt_c4yw-28" target="ymTq_LFzbMRqKzt_c4yw-11" edge="1">
@@ -615,7 +615,7 @@
         <mxCell id="JHv-_JhhGN5gbRX45gf3-26" value="" style="html=1;shape=mxgraph.electrical.electro-mechanical.switchDisconnector;aspect=fixed;elSwitchState=off;direction=south;" parent="ymTq_LFzbMRqKzt_c4yw-68" vertex="1">
           <mxGeometry x="1340" y="609" width="20" height="75" as="geometry" />
         </mxCell>
-        <mxCell id="JHv-_JhhGN5gbRX45gf3-27" value="&lt;div&gt;Batterie&lt;/div&gt;&lt;div&gt;&lt;div&gt;4 x Deye RW-M6.1&lt;/div&gt;&lt;div&gt;LiFePO4&lt;/div&gt;&lt;div&gt;4 x 6,14kWh = &lt;b&gt;&lt;i&gt;24,56kWh&lt;/i&gt;&lt;/b&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;shadow=1;verticalAlign=top;" parent="ymTq_LFzbMRqKzt_c4yw-68" vertex="1">
+        <mxCell id="JHv-_JhhGN5gbRX45gf3-27" value="&lt;div&gt;Batterie&lt;/div&gt;&lt;div&gt;&lt;div&gt;4 x Deye RW-M6.1&lt;/div&gt;&lt;div&gt;LiFePO4&lt;/div&gt;&lt;div&gt;4 x 6,14kWh = &lt;b&gt;&lt;i&gt;24,56kWh&lt;/i&gt;&lt;/b&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;shadow=1;verticalAlign=top;fillColor=#d5e8d4;strokeColor=#82b366;" parent="ymTq_LFzbMRqKzt_c4yw-68" vertex="1">
           <mxGeometry x="1242" y="732" width="130" height="130" as="geometry" />
         </mxCell>
         <mxCell id="JHv-_JhhGN5gbRX45gf3-28" value="" style="pointerEvents=1;verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.miscellaneous.batteryStack;" parent="ymTq_LFzbMRqKzt_c4yw-68" vertex="1">
@@ -668,16 +668,16 @@
         <mxCell id="JHv-_JhhGN5gbRX45gf3-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.363;entryY=0.001;entryDx=0;entryDy=0;entryPerimeter=0;" parent="JHv-_JhhGN5gbRX45gf3-41" source="JHv-_JhhGN5gbRX45gf3-49" target="JHv-_JhhGN5gbRX45gf3-43" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="JHv-_JhhGN5gbRX45gf3-49" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/science-technology-outline-24-px/24/tech_solar_panelsolar_cellsolar_energy_panelsolar_system-128.png" parent="JHv-_JhhGN5gbRX45gf3-41" vertex="1">
+        <mxCell id="JHv-_JhhGN5gbRX45gf3-49" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/science-technology-outline-24-px/24/tech_solar_panelsolar_cellsolar_energy_panelsolar_system-128.png;imageBackground=default;" parent="JHv-_JhhGN5gbRX45gf3-41" vertex="1">
           <mxGeometry x="987" y="200" width="60" height="60" as="geometry" />
         </mxCell>
         <mxCell id="JHv-_JhhGN5gbRX45gf3-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="JHv-_JhhGN5gbRX45gf3-41" source="JHv-_JhhGN5gbRX45gf3-51" target="JHv-_JhhGN5gbRX45gf3-43" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="JHv-_JhhGN5gbRX45gf3-51" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/science-technology-outline-24-px/24/tech_solar_panelsolar_cellsolar_energy_panelsolar_system-128.png" parent="JHv-_JhhGN5gbRX45gf3-41" vertex="1">
+        <mxCell id="JHv-_JhhGN5gbRX45gf3-51" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/science-technology-outline-24-px/24/tech_solar_panelsolar_cellsolar_energy_panelsolar_system-128.png;imageBackground=default;" parent="JHv-_JhhGN5gbRX45gf3-41" vertex="1">
           <mxGeometry x="1027" y="200" width="60" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="JHv-_JhhGN5gbRX45gf3-52" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/science-technology-outline-24-px/24/tech_solar_panelsolar_cellsolar_energy_panelsolar_system-128.png" parent="JHv-_JhhGN5gbRX45gf3-41" vertex="1">
+        <mxCell id="JHv-_JhhGN5gbRX45gf3-52" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/science-technology-outline-24-px/24/tech_solar_panelsolar_cellsolar_energy_panelsolar_system-128.png;imageBackground=default;" parent="JHv-_JhhGN5gbRX45gf3-41" vertex="1">
           <mxGeometry x="1067" y="200" width="60" height="60" as="geometry" />
         </mxCell>
         <mxCell id="JHv-_JhhGN5gbRX45gf3-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.664;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="JHv-_JhhGN5gbRX45gf3-41" source="JHv-_JhhGN5gbRX45gf3-52" target="JHv-_JhhGN5gbRX45gf3-43" edge="1">
