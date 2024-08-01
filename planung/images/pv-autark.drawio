@@ -375,7 +375,7 @@
             <mxPoint x="550" y="240" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="8MDdlcKNSWUWweyi4eZG-4" value="|----&amp;gt;&lt;br&gt;&lt;div&gt;&lt;b&gt;VIRT_ZA &lt;/b&gt;= Z1_out - Z3&lt;/div&gt;" style="shape=ext;double=1;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#fff2cc;strokeColor=#FF6666;dashed=1;dashPattern=8 8;opacity=30;fontColor=#009900;verticalAlign=top;" vertex="1" parent="ymTq_LFzbMRqKzt_c4yw-56">
+        <mxCell id="8MDdlcKNSWUWweyi4eZG-4" value="&lt;font color=&quot;#006600&quot;&gt;|----&amp;gt;&lt;br&gt;&lt;/font&gt;&lt;div&gt;&lt;b&gt;&lt;font color=&quot;#006600&quot;&gt;VIRT_ZA = Z1&lt;sub&gt;Lieferung&lt;/sub&gt;&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;font color=&quot;#006600&quot;&gt;- Z3&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;" style="shape=ext;double=1;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#fff2cc;strokeColor=#FF6666;dashed=1;dashPattern=8 8;opacity=30;fontColor=#009900;verticalAlign=top;" vertex="1" parent="ymTq_LFzbMRqKzt_c4yw-56">
           <mxGeometry x="625" y="419.0000000000001" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="8MDdlcKNSWUWweyi4eZG-6" value="" style="endArrow=classic;startArrow=none;html=1;rounded=0;startFill=0;" edge="1" parent="ymTq_LFzbMRqKzt_c4yw-56">
