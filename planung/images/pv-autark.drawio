@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-07-31T23:40:21.583Z" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0" etag="i13r9ncEpn95k5Rcewe1" version="24.7.3" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2024-08-01T00:02:22.912Z" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0" etag="fSjuac9Mi9vrv8boOvDV" version="24.7.3" type="github" pages="2">
   <diagram name="MK7.1" id="099fd60b-425b-db50-ffb0-6b813814b670">
     <mxGraphModel dx="1632" dy="811" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
@@ -334,7 +334,7 @@
           <mxGeometry x="215" y="-110" width="10" height="360" as="geometry" />
         </mxCell>
         <mxCell id="ymTq_LFzbMRqKzt_c4yw-3" value="Eigentumsgrenze" style="line;strokeWidth=2;direction=south;html=1;rotation=-90;align=left;textDirection=vertical-rl;horizontal=1;verticalAlign=top;spacingTop=13;spacingBottom=5;spacingLeft=7;strokeColor=#FF3333;dashed=1;" vertex="1" parent="ymTq_LFzbMRqKzt_c4yw-1">
-          <mxGeometry x="215" y="-60" width="10" height="360" as="geometry" />
+          <mxGeometry x="315" y="-160" width="10" height="560" as="geometry" />
         </mxCell>
         <mxCell id="ymTq_LFzbMRqKzt_c4yw-4" value="NVP" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="ymTq_LFzbMRqKzt_c4yw-1">
           <mxGeometry x="225" y="100" width="50" height="20" as="geometry" />
@@ -348,12 +348,6 @@
         <mxCell id="rBrF5vIntjs2acZ5XrIU-4" value="Zähler für Bezug Haushalt" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="ymTq_LFzbMRqKzt_c4yw-1">
           <mxGeometry x="110" y="330" width="70" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="JHv-_JhhGN5gbRX45gf3-2" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontSize=12;startSize=8;endSize=8;endArrow=none;endFill=0;" edge="1" parent="ymTq_LFzbMRqKzt_c4yw-1" source="JHv-_JhhGN5gbRX45gf3-0" target="ymTq_LFzbMRqKzt_c4yw-58">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="JHv-_JhhGN5gbRX45gf3-0" value="&lt;div&gt;&amp;lt;----&amp;gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Z1&lt;/div&gt;" style="shape=ext;double=1;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="ymTq_LFzbMRqKzt_c4yw-1">
-          <mxGeometry x="210" y="160" width="80" height="80" as="geometry" />
-        </mxCell>
         <mxCell id="JHv-_JhhGN5gbRX45gf3-1" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;" edge="1" parent="ymTq_LFzbMRqKzt_c4yw-1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="190" y="390" as="sourcePoint" />
@@ -363,7 +357,7 @@
         <mxCell id="ymTq_LFzbMRqKzt_c4yw-6" value="Texte" parent="ymTq_LFzbMRqKzt_c4yw-0" />
         <mxCell id="ymTq_LFzbMRqKzt_c4yw-9" value="PV1" parent="ymTq_LFzbMRqKzt_c4yw-0" />
         <mxCell id="ymTq_LFzbMRqKzt_c4yw-10" value="&lt;div style=&quot;font-size: 10px;&quot;&gt;&lt;br style=&quot;font-size: 10px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;3 x Schmelzsicherung&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;verticalAlign=bottom;fontSize=10;" vertex="1" parent="ymTq_LFzbMRqKzt_c4yw-9">
-          <mxGeometry x="502.5" y="260" width="90" height="70" as="geometry" />
+          <mxGeometry x="502.5" y="360" width="90" height="70" as="geometry" />
         </mxCell>
         <mxCell id="ymTq_LFzbMRqKzt_c4yw-11" value="&lt;div&gt;KACO blueplanet&lt;/div&gt;&lt;div&gt;15.0 TL3&lt;br&gt;&lt;b&gt;&lt;i&gt;max. 15 kW to Grid&lt;br&gt;&lt;/i&gt;&lt;/b&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;shadow=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="ymTq_LFzbMRqKzt_c4yw-9">
           <mxGeometry x="687" y="310" width="140" height="140" as="geometry" />
@@ -373,28 +367,25 @@
             <mxPoint x="722" y="450" as="sourcePoint" />
             <mxPoint x="420" y="390" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="620" y="380" />
-              <mxPoint x="620" y="280" />
+              <mxPoint x="600" y="380" />
+              <mxPoint x="600" y="380" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="ymTq_LFzbMRqKzt_c4yw-19" value="" style="html=1;shape=mxgraph.electrical.electro-mechanical.fuse2;aspect=fixed;elSwitchState=on;" vertex="1" parent="ymTq_LFzbMRqKzt_c4yw-9">
-          <mxGeometry x="510" y="264" width="75" height="20" as="geometry" />
+          <mxGeometry x="510" y="364" width="75" height="20" as="geometry" />
         </mxCell>
         <mxCell id="ymTq_LFzbMRqKzt_c4yw-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.8;entryDx=0;entryDy=0;endArrow=none;endFill=0;startArrow=oval;startFill=1;" edge="1" parent="ymTq_LFzbMRqKzt_c4yw-9" target="ymTq_LFzbMRqKzt_c4yw-19">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="370" y="280" />
-              <mxPoint x="370" y="280" />
+              <mxPoint x="330" y="280" />
+              <mxPoint x="330" y="380" />
             </Array>
             <mxPoint x="250" y="280" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="ymTq_LFzbMRqKzt_c4yw-21" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.transmission.3_line_bus;rotation=-45;" vertex="1" parent="ymTq_LFzbMRqKzt_c4yw-9">
           <mxGeometry x="633" y="374.00000000000006" width="30" height="14.64" as="geometry" />
-        </mxCell>
-        <mxCell id="ymTq_LFzbMRqKzt_c4yw-23" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.transmission.3_line_bus;rotation=-45;" vertex="1" parent="ymTq_LFzbMRqKzt_c4yw-9">
-          <mxGeometry x="400" y="270" width="30" height="14.64" as="geometry" />
         </mxCell>
         <mxCell id="ymTq_LFzbMRqKzt_c4yw-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.363;entryY=0.001;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="ymTq_LFzbMRqKzt_c4yw-9" source="ymTq_LFzbMRqKzt_c4yw-25" target="ymTq_LFzbMRqKzt_c4yw-11">
           <mxGeometry relative="1" as="geometry" />
@@ -414,9 +405,6 @@
         <mxCell id="ymTq_LFzbMRqKzt_c4yw-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.664;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="ymTq_LFzbMRqKzt_c4yw-9" source="ymTq_LFzbMRqKzt_c4yw-28" target="ymTq_LFzbMRqKzt_c4yw-11">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ymTq_LFzbMRqKzt_c4yw-30" value="&lt;b&gt;NEU: Norddach&lt;/b&gt;&lt;br&gt;56 x Heckert NeMo® 2.0 60 M 330W (5BB) MC4&lt;br&gt;&lt;div&gt;bei max. 70% Ausbeute Nord:&lt;br&gt;&lt;b&gt;&lt;i&gt;12,9 kWp&lt;/i&gt;&lt;/b&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="ymTq_LFzbMRqKzt_c4yw-9">
-          <mxGeometry x="921" y="30" width="188" height="90" as="geometry" />
-        </mxCell>
         <mxCell id="ymTq_LFzbMRqKzt_c4yw-31" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.transmission.2_line_bus;direction=west;rotation=-45;" vertex="1" parent="ymTq_LFzbMRqKzt_c4yw-9">
           <mxGeometry x="706.0000000000001" y="193" width="20" height="5" as="geometry" />
         </mxCell>
@@ -425,6 +413,9 @@
         </mxCell>
         <mxCell id="ymTq_LFzbMRqKzt_c4yw-33" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.transmission.2_line_bus;direction=west;rotation=-45;" vertex="1" parent="ymTq_LFzbMRqKzt_c4yw-9">
           <mxGeometry x="787" y="195" width="20" height="5" as="geometry" />
+        </mxCell>
+        <mxCell id="JHv-_JhhGN5gbRX45gf3-40" value="&lt;b&gt;Bestand aus 2019: Süddach&lt;/b&gt;&lt;br&gt;40 x Heckert NeMo®&amp;nbsp; 315W&lt;br&gt;&lt;div&gt;&lt;b&gt;&lt;i&gt;12,6 kWp&lt;/i&gt;&lt;/b&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="ymTq_LFzbMRqKzt_c4yw-9">
+          <mxGeometry x="664" y="59" width="188" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ymTq_LFzbMRqKzt_c4yw-34" value="PV2" parent="ymTq_LFzbMRqKzt_c4yw-0" />
         <mxCell id="ymTq_LFzbMRqKzt_c4yw-47" value="&lt;div style=&quot;font-size: 10px;&quot;&gt;&lt;br style=&quot;font-size: 10px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;3 x Schmelzsicherung&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;verticalAlign=bottom;fontSize=10;" vertex="1" parent="ymTq_LFzbMRqKzt_c4yw-34">
@@ -459,9 +450,6 @@
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="1033" y="310" as="targetPoint" />
           </mxGeometry>
-        </mxCell>
-        <mxCell id="ymTq_LFzbMRqKzt_c4yw-43" value="&lt;b&gt;Bestand aus 2019: Süddach&lt;/b&gt;&lt;br&gt;40 x Heckert NeMo®&amp;nbsp; 315W&lt;br&gt;&lt;div&gt;&lt;b&gt;&lt;i&gt;12,6 kWp&lt;/i&gt;&lt;/b&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="ymTq_LFzbMRqKzt_c4yw-34">
-          <mxGeometry x="664" y="59" width="188" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ymTq_LFzbMRqKzt_c4yw-44" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.transmission.2_line_bus;direction=west;rotation=-45;" vertex="1" parent="ymTq_LFzbMRqKzt_c4yw-34">
           <mxGeometry x="959.5000000000001" y="210" width="20" height="5" as="geometry" />
@@ -513,8 +501,8 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="JHv-_JhhGN5gbRX45gf3-3" value="Untermessung für Erzeugung mit Rücklaufsperre" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="ymTq_LFzbMRqKzt_c4yw-34">
-          <mxGeometry x="280" y="632" width="70" height="50" as="geometry" />
+        <mxCell id="JHv-_JhhGN5gbRX45gf3-3" value="Untermessung für Erzeugung nach §3 Nr. 19 EEG " style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="ymTq_LFzbMRqKzt_c4yw-34">
+          <mxGeometry x="270" y="630" width="80" height="51" as="geometry" />
         </mxCell>
         <mxCell id="JHv-_JhhGN5gbRX45gf3-37" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;fontSize=12;startSize=8;endSize=8;endArrow=none;endFill=0;" edge="1" parent="ymTq_LFzbMRqKzt_c4yw-34" source="JHv-_JhhGN5gbRX45gf3-4">
           <mxGeometry relative="1" as="geometry">
@@ -539,12 +527,10 @@
         <mxCell id="JHv-_JhhGN5gbRX45gf3-36" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.3;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startSize=8;endSize=8;endArrow=none;endFill=0;" edge="1" parent="ymTq_LFzbMRqKzt_c4yw-34" source="JHv-_JhhGN5gbRX45gf3-4" target="ymTq_LFzbMRqKzt_c4yw-54">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ymTq_LFzbMRqKzt_c4yw-56" value="Zähler" parent="ymTq_LFzbMRqKzt_c4yw-0" />
-        <mxCell id="ymTq_LFzbMRqKzt_c4yw-57" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="ymTq_LFzbMRqKzt_c4yw-56" source="JHv-_JhhGN5gbRX45gf3-0">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="250" y="120" as="targetPoint" />
-          </mxGeometry>
+        <mxCell id="JHv-_JhhGN5gbRX45gf3-39" value="&lt;b&gt;NEU: Norddach&lt;/b&gt;&lt;br&gt;56 x Heckert NeMo® 2.0 60 M 330W (5BB) MC4&lt;br&gt;&lt;div&gt;bei max. 70% Ausbeute Nord:&lt;br&gt;&lt;b&gt;&lt;i&gt;12,9 kWp&lt;/i&gt;&lt;/b&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="ymTq_LFzbMRqKzt_c4yw-34">
+          <mxGeometry x="921" y="30" width="188" height="90" as="geometry" />
         </mxCell>
+        <mxCell id="ymTq_LFzbMRqKzt_c4yw-56" value="Zähler" parent="ymTq_LFzbMRqKzt_c4yw-0" />
         <mxCell id="ymTq_LFzbMRqKzt_c4yw-58" value="&lt;div&gt;&amp;lt;----&amp;gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Z2&lt;/div&gt;" style="shape=ext;double=1;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="ymTq_LFzbMRqKzt_c4yw-56">
           <mxGeometry x="210" y="320" width="80" height="80" as="geometry" />
         </mxCell>
@@ -559,7 +545,13 @@
             <mxPoint x="190" y="170" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ymTq_LFzbMRqKzt_c4yw-68" value="Batterie" visible="0" parent="ymTq_LFzbMRqKzt_c4yw-0" />
+        <mxCell id="JHv-_JhhGN5gbRX45gf3-68" style="edgeStyle=none;shape=connector;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;labelBackgroundColor=default;startSize=8;endArrow=none;endFill=0;endSize=8;" edge="1" parent="ymTq_LFzbMRqKzt_c4yw-56" source="JHv-_JhhGN5gbRX45gf3-67" target="ymTq_LFzbMRqKzt_c4yw-58">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JHv-_JhhGN5gbRX45gf3-67" value="&lt;div&gt;&amp;lt;----&amp;gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Z1&lt;/div&gt;" style="shape=ext;double=1;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="ymTq_LFzbMRqKzt_c4yw-56">
+          <mxGeometry x="210" y="160" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ymTq_LFzbMRqKzt_c4yw-68" value="Batterie" parent="ymTq_LFzbMRqKzt_c4yw-0" />
         <mxCell id="JHv-_JhhGN5gbRX45gf3-19" value="&lt;div align=&quot;right&quot;&gt;&lt;div&gt;DC Schutzschalter&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;" vertex="1" parent="ymTq_LFzbMRqKzt_c4yw-68">
           <mxGeometry x="989" y="522" width="90" height="72" as="geometry" />
         </mxCell>
@@ -642,6 +634,123 @@
         </mxCell>
         <mxCell id="JHv-_JhhGN5gbRX45gf3-34" value="&lt;div&gt;Verbrauchseinrichtungen&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="JHv-_JhhGN5gbRX45gf3-29">
           <mxGeometry x="160" y="585" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="JHv-_JhhGN5gbRX45gf3-75" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.transmission.3_line_bus;rotation=-45;" vertex="1" parent="JHv-_JhhGN5gbRX45gf3-29">
+          <mxGeometry x="340" y="374.00000000000006" width="30" height="14.64" as="geometry" />
+        </mxCell>
+        <mxCell id="JHv-_JhhGN5gbRX45gf3-76" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.8;entryDx=0;entryDy=0;endArrow=none;endFill=0;startArrow=oval;startFill=1;" edge="1" parent="JHv-_JhhGN5gbRX45gf3-29">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="330" y="280" />
+              <mxPoint x="330" y="380" />
+            </Array>
+            <mxPoint x="250" y="280" as="sourcePoint" />
+            <mxPoint x="510" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JHv-_JhhGN5gbRX45gf3-77" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.transmission.3_line_bus;rotation=-45;" vertex="1" parent="JHv-_JhhGN5gbRX45gf3-29">
+          <mxGeometry x="374" y="340.00000000000006" width="30" height="14.64" as="geometry" />
+        </mxCell>
+        <mxCell id="JHv-_JhhGN5gbRX45gf3-80" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.transmission.3_line_bus;rotation=-45;" vertex="1" parent="JHv-_JhhGN5gbRX45gf3-29">
+          <mxGeometry x="476" y="340.00000000000006" width="30" height="14.64" as="geometry" />
+        </mxCell>
+        <object label="FRE" id="JHv-_JhhGN5gbRX45gf3-41">
+          <mxCell parent="ymTq_LFzbMRqKzt_c4yw-0" />
+        </object>
+        <mxCell id="JHv-_JhhGN5gbRX45gf3-42" value="&lt;div style=&quot;font-size: 10px;&quot;&gt;&lt;br style=&quot;font-size: 10px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;3 x Schmelzsicherung&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;verticalAlign=bottom;fontSize=10;" vertex="1" parent="JHv-_JhhGN5gbRX45gf3-41">
+          <mxGeometry x="502.5" y="360" width="90" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="JHv-_JhhGN5gbRX45gf3-43" value="&lt;div&gt;KACO blueplanet&lt;/div&gt;&lt;div&gt;15.0 TL3&lt;br&gt;&lt;b&gt;&lt;i&gt;max. 15 kW to Grid&lt;br&gt;&lt;/i&gt;&lt;/b&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;shadow=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="JHv-_JhhGN5gbRX45gf3-41">
+          <mxGeometry x="687" y="310" width="140" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="JHv-_JhhGN5gbRX45gf3-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.8;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="JHv-_JhhGN5gbRX45gf3-41" source="JHv-_JhhGN5gbRX45gf3-43" target="JHv-_JhhGN5gbRX45gf3-45">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="722" y="450" as="sourcePoint" />
+            <mxPoint x="420" y="390" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="600" y="380" />
+              <mxPoint x="600" y="380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JHv-_JhhGN5gbRX45gf3-45" value="" style="html=1;shape=mxgraph.electrical.electro-mechanical.fuse2;aspect=fixed;elSwitchState=on;" vertex="1" parent="JHv-_JhhGN5gbRX45gf3-41">
+          <mxGeometry x="510" y="364" width="75" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="JHv-_JhhGN5gbRX45gf3-47" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.transmission.3_line_bus;rotation=-45;" vertex="1" parent="JHv-_JhhGN5gbRX45gf3-41">
+          <mxGeometry x="633" y="374.00000000000006" width="30" height="14.64" as="geometry" />
+        </mxCell>
+        <mxCell id="JHv-_JhhGN5gbRX45gf3-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.363;entryY=0.001;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="JHv-_JhhGN5gbRX45gf3-41" source="JHv-_JhhGN5gbRX45gf3-49" target="JHv-_JhhGN5gbRX45gf3-43">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JHv-_JhhGN5gbRX45gf3-49" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/science-technology-outline-24-px/24/tech_solar_panelsolar_cellsolar_energy_panelsolar_system-128.png" vertex="1" parent="JHv-_JhhGN5gbRX45gf3-41">
+          <mxGeometry x="687" y="120" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JHv-_JhhGN5gbRX45gf3-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="JHv-_JhhGN5gbRX45gf3-41" source="JHv-_JhhGN5gbRX45gf3-51" target="JHv-_JhhGN5gbRX45gf3-43">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JHv-_JhhGN5gbRX45gf3-51" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/science-technology-outline-24-px/24/tech_solar_panelsolar_cellsolar_energy_panelsolar_system-128.png" vertex="1" parent="JHv-_JhhGN5gbRX45gf3-41">
+          <mxGeometry x="727" y="120" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JHv-_JhhGN5gbRX45gf3-52" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/science-technology-outline-24-px/24/tech_solar_panelsolar_cellsolar_energy_panelsolar_system-128.png" vertex="1" parent="JHv-_JhhGN5gbRX45gf3-41">
+          <mxGeometry x="767" y="120" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JHv-_JhhGN5gbRX45gf3-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.664;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="JHv-_JhhGN5gbRX45gf3-41" source="JHv-_JhhGN5gbRX45gf3-52" target="JHv-_JhhGN5gbRX45gf3-43">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JHv-_JhhGN5gbRX45gf3-54" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.transmission.2_line_bus;direction=west;rotation=-45;" vertex="1" parent="JHv-_JhhGN5gbRX45gf3-41">
+          <mxGeometry x="706.0000000000001" y="193" width="20" height="5" as="geometry" />
+        </mxCell>
+        <mxCell id="JHv-_JhhGN5gbRX45gf3-55" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.transmission.2_line_bus;direction=west;rotation=-45;" vertex="1" parent="JHv-_JhhGN5gbRX45gf3-41">
+          <mxGeometry x="747.0000000000001" y="194" width="20" height="5" as="geometry" />
+        </mxCell>
+        <mxCell id="JHv-_JhhGN5gbRX45gf3-56" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.transmission.2_line_bus;direction=west;rotation=-45;" vertex="1" parent="JHv-_JhhGN5gbRX45gf3-41">
+          <mxGeometry x="787" y="195" width="20" height="5" as="geometry" />
+        </mxCell>
+        <mxCell id="JHv-_JhhGN5gbRX45gf3-57" value="&lt;b&gt;Bestand aus 2019: Süddach&lt;/b&gt;&lt;br&gt;40 x Heckert NeMo®&amp;nbsp; 315W&lt;br&gt;&lt;div&gt;&lt;b&gt;&lt;i&gt;12,6 kWp&lt;/i&gt;&lt;/b&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="JHv-_JhhGN5gbRX45gf3-41">
+          <mxGeometry x="664" y="59" width="188" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JHv-_JhhGN5gbRX45gf3-60" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="JHv-_JhhGN5gbRX45gf3-41" source="JHv-_JhhGN5gbRX45gf3-58" target="JHv-_JhhGN5gbRX45gf3-59">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JHv-_JhhGN5gbRX45gf3-58" value="FRE" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="JHv-_JhhGN5gbRX45gf3-41">
+          <mxGeometry x="405" y="88" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="JHv-_JhhGN5gbRX45gf3-63" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;endArrow=block;endFill=1;dashed=1;fillColor=#a20025;strokeColor=#6F0000;" edge="1" parent="JHv-_JhhGN5gbRX45gf3-41" source="JHv-_JhhGN5gbRX45gf3-59" target="JHv-_JhhGN5gbRX45gf3-61">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JHv-_JhhGN5gbRX45gf3-64" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;endArrow=block;endFill=1;fillColor=#a20025;strokeColor=#6F0000;dashed=1;" edge="1" parent="JHv-_JhhGN5gbRX45gf3-41" source="JHv-_JhhGN5gbRX45gf3-59" target="JHv-_JhhGN5gbRX45gf3-62">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JHv-_JhhGN5gbRX45gf3-66" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;labelBackgroundColor=default;startSize=8;endArrow=oval;endFill=1;endSize=8;startArrow=none;startFill=0;" edge="1" parent="JHv-_JhhGN5gbRX45gf3-41" source="JHv-_JhhGN5gbRX45gf3-59">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="250" y="260" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="410" y="190" />
+              <mxPoint x="310" y="190" />
+              <mxPoint x="310" y="260" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JHv-_JhhGN5gbRX45gf3-59" value="&lt;h2 class=&quot;elementor-heading-title elementor-size-default&quot;&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;openWB-Dimm- &amp;amp; Control-Kit&lt;/font&gt;&lt;/span&gt;&lt;/h2&gt;" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;" vertex="1" parent="JHv-_JhhGN5gbRX45gf3-41">
+          <mxGeometry x="380" y="158" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JHv-_JhhGN5gbRX45gf3-61" value="NIBE 1256-13 Erdwärmepumpe" style="whiteSpace=wrap;html=1;aspect=fixed;shadow=1;" vertex="1" parent="JHv-_JhhGN5gbRX45gf3-41">
+          <mxGeometry x="350" y="240" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="JHv-_JhhGN5gbRX45gf3-62" value="OpenWB Wallbox" style="whiteSpace=wrap;html=1;aspect=fixed;shadow=1;" vertex="1" parent="JHv-_JhhGN5gbRX45gf3-41">
+          <mxGeometry x="450" y="240" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="JHv-_JhhGN5gbRX45gf3-70" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontSize=12;startSize=8;endSize=8;endArrow=oval;endFill=1;" edge="1" parent="JHv-_JhhGN5gbRX45gf3-41">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="390" y="380" as="targetPoint" />
+            <mxPoint x="390" y="320" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JHv-_JhhGN5gbRX45gf3-79" value="" style="edgeStyle=none;shape=connector;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;labelBackgroundColor=default;startSize=8;endArrow=oval;endFill=1;endSize=8;" edge="1" parent="JHv-_JhhGN5gbRX45gf3-41">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="490" y="380" as="targetPoint" />
+            <mxPoint x="490" y="320" as="sourcePoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
