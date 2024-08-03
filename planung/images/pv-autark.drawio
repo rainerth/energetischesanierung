@@ -326,7 +326,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="MK40" id="6qUm-qkjqJyaQYZ7X8C-">
-    <mxGraphModel dx="2323" dy="1225" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" background="none" math="0" shadow="0">
+    <mxGraphModel dx="1328" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
         <mxCell id="ymTq_LFzbMRqKzt_c4yw-0" />
         <mxCell id="ymTq_LFzbMRqKzt_c4yw-1" parent="ymTq_LFzbMRqKzt_c4yw-0" />
@@ -348,9 +348,6 @@
         <mxCell id="ymTq_LFzbMRqKzt_c4yw-56" value="Zähler" parent="ymTq_LFzbMRqKzt_c4yw-0" />
         <mxCell id="8MDdlcKNSWUWweyi4eZG-29" value="Zählerschrank" style="swimlane;whiteSpace=wrap;html=1;startSize=23;" parent="ymTq_LFzbMRqKzt_c4yw-56" vertex="1">
           <mxGeometry x="262" y="110" width="450" height="710" as="geometry" />
-        </mxCell>
-        <mxCell id="JHv-_JhhGN5gbRX45gf3-47" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.transmission.3_line_bus;rotation=-45;" parent="8MDdlcKNSWUWweyi4eZG-29" vertex="1">
-          <mxGeometry x="165" y="398" width="30" height="14.64" as="geometry" />
         </mxCell>
         <mxCell id="ymTq_LFzbMRqKzt_c4yw-35" value="&lt;div style=&quot;font-size: 10px;&quot;&gt;&lt;br style=&quot;font-size: 10px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;3 x CT&lt;br style=&quot;font-size: 10px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;(Stromwandler)&lt;br style=&quot;font-size: 10px;&quot;&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;align=left;direction=west;verticalAlign=bottom;fontSize=10;" parent="8MDdlcKNSWUWweyi4eZG-29" vertex="1">
           <mxGeometry x="132" y="119" width="90" height="68" as="geometry" />
@@ -414,19 +411,6 @@
         <mxCell id="8MDdlcKNSWUWweyi4eZG-4" value="&lt;font color=&quot;#006600&quot;&gt;|----&amp;gt;&lt;br&gt;&lt;/font&gt;&lt;div&gt;&lt;b&gt;&lt;font color=&quot;#006600&quot;&gt;VIRT_ZA = Z1&lt;sub&gt;Lieferung&lt;/sub&gt;&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;font color=&quot;#006600&quot;&gt;- Z3&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;" style="shape=ext;double=1;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#fff2cc;strokeColor=#FF6666;dashed=1;dashPattern=8 8;opacity=30;fontColor=#009900;verticalAlign=top;" parent="8MDdlcKNSWUWweyi4eZG-29" vertex="1">
           <mxGeometry x="248" y="170.0000000000001" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="v5nXLQXQnNRcPBPpOe1F-8" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.transmission.3_line_bus;rotation=-45;" vertex="1" parent="8MDdlcKNSWUWweyi4eZG-29">
-          <mxGeometry x="164" y="507" width="30" height="14.64" as="geometry" />
-        </mxCell>
-        <mxCell id="ymTq_LFzbMRqKzt_c4yw-59" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" parent="ymTq_LFzbMRqKzt_c4yw-56" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="440" y="559" as="sourcePoint" />
-            <mxPoint x="440" y="469" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="440" y="520" />
-              <mxPoint x="440" y="520" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
         <mxCell id="JHv-_JhhGN5gbRX45gf3-85" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;" parent="ymTq_LFzbMRqKzt_c4yw-56" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="392" y="470" as="sourcePoint" />
@@ -466,9 +450,6 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="ymTq_LFzbMRqKzt_c4yw-21" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.transmission.3_line_bus;rotation=-45;" parent="ymTq_LFzbMRqKzt_c4yw-9" vertex="1">
-          <mxGeometry x="770" y="250.00000000000006" width="30" height="14.64" as="geometry" />
-        </mxCell>
         <mxCell id="ymTq_LFzbMRqKzt_c4yw-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.363;entryY=0.001;entryDx=0;entryDy=0;entryPerimeter=0;" parent="ymTq_LFzbMRqKzt_c4yw-9" source="ymTq_LFzbMRqKzt_c4yw-25" target="ymTq_LFzbMRqKzt_c4yw-11" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
@@ -498,6 +479,9 @@
         </mxCell>
         <mxCell id="JHv-_JhhGN5gbRX45gf3-40" value="&lt;div&gt;&lt;b&gt;PVSUED&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Bestand aus 2019: Süddach&lt;/b&gt;&lt;/div&gt;40 x Heckert NeMo®&amp;nbsp; 315W&lt;br&gt;&lt;div&gt;&lt;b&gt;&lt;i&gt;12,6 kWp&lt;/i&gt;&lt;/b&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="ymTq_LFzbMRqKzt_c4yw-9" vertex="1">
           <mxGeometry x="860" y="30" width="188" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="v5nXLQXQnNRcPBPpOe1F-9" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.transmission.3_line_bus;rotation=-45;" vertex="1" parent="ymTq_LFzbMRqKzt_c4yw-9">
+          <mxGeometry x="760" y="324" width="30" height="14.64" as="geometry" />
         </mxCell>
         <object label="PVNORD" id="ymTq_LFzbMRqKzt_c4yw-34">
           <mxCell parent="ymTq_LFzbMRqKzt_c4yw-0" />
@@ -563,8 +547,8 @@
         <mxCell id="ymTq_LFzbMRqKzt_c4yw-51" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.transmission.3_line_bus;rotation=-45;" parent="ymTq_LFzbMRqKzt_c4yw-34" vertex="1">
           <mxGeometry x="779" y="715.36" width="30" height="14.64" as="geometry" />
         </mxCell>
-        <mxCell id="ymTq_LFzbMRqKzt_c4yw-52" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.transmission.3_line_bus;rotation=-45;" parent="ymTq_LFzbMRqKzt_c4yw-34" vertex="1">
-          <mxGeometry x="760" y="324" width="30" height="14.64" as="geometry" />
+        <mxCell id="JHv-_JhhGN5gbRX45gf3-39" value="&lt;b&gt;PVNORD &lt;br&gt;&lt;/b&gt;&lt;b&gt;Neuanlage 2024: &lt;/b&gt;&lt;b&gt;Norddach&lt;/b&gt;&lt;br&gt;56 x Heckert NeMo® 2.0 60 M 330W (5BB) MC4&lt;br&gt;&lt;div&gt;bei max. 70% Ausbeute Nord:&lt;br&gt;&lt;b&gt;&lt;i&gt;12,9 kWp&lt;/i&gt;&lt;/b&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="ymTq_LFzbMRqKzt_c4yw-34" vertex="1">
+          <mxGeometry x="1110" y="14" width="188" height="90" as="geometry" />
         </mxCell>
         <mxCell id="ymTq_LFzbMRqKzt_c4yw-55" value="" style="endArrow=none;html=1;rounded=0;entryX=1.114;entryY=0.519;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.016;exitY=0.372;exitDx=0;exitDy=0;fillColor=#a20025;strokeColor=#6F0000;strokeWidth=2;dashed=1;endFill=0;startArrow=block;startFill=1;exitPerimeter=0;" parent="ymTq_LFzbMRqKzt_c4yw-34" target="v5nXLQXQnNRcPBPpOe1F-4" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -580,21 +564,21 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="JHv-_JhhGN5gbRX45gf3-37" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;fontSize=12;startSize=8;endSize=8;endArrow=none;endFill=0;" parent="ymTq_LFzbMRqKzt_c4yw-34" edge="1" source="8MDdlcKNSWUWweyi4eZG-27">
+        <mxCell id="v5nXLQXQnNRcPBPpOe1F-10" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.transmission.3_line_bus;rotation=-45;" vertex="1" parent="ymTq_LFzbMRqKzt_c4yw-34">
+          <mxGeometry x="770" y="250.00000000000006" width="30" height="14.64" as="geometry" />
+        </mxCell>
+        <mxCell id="v5nXLQXQnNRcPBPpOe1F-11" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.transmission.3_line_bus;rotation=-45;" vertex="1" parent="ymTq_LFzbMRqKzt_c4yw-34">
+          <mxGeometry x="426" y="617" width="30" height="14.64" as="geometry" />
+        </mxCell>
+        <mxCell id="v5nXLQXQnNRcPBPpOe1F-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="ymTq_LFzbMRqKzt_c4yw-34">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="264" y="560" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="440" y="630" />
-              <mxPoint x="440" y="560" />
-            </Array>
-            <mxPoint x="444" y="697" as="sourcePoint" />
+            <mxPoint x="440" y="680" as="sourcePoint" />
+            <mxPoint x="440" y="469" as="targetPoint" />
+            <Array as="points" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="JHv-_JhhGN5gbRX45gf3-7" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.transmission.3_line_bus;rotation=-45;" parent="ymTq_LFzbMRqKzt_c4yw-34" vertex="1">
-          <mxGeometry x="334" y="550" width="30" height="14.64" as="geometry" />
-        </mxCell>
-        <mxCell id="JHv-_JhhGN5gbRX45gf3-39" value="&lt;b&gt;PVNORD &lt;br&gt;&lt;/b&gt;&lt;b&gt;Neuanlage 2024: &lt;/b&gt;&lt;b&gt;Norddach&lt;/b&gt;&lt;br&gt;56 x Heckert NeMo® 2.0 60 M 330W (5BB) MC4&lt;br&gt;&lt;div&gt;bei max. 70% Ausbeute Nord:&lt;br&gt;&lt;b&gt;&lt;i&gt;12,9 kWp&lt;/i&gt;&lt;/b&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="ymTq_LFzbMRqKzt_c4yw-34" vertex="1">
-          <mxGeometry x="1110" y="14" width="188" height="90" as="geometry" />
+        <mxCell id="v5nXLQXQnNRcPBPpOe1F-15" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.transmission.3_line_bus;rotation=-45;" vertex="1" parent="ymTq_LFzbMRqKzt_c4yw-34">
+          <mxGeometry x="427" y="508" width="30" height="14.64" as="geometry" />
         </mxCell>
         <mxCell id="ymTq_LFzbMRqKzt_c4yw-68" value="Batterie" parent="ymTq_LFzbMRqKzt_c4yw-0" />
         <mxCell id="JHv-_JhhGN5gbRX45gf3-19" value="&lt;div align=&quot;right&quot;&gt;&lt;div&gt;DC Schutzschalter&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;" parent="ymTq_LFzbMRqKzt_c4yw-68" vertex="1">
@@ -679,6 +663,19 @@
         </mxCell>
         <mxCell id="JHv-_JhhGN5gbRX45gf3-34" value="&lt;div&gt;Verbrauchseinrichtungen&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="JHv-_JhhGN5gbRX45gf3-29" vertex="1">
           <mxGeometry x="145" y="665" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="v5nXLQXQnNRcPBPpOe1F-12" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.transmission.3_line_bus;rotation=-45;" vertex="1" parent="JHv-_JhhGN5gbRX45gf3-29">
+          <mxGeometry x="334" y="550" width="30" height="14.64" as="geometry" />
+        </mxCell>
+        <mxCell id="v5nXLQXQnNRcPBPpOe1F-13" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;fontSize=12;startSize=8;endSize=8;endArrow=none;endFill=0;" edge="1" parent="JHv-_JhhGN5gbRX45gf3-29">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="264" y="560" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="440" y="630" />
+              <mxPoint x="440" y="560" />
+            </Array>
+            <mxPoint x="440" y="680" as="sourcePoint" />
+          </mxGeometry>
         </mxCell>
         <object label="FRE" id="JHv-_JhhGN5gbRX45gf3-41">
           <mxCell parent="ymTq_LFzbMRqKzt_c4yw-0" />
