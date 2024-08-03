@@ -506,7 +506,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="ymTq_LFzbMRqKzt_c4yw-38" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/science-technology-outline-24-px/24/tech_solar_panelsolar_cellsolar_energy_panelsolar_system-128.png" parent="ymTq_LFzbMRqKzt_c4yw-34" vertex="1">
-          <mxGeometry x="1133" y="130" width="60" height="60" as="geometry" />
+          <mxGeometry x="1133" y="114" width="60" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ymTq_LFzbMRqKzt_c4yw-39" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="ymTq_LFzbMRqKzt_c4yw-34" source="ymTq_LFzbMRqKzt_c4yw-40" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -514,10 +514,10 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="ymTq_LFzbMRqKzt_c4yw-40" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/science-technology-outline-24-px/24/tech_solar_panelsolar_cellsolar_energy_panelsolar_system-128.png" parent="ymTq_LFzbMRqKzt_c4yw-34" vertex="1">
-          <mxGeometry x="1173" y="130" width="60" height="60" as="geometry" />
+          <mxGeometry x="1173" y="114" width="60" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ymTq_LFzbMRqKzt_c4yw-41" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/science-technology-outline-24-px/24/tech_solar_panelsolar_cellsolar_energy_panelsolar_system-128.png" parent="ymTq_LFzbMRqKzt_c4yw-34" vertex="1">
-          <mxGeometry x="1213" y="130" width="60" height="60" as="geometry" />
+          <mxGeometry x="1213" y="114" width="60" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ymTq_LFzbMRqKzt_c4yw-42" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.664;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="ymTq_LFzbMRqKzt_c4yw-34" source="ymTq_LFzbMRqKzt_c4yw-41" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -584,7 +584,7 @@
           <mxGeometry x="334" y="550" width="30" height="14.64" as="geometry" />
         </mxCell>
         <mxCell id="JHv-_JhhGN5gbRX45gf3-39" value="&lt;b&gt;PVNORD &lt;br&gt;&lt;/b&gt;&lt;b&gt;Neuanlage 2024: &lt;/b&gt;&lt;b&gt;Norddach&lt;/b&gt;&lt;br&gt;56 x Heckert NeMo® 2.0 60 M 330W (5BB) MC4&lt;br&gt;&lt;div&gt;bei max. 70% Ausbeute Nord:&lt;br&gt;&lt;b&gt;&lt;i&gt;12,9 kWp&lt;/i&gt;&lt;/b&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="ymTq_LFzbMRqKzt_c4yw-34" vertex="1">
-          <mxGeometry x="1110" y="30" width="188" height="90" as="geometry" />
+          <mxGeometry x="1110" y="14" width="188" height="90" as="geometry" />
         </mxCell>
         <mxCell id="ymTq_LFzbMRqKzt_c4yw-68" value="Batterie" parent="ymTq_LFzbMRqKzt_c4yw-0" />
         <mxCell id="JHv-_JhhGN5gbRX45gf3-19" value="&lt;div align=&quot;right&quot;&gt;&lt;div&gt;DC Schutzschalter&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;" parent="ymTq_LFzbMRqKzt_c4yw-68" vertex="1">
