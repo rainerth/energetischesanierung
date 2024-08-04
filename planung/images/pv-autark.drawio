@@ -787,7 +787,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="MK40-V2" id="UD_dbjVWE_ghaYJ5W2GC">
-    <mxGraphModel dx="432" dy="242" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" background="none" math="0" shadow="0">
+    <mxGraphModel dx="1028" dy="576" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
         <mxCell id="GNeWTPV5OC2gUjN5yp8g-0" />
         <mxCell id="GNeWTPV5OC2gUjN5yp8g-1" parent="GNeWTPV5OC2gUjN5yp8g-0" />
@@ -854,7 +854,7 @@
         <mxCell id="GNeWTPV5OC2gUjN5yp8g-17" value="" style="html=1;shape=mxgraph.electrical.electro-mechanical.fuse2;aspect=fixed;elSwitchState=on;" vertex="1" parent="GNeWTPV5OC2gUjN5yp8g-7">
           <mxGeometry x="362" y="414" width="75" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="GNeWTPV5OC2gUjN5yp8g-18" value="|----&amp;gt;&lt;br&gt;&lt;div&gt;&lt;b&gt;Z4&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;PVNORD&lt;br&gt;&lt;/div&gt;" style="shape=ext;double=1;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#fff2cc;strokeColor=#d6b656;verticalAlign=top;" vertex="1" parent="GNeWTPV5OC2gUjN5yp8g-7">
+        <mxCell id="GNeWTPV5OC2gUjN5yp8g-18" value="&amp;lt;----|&lt;br&gt;&lt;div&gt;&lt;b&gt;Z4&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;PVNORD&lt;br&gt;&lt;/div&gt;" style="shape=ext;double=1;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#fff2cc;strokeColor=#d6b656;verticalAlign=top;" vertex="1" parent="GNeWTPV5OC2gUjN5yp8g-7">
           <mxGeometry x="138" y="570.0000000000001" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="El4rv6tW304RaiX-8Iql-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;startArrow=oval;startFill=1;" edge="1" parent="GNeWTPV5OC2gUjN5yp8g-7" target="El4rv6tW304RaiX-8Iql-1">
@@ -875,7 +875,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="El4rv6tW304RaiX-8Iql-1" value="|----&amp;gt;&lt;br&gt;&lt;div&gt;&lt;b&gt;Z3&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;PVSUED&lt;br&gt;&lt;/div&gt;" style="shape=ext;double=1;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#fff2cc;strokeColor=#d6b656;verticalAlign=top;" vertex="1" parent="GNeWTPV5OC2gUjN5yp8g-7">
+        <mxCell id="El4rv6tW304RaiX-8Iql-1" value="&amp;lt;----|&lt;br&gt;&lt;div&gt;&lt;b&gt;Z3&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;PVSUED&lt;br&gt;&lt;/div&gt;" style="shape=ext;double=1;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#fff2cc;strokeColor=#d6b656;verticalAlign=top;" vertex="1" parent="GNeWTPV5OC2gUjN5yp8g-7">
           <mxGeometry x="248" y="389.6400000000001" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="GNeWTPV5OC2gUjN5yp8g-24" value="" style="endArrow=classic;startArrow=none;html=1;rounded=0;startFill=0;" edge="1" parent="GNeWTPV5OC2gUjN5yp8g-7">
@@ -1253,7 +1253,7 @@
         <mxCell id="GNeWTPV5OC2gUjN5yp8g-110" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Z3&lt;/h1&gt;&lt;p&gt;&lt;font color=&quot;#cc0000&quot;&gt;Z3&lt;sub&gt;1.8.0 &lt;/sub&gt;keine Funktion&lt;/font&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;font color=&quot;#006600&quot;&gt;Z3&lt;sub&gt;2.8.0&lt;/sub&gt; Gesamterzeugung der Eigenerzeugungsanlage &lt;b&gt;PVSUED&lt;br&gt;&lt;/b&gt;&lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="GNeWTPV5OC2gUjN5yp8g-95">
           <mxGeometry x="700" y="870" width="310" height="250" as="geometry" />
         </mxCell>
-        <mxCell id="El4rv6tW304RaiX-8Iql-7" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Z4&lt;/h1&gt;&lt;p&gt;&lt;font color=&quot;#cc0000&quot;&gt;Z3&lt;sub&gt;1.8.0 &lt;/sub&gt;keine Funktion&lt;/font&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;font color=&quot;#006600&quot;&gt;Z3&lt;sub&gt;2.8.0&lt;/sub&gt; Gesamterzeugung der Eigenerzeugungsanlage &lt;b&gt;PVNORD&lt;br&gt;&lt;/b&gt;&lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="GNeWTPV5OC2gUjN5yp8g-95">
+        <mxCell id="El4rv6tW304RaiX-8Iql-7" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Z4&lt;/h1&gt;&lt;p&gt;&lt;font color=&quot;#cc0000&quot;&gt;Z4&lt;sub&gt;1.8.0 &lt;/sub&gt;keine Funktion&lt;/font&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;font color=&quot;#006600&quot;&gt;Z4&lt;sub&gt;2.8.0&lt;/sub&gt; Gesamterzeugung der Eigenerzeugungsanlage &lt;b&gt;PVNORD&lt;br&gt;&lt;/b&gt;&lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="GNeWTPV5OC2gUjN5yp8g-95">
           <mxGeometry x="1023" y="870" width="310" height="250" as="geometry" />
         </mxCell>
       </root>
