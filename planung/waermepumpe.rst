@@ -45,10 +45,9 @@ Die S1256 besteht aus Wärmepumpe, Brauchwasserspeicher, Elektroheizpatrone, Umw
 
 Im Verdampfer der Wärmepumpe gibt das Wärmequellenmedium (Frostschutzflüssigkeit, z.B. Ethanol oder Glykol gemischt mit Wasser) seine Energie an das Kältemittel ab. Dieses wiederum wird verdampft und im Verdichter komprimiert. Dort erhöht sich die Temperatur des Kühlmittels und es wird weiter in den Kondensator geleitet, wo es seine Energie an den Heizkreis und bei Bedarf an den Brauchwasserspeicher abgibt. Wenn ein größerer Bedarf an Wärme bzw. Brauchwasser vorliegt, als der Verdichter allein decken kann, wird eine integrierte Elektroheizpatrone zugeschaltet.
 
-
-
-Fragen / Klären / Info
-======================
+.. seealso:: 
+	* :download:`S1256 Benutzerhandbuch </_static/datenblaetter/NIBE-S1256-Benutzerhandbuch.pdf>`
+	* :download:`S1256 Installateurhandbuch </_static/datenblaetter/NIBE-S1256-Installateurhandbuch.pdf>`
 
 Montage 
 =======
@@ -125,7 +124,7 @@ Die Leistung der Elektroheizpatrone kann in Stufen abgerufen werden (vier Stufen
 
 
 
-.. list-table:: Elektrische Zusatzheitzung für S1256-13 mit 3x230 V
+.. list-table:: Elektrische Zusatzheizung für S1256-13 mit 3x230 V
 	:widths: 25 25 25 25
 	:header-rows: 1
 	
