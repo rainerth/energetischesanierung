@@ -57,3 +57,18 @@ Zusätzliche Überlegungen
 - **Wartung und Überwachung:** Planen Sie regelmäßige Wartungen ein, und setzen Sie möglicherweise Überwachungssysteme ein, um die Performance des Systems und den Zustand der Batterie zu überwachen.
 
 Diese Konfiguration erfordert eine sorgfältige Planung und oft auch die Zusammenarbeit mit einem Fachbetrieb, der Erfahrung mit der Installation und Konfiguration von hybrid PV- und Speichersystemen hat. Es ist auch ratsam, mit dem lokalen Energieversorger und/oder Netzwerkbetreiber zusammenzuarbeiten, um alle Anforderungen und Vorschriften zu erfüllen.
+
+
+Netzdienlichkeit
+================
+
+Die Festlegungen der BNetzA zu§14a EnWG ab 1. Januar 2024 im Überblick:
+
+Die Teilnahme von steuerbaren Verbrauchseinrichtungen mit einer Bezugsleistung von mehr als 4,2 kW am neuen §14 a-Modell ist verpflichtend, wenn diese ab dem 01.01.2024 in Betrieb genommen wurden
+
+Einführung von 3 neuen Netzentgeltmodulen, die eine Reduzierung der Netzentgelte vorsehen.
+
+Ein separater Zähler für einen steuerbaren Verbraucher ist keine zwingende Voraussetzung mehr für die Teilnahme an §14a EnWG.
+
+.. seealso:: https://enbw-eg.de/blog/14a-enwg-neuregelung
+

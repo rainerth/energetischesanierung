@@ -213,4 +213,5 @@ Im Rahmen der Beantragung muss ein Messkonzept angegeben werden. Dies ist die Au
 	* `Photovoltaikforum FAQ <https://www.photovoltaikforum.com/wissen/entry/2-faq-wertvolle-informationen-zu-pv-anlagengr%C3%B6%C3%9Fe-stromspeicher-wirtschaftlichkeit/>`_
 	* `Bundesnetzagentur EEG-Förderung <https://www.bundesnetzagentur.de/DE/Fachthemen/ElektrizitaetundGas/ErneuerbareEnergien/EEG_Foerderung/start.html>`_
 	* `Clearingstelle EEG <https://www.clearingstelle-eeg-kwkg.de/haeufige-rechtsfrage/68>`_
+	* https://openwb.de/main/?page_id=1637 
 
