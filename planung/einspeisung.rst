@@ -70,5 +70,56 @@ Einführung von 3 neuen Netzentgeltmodulen, die eine Reduzierung der Netzentgelt
 
 Ein separater Zähler für einen steuerbaren Verbraucher ist keine zwingende Voraussetzung mehr für die Teilnahme an §14a EnWG.
 
-.. seealso:: https://enbw-eg.de/blog/14a-enwg-neuregelung
+.. seealso:: 
+	
+	* `§14a EnWG <https://enbw-eg.de/blog/14a-enwg-neuregelung>`_
+	* :download:`Funkrundsteuerung in EEG-Anlagen </_static/datenblaetter/eeg-fre-montageanleitung.pdf>`
+	* `OpenWB Forum: Steuerbare Verbrauchseinrichtung §14 EnWG <https://forum.openwb.de/viewtopic.php?t=8019&start=100>`_
+
+
+
+
+.. epigraph:: 
+	
+	Netze-BW: 
+	
+	Leider geht es bei einer gemeinsamen Messung mit 2 PV-Anlagen nicht, ein intelligentes Messsystem einzubauen, wegen der Abrechnung.
+
+
+Messkonzept
+===========
+
+.. figure:: ./images/pv-autark-MK40-V2.png
+
+FRE Rundsteuerempfänger
+-----------------------
+
+.. figure:: ./images/eeg-rundsteuerempfaenger.png
+
+
+OpenWB Dimm- und Control-Kit
+----------------------------
+
+.. figure:: ./images/openWBDimm-ControlModul-v1.png
+
+Das openWB "Dimm- & Control-Kit" ermöglicht die Auswertung von bis zu 8 Steuersignalen des Energieversorgers mittels potentialfreier Kontakte aus dessen :download:`Rundsteuerempfänger (RSE, FRE) </_static/datenblaetter/eeg-fre-montageanleitung.pdf>` bzw. Steuerbox (z.B. nach §14a EnWG).
+
+Die Eingangssignale werden im Kit zu Netzwerksignalen übersetzt und dem openWB-Energiemanagementsystem (EMS) bzw. Lastmanagement (LM) zur weiteren Verarbeitung zur Verfügung gestellt. Die Eingangssignale können für eine reduzierte als auch komplette Abschaltung der Ladevorgänge sowie weiterer steuerbarer Verbraucher (StVE) genutzt werden (gesamtheitliche Steuerung über das openWB-EMS/LM).
+
+Gleichzeitig bietet das “Dimm- & Control-Kit” 8 Relaisausgänge zur direkten Kontrolle steuerbarer Verbraucher (StVE). Die Ausgänge sind potentialfrei als NO/NC ausgeführt und mit bis zu 5A@28VDC/250VAC belastbar.
+Hiermit lassen sich z. B. einzelne Verbraucher situationsbedingt schalten bzw. dimmen. Hierzu zählen auch “SG-Ready”-Kontakte (und Vergleichbare) von Wärmepumpen oder anderen Verbrauchern.*
+
+Die Möglichkeiten der Ein-/Ausgänge werden in openWB Software (ab software2) konfiguriert.
+
+Zusätzlich verfügt das “Dimm- & Control-Kit” über eine Heartbeat-Funktionalität zur Eigenüberwachung. Gibt es Netzwerkstörungen oder Kommunikationsprobleme, so wird eine konfigurierbare “Dimmung” der Verbraucher über die openWB-Software vorgenommen, um Überlastungen sicher zu verhindern.
+Ggf. genutzte Ausgänge des Kits schalten in diesem Fall angeschlossene Verbraucher automatisch ab.
+
+Das openWB “Dimm- & Control-Kit” kann sowohl auf Hutschiene als auch per Wandmontage bestellt werden. Je nach Auswahl erfolgt die Lieferung mit Hutschienen- oder Steckernetzteil und entsprechendem Befestigungsmaterial. Der Anschluss erfolgt über Netzwerk (LAN).
+
+Zur Nutzung wird eine openWB (alle Varianten möglich) mit mind. software2 benötigt. Unabhängig von der Anzahl der Ladepunkte ist nur ein “Dimm- & Control-Kit” erforderlich.
+Der max. Leitungsweg der potentialfrei geschaltenen Eingänge ist auf 2 m ausgelegt. Die Ausgänge werden im Normalfall spannungsführend genutzt, so dass die Leitungslängen entsprechend den gültigen VDE-Vorschriften nutzbar sind.
+
+.. hint:: 
+	Die Ausgänge sind zum Zeitpunkt der Auslieferung noch nicht in der Software2 implementiert. Das Feature wird per Update nachgereicht
+
 

@@ -29,25 +29,25 @@ Glossar
 	Bemessungsscheinleistung
 		Bemessungsscheinleistung aller geplanten Erzeugungseinheiten (Umrichterscheinleistung) ΣS :sub:`r,E`
 
-Die Bemessungsscheinleistung aller geplanten Erzeugungseinheiten (Umrichterscheinleistung) ΣS r,E beträgt 10 kW.
 
-	Wirkleistung
-		Maximale Wirkleistung aller geplanten Erzeugungseinheiten (Umrichterwirkleistung) ΣP :sub:`Emax`
+	CT
+		Stromwandler (CT = Current Tranformer) erzeugen einen Ausgang proportional zum Stromfluss durch die Primärwicklung als Resultat eines konstanten Potentials an der Primärwicklung
 
-
-Anschlusswirkleistung der existierenden Anlage
+		.. seealso:: https://www.electronics-tutorials.ws/de/transformatoren/stromwandler.html
 
 
+	EMS
+		Energiemanagement-System
 
-CT
-	Stromwandler (CT = Current Tranformer) erzeugen einen Ausgang proportional zum Stromfluss durch die Primärwicklung als Resultat eines konstanten Potentials an der Primärwicklung
+	SteuEV
+		Steuerbare Elektrische Verbraucher
 
-	.. seealso:: https://www.electronics-tutorials.ws/de/transformatoren/stromwandler.html
-
+	iMSys
+		intelligentes Messsystem
 
 
 
 .. seealso::
 
-	`Bundesmuserwortlaut <https://www.bdew.de/media/documents/3000_BDEW_Bundesmusterwortlaut_TAB_2023_v20230502.pdf>`_
+	`Bundesmusterwortlaut <https://www.bdew.de/media/documents/3000_BDEW_Bundesmusterwortlaut_TAB_2023_v20230502.pdf>`_
 
