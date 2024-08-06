@@ -787,7 +787,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="MK40-V2" id="UD_dbjVWE_ghaYJ5W2GC">
-    <mxGraphModel dx="1028" dy="576" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" background="none" math="0" shadow="0">
+    <mxGraphModel dx="553" dy="310" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
         <mxCell id="GNeWTPV5OC2gUjN5yp8g-0" />
         <mxCell id="GNeWTPV5OC2gUjN5yp8g-1" parent="GNeWTPV5OC2gUjN5yp8g-0" />
@@ -1156,8 +1156,14 @@
         <object label="FRE" id="GNeWTPV5OC2gUjN5yp8g-81">
           <mxCell parent="GNeWTPV5OC2gUjN5yp8g-0" />
         </object>
-        <mxCell id="GNeWTPV5OC2gUjN5yp8g-82" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;fillColor=#a20025;strokeColor=#6F0000;dashed=1;" edge="1" parent="GNeWTPV5OC2gUjN5yp8g-81" source="GNeWTPV5OC2gUjN5yp8g-83" target="GNeWTPV5OC2gUjN5yp8g-86">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="GNeWTPV5OC2gUjN5yp8g-82" value="R3" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=8;startSize=8;endSize=8;fillColor=#a20025;strokeColor=#6F0000;dashed=1;endArrow=none;endFill=0;" edge="1" parent="GNeWTPV5OC2gUjN5yp8g-81">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="144" y="245" as="sourcePoint" />
+            <mxPoint x="144" y="273" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="144" y="260" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <UserObject label="FRE" link="https://rainerth.github.io/energetischesanierung/planung/einspeisung.html#fre-rundsteuerempfanger" linkTarget="_blank" id="GNeWTPV5OC2gUjN5yp8g-83">
           <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="GNeWTPV5OC2gUjN5yp8g-81">
@@ -1259,6 +1265,30 @@
         </mxCell>
         <mxCell id="El4rv6tW304RaiX-8Iql-7" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Z4&lt;/h1&gt;&lt;p&gt;&lt;font color=&quot;#cc0000&quot;&gt;Z4&lt;sub&gt;1.8.0 &lt;/sub&gt;keine Funktion&lt;/font&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;font color=&quot;#006600&quot;&gt;Z4&lt;sub&gt;2.8.0&lt;/sub&gt; Gesamterzeugung der Eigenerzeugungsanlage &lt;b&gt;PVNORD&lt;br&gt;&lt;/b&gt;&lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="GNeWTPV5OC2gUjN5yp8g-95">
           <mxGeometry x="1023" y="870" width="310" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="U017pya_JNiJRQ7tLdP7-1" value="R4" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=8;startSize=8;endSize=8;fillColor=#a20025;strokeColor=#6F0000;dashed=1;endArrow=none;endFill=0;" edge="1" parent="GNeWTPV5OC2gUjN5yp8g-95">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="160" y="245" as="sourcePoint" />
+            <mxPoint x="160" y="273" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="U017pya_JNiJRQ7tLdP7-4" value="R1" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=8;startSize=8;endSize=8;fillColor=#a20025;strokeColor=#6F0000;dashed=1;endArrow=none;endFill=0;" edge="1" parent="GNeWTPV5OC2gUjN5yp8g-95">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="111" y="245" as="sourcePoint" />
+            <mxPoint x="111" y="273" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="111" y="260" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="U017pya_JNiJRQ7tLdP7-5" value="R2" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=8;startSize=8;endSize=8;fillColor=#a20025;strokeColor=#6F0000;dashed=1;endArrow=none;endFill=0;" edge="1" parent="GNeWTPV5OC2gUjN5yp8g-95">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="129" y="246" as="sourcePoint" />
+            <mxPoint x="129" y="274" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="129" y="261" />
+            </Array>
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
