@@ -795,7 +795,7 @@
           <mxGeometry x="460.5" y="-186.5" width="10" height="455" as="geometry" />
         </mxCell>
         <mxCell id="GNeWTPV5OC2gUjN5yp8g-3" value="Eigentumsgrenze" style="line;strokeWidth=2;direction=south;html=1;rotation=-90;align=left;textDirection=vertical-rl;horizontal=1;verticalAlign=top;spacingTop=13;spacingBottom=5;spacingLeft=7;strokeColor=#FF3333;dashed=1;" parent="GNeWTPV5OC2gUjN5yp8g-1" vertex="1">
-          <mxGeometry x="468" y="-146" width="10" height="480" as="geometry" />
+          <mxGeometry x="479" y="-146" width="10" height="480" as="geometry" />
         </mxCell>
         <mxCell id="GNeWTPV5OC2gUjN5yp8g-4" value="NVP" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="GNeWTPV5OC2gUjN5yp8g-1" vertex="1">
           <mxGeometry x="415" y="74" width="50" height="20" as="geometry" />
