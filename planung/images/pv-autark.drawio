@@ -1159,9 +1159,11 @@
         <mxCell id="GNeWTPV5OC2gUjN5yp8g-82" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;fillColor=#a20025;strokeColor=#6F0000;dashed=1;" edge="1" parent="GNeWTPV5OC2gUjN5yp8g-81" source="GNeWTPV5OC2gUjN5yp8g-83" target="GNeWTPV5OC2gUjN5yp8g-86">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="GNeWTPV5OC2gUjN5yp8g-83" value="FRE" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="GNeWTPV5OC2gUjN5yp8g-81">
-          <mxGeometry x="103" y="215" width="70" height="30" as="geometry" />
-        </mxCell>
+        <UserObject label="FRE" link="https://rainerth.github.io/energetischesanierung/planung/einspeisung.html#fre-rundsteuerempfanger" linkTarget="_blank" id="GNeWTPV5OC2gUjN5yp8g-83">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="GNeWTPV5OC2gUjN5yp8g-81">
+            <mxGeometry x="103" y="215" width="70" height="30" as="geometry" />
+          </mxCell>
+        </UserObject>
         <mxCell id="GNeWTPV5OC2gUjN5yp8g-84" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;endArrow=block;endFill=1;dashed=1;fillColor=#a20025;strokeColor=#6F0000;strokeWidth=2;" edge="1" parent="GNeWTPV5OC2gUjN5yp8g-81" source="GNeWTPV5OC2gUjN5yp8g-86" target="GNeWTPV5OC2gUjN5yp8g-87">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
@@ -1172,9 +1174,11 @@
         <mxCell id="GNeWTPV5OC2gUjN5yp8g-85" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;endArrow=block;endFill=1;fillColor=#a20025;strokeColor=#6F0000;dashed=1;strokeWidth=2;" edge="1" parent="GNeWTPV5OC2gUjN5yp8g-81" source="GNeWTPV5OC2gUjN5yp8g-86" target="GNeWTPV5OC2gUjN5yp8g-89">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="GNeWTPV5OC2gUjN5yp8g-86" value="&lt;h2 class=&quot;elementor-heading-title elementor-size-default&quot;&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;openWB-Dimm- &amp;amp; Control-Kit&lt;/font&gt;&lt;/span&gt;&lt;/h2&gt;" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="GNeWTPV5OC2gUjN5yp8g-81">
-          <mxGeometry x="78" y="273" width="120" height="60" as="geometry" />
-        </mxCell>
+        <UserObject label="&lt;h2 class=&quot;elementor-heading-title elementor-size-default&quot;&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;openWB-Dimm- &amp;amp; Control-Kit&lt;/font&gt;&lt;/span&gt;&lt;/h2&gt;" link="https://rainerth.github.io/energetischesanierung/planung/einspeisung.html#openwb-dimm-und-control-kit" linkTarget="_blank" id="GNeWTPV5OC2gUjN5yp8g-86">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;shadow=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="GNeWTPV5OC2gUjN5yp8g-81">
+            <mxGeometry x="78" y="273" width="120" height="60" as="geometry" />
+          </mxCell>
+        </UserObject>
         <mxCell id="GNeWTPV5OC2gUjN5yp8g-87" value="NIBE 1256-13 Erdwärmepumpe" style="whiteSpace=wrap;html=1;aspect=fixed;shadow=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="GNeWTPV5OC2gUjN5yp8g-81">
           <mxGeometry x="43" y="360" width="80" height="80" as="geometry" />
         </mxCell>
