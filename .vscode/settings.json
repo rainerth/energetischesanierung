@@ -4,11 +4,17 @@
 		"Bösingen",
 		"Brauchwasserspeicher",
 		"Entlüfter",
+		"Installateurhandbuch",
+		"Inverterwechsel",
 		"Kollektorkreise",
 		"Merowingerstraße",
+		"Modbus",
 		"Ortgänge",
+		"Passivkühlung",
 		"Photovoltaikmoduls",
-		"Ringspeicherkollektors"
+		"Ringspeicherkollektors",
+		"Verdrahtungsplan",
+		"Zubehöradapter"
 	],
 	"esbonio.server.enabled": true,
 	"esbonio.server.enabledInPyFiles": true

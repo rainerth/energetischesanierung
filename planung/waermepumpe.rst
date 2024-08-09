@@ -86,10 +86,32 @@ Montage
 
 
 .. seealso::
-	* :download:`NIBE Wasservorlage </_static/datenblaetter/NIBE_wasservorlage-24-02-V.1.3.pdf>`
-	* :download:`S1155 UKV </_static/datenblaetter/NIBE_S1256_PL2_012_S1255_UKV_9_002.pdf>`
-	* :download:`S1255_PCM_UKV </_static/datenblaetter/NIBE_S1256_PL2_003_S1255_PCM_UKV.pdf>`
 
+	* :download:`NIBE S1256 Benutzerhandbuch </_static/datenblaetter/NIBE_S1256_benutzerhandbuch.pdf>`
+	* :download:`NIBE S1256 Installateurhandbuch </_static/datenblaetter/NIBE_S1256_installateurhandbuch.pdf>`
+	* :download:`Installationshilfen S1256 Version 310724 </_static/datenblaetter/NIBE_S1256_installationshilfe-QGD_IH_DE_310724_2.pdf>`
+	* :download:`Installationshilfen S1256 Version 110424 </_static/datenblaetter/NIBE_S1256_Installationshilfe_S1256_V1_110424.pdf>`
+	* :download:`Installationshilfe Zubehöradapter AXC - Zusätzlicher Heiz- und Kühlkreis </_static/datenblaetter/NIBE_IH_AXC_Zusaetzlicher_Heiz_und_Kuehlkreis.pdf>`
+	* :download:`Installationshilfe PV Modulsteuerung </_static/datenblaetter/NIBE_S1256_installationshilfe_PV-Modulsteuerung-allgemein.pdf>`
+
+	* :download:`Zubehöradapter AXC 30 Luft- / Wasserbetrieb </_static/datenblaetter/NIBE_axc_30_231465-1.pdf>`
+	* :download:`Zubehöradapter AXC 40 Sole- / Wasserbetrieb</_static/datenblaetter/NIBE_axc_40_031445-7.pdf>`
+	* :download:`Zubehöradapter AXC 50 </_static/datenblaetter/NIBE_S1256_IHB_231157-8.pdf>`
+  
+	* :download:`Hydraulikplan S1155 passive Kühlung </_static/datenblaetter/NIBE_S1256_PL1.115_S1155-25_passive_Kuehlung.pdf>`
+	* :download:`Hydraulikplan S1256 Trennspeicher (UKV) und Passivkühlung (PCM) </_static/datenblaetter/NIBE_S1256_PL2_003_S1255_PCM_UKV.pdf>`
+	* :download:`Hydraulikplan S1255 Trennspeicher (UKV) </_static/datenblaetter/NIBE_S1256_PL2_012_S1255_UKV_9_002.pdf>`
+  
+	* :download:`Kabelzugplan zum Zählerschrank</_static/datenblaetter/NIBE_S1256_kabelzugplan-WHB_KZP_DE_080324_1.pdf>`
+	* :download:`Verdrahtungsplan </_static/datenblaetter/NIBE_S1256_wiring-plan-WHB_531720-2.pdf>`
+	* :download:`Tarifschaltung / Tarifblockierung</_static/datenblaetter/NIBE_S1256_tarifschaltung-QGD_IH_DE_221123_1.1.pdf>`
+	* :download:`Modbus-Register </_static/datenblaetter/NIBE_IH_Modbus_mit_S-Serie_V2418.pdf>`
+
+	* :download:`Serviceanleitung Inverterwechsel </_static/datenblaetter/NIBE_S1256_inverterwechsel-SIT_431292-8.pdf>`
+
+	* :download:`Konformitätserklärung </_static/datenblaetter/NIBE_S1256_konformitaetserklaerung-TVF_DOC_0003302-2.pdf>`
+	* :download:`NIBE Wasservorlage / Mindestwasserumlauf Wärmepumpen </_static/datenblaetter/NIBE_wasservorlage-24-02-V.1.3.pdf>`
+	* :download:`EVU Datenerfassungsblatt  für den Anschluss von Elektro-Wärmepumpenanlagen </_static/datenblaetter/NIBE_BLK_EVU_DatenerfassungsblattS1x56-13.pdf>`
 
 SG ready
 ========
