@@ -7,7 +7,7 @@ Die Wärmepumpe ist ein Gerät, das Wärme von einem kälteren auf ein wärmeres
 .. image:: images/nibe-s1256-datenblatt.png
 	:alt: Nibe S1256 Datenblatt
 	:align: center
-	
+
 
 Drosselung
 ==========
@@ -26,37 +26,37 @@ Vom Heizungsbauer kommt auch Entwarnung:
 Kühlfunktion
 ============
 
-Neben der NIBE 1256-13 gibt es auch die NIBE 1256PC-8. Diese beinhaltet eine mögliche Kühlfunktion. Für die NIBE 1256-13 kann die Kühlfunktion über Zubehör erreicht werden. 
+Neben der NIBE 1256-13 gibt es auch die NIBE 1256PC-8. Diese beinhaltet eine mögliche Kühlfunktion. Für die NIBE 1256-13 kann die Kühlfunktion über Zubehör erreicht werden.
 
 .. figure:: ./images/nibe-1256pc-cooling.png
-	
+
 	NIBE 1256PC-8
 
 
 .. figure:: ./images/nibe-1256-cooling.png
-	
+
 	NIBE 1256-13
 
 
-Systemprinzip 
+Systemprinzip
 =============
 
-Die S1256 besteht aus Wärmepumpe, Brauchwasserspeicher, Elektroheizpatrone, Umwälzpumpe und Regelgerät. S1256 wird mit einem Wärmequellen- bzw. Heizkreis verbunden. 
+Die S1256 besteht aus Wärmepumpe, Brauchwasserspeicher, Elektroheizpatrone, Umwälzpumpe und Regelgerät. S1256 wird mit einem Wärmequellen- bzw. Heizkreis verbunden.
 
 Im Verdampfer der Wärmepumpe gibt das Wärmequellenmedium (Frostschutzflüssigkeit, z.B. Ethanol oder Glykol gemischt mit Wasser) seine Energie an das Kältemittel ab. Dieses wiederum wird verdampft und im Verdichter komprimiert. Dort erhöht sich die Temperatur des Kühlmittels und es wird weiter in den Kondensator geleitet, wo es seine Energie an den Heizkreis und bei Bedarf an den Brauchwasserspeicher abgibt. Wenn ein größerer Bedarf an Wärme bzw. Brauchwasser vorliegt, als der Verdichter allein decken kann, wird eine integrierte Elektroheizpatrone zugeschaltet.
 
-.. seealso:: 
-	* :download:`S1256 Benutzerhandbuch </_static/datenblaetter/NIBE-S1256-Benutzerhandbuch.pdf>`
-	* :download:`S1256 Installateurhandbuch </_static/datenblaetter/NIBE-S1256-Installateurhandbuch.pdf>`
+.. seealso::
+	* :download:`S1256 Benutzerhandbuch </_static/datenblaetter/NIBE_S1256_benutzerhandbuch.pdf>`
+	* :download:`S1256 Installateurhandbuch </_static/datenblaetter/NIBE_S1256_installateurhandbuch.pdf>`
 
-Montage 
+Montage
 =======
 
 .. figure:: ./images/nibe1256-niveaugefaess.png
 
 #. Isolieren Sie alle Wärmequellenleitungen im Innenbereich gegen Kondensation.
 
-#. mitgeliefertes Niveaugefäß (:index:`CM2`)/Ausdehnungsgefäß: Bringen Sie das Niveaugefäß an der höchsten Stelle des Wärmequellensystems am Eingangsrohr vor der Wärmequellenpumpe an (beziehungsweise 1). Wenn das Niveaugefäß nicht am höchsten Punkt platziert werden kann, muss ein Ausdehnungsgefäß verwendet werden (beziehungsweise 2). 
+#. mitgeliefertes Niveaugefäß (:index:`CM2`)/Ausdehnungsgefäß: Bringen Sie das Niveaugefäß an der höchsten Stelle des Wärmequellensystems am Eingangsrohr vor der Wärmequellenpumpe an (beziehungsweise 1). Wenn das Niveaugefäß nicht am höchsten Punkt platziert werden kann, muss ein Ausdehnungsgefäß verwendet werden (beziehungsweise 2).
 
 #. mitgeliefertes Sicherheitsventil (:index:`FL3`). Das Sicherheitsventil ist wie in der Abbildung dargestellt unter dem Niveaugefäß zu montieren.
 
@@ -85,18 +85,18 @@ Montage
 #. Energiezähler Impuls: Es können bis zu zwei Stromzähler oder Wärmemengenzähler ( :index:`BE6`, :index:`BE7`) via Anschlussklemme AA2-X28:1-2 und AA2-X30:7-8 mit S1256 verbunden werden.
 
 
-.. seealso:: 
-	* :download:`NIBE Wasservorlage </_static/datenblaetter/NIBE-Wasservorlage-24-02-V.1.3.pdf>` 	
-	* :download:`S1155 UKV </_static/datenblaetter/nibe_PL2_012_S1255_UKV_9_002.pdf>` 
-	* :download:`S1255_PCM_UKV </_static/datenblaetter/nibe_PL2_003_S1255_PCM_UKV.pdf>`
+.. seealso::
+	* :download:`NIBE Wasservorlage </_static/datenblaetter/NIBE_wasservorlage-24-02-V.1.3.pdf>`
+	* :download:`S1155 UKV </_static/datenblaetter/NIBE_S1256_PL2_012_S1255_UKV_9_002.pdf>`
+	* :download:`S1255_PCM_UKV </_static/datenblaetter/NIBE_S1256_PL2_003_S1255_PCM_UKV.pdf>`
 
 
 SG ready
 ========
 
-Wird diese Funktion gewünscht, ist sie mit Anschlussklemme X28 auf der Basisplatine (AA2) zu verbinden. „SG Ready“ ist eine intelligente Art der Tarifsteuerung, bei der der Stromversorger die Innen-, Brauchwasser- und/oder Pooltemperatur (sofern vorhanden) beeinflussen oder die Zusatzheizung und/oder den Verdichter in der Wärmepumpe zu bestimmten Tageszeiten blockieren kann. (Die Auswahl erfolgt in Menü 4.2.3, nachdem die Funktion aktiviert wurde.) 
+Wird diese Funktion gewünscht, ist sie mit Anschlussklemme X28 auf der Basisplatine (AA2) zu verbinden. „SG Ready“ ist eine intelligente Art der Tarifsteuerung, bei der der Stromversorger die Innen-, Brauchwasser- und/oder Pooltemperatur (sofern vorhanden) beeinflussen oder die Zusatzheizung und/oder den Verdichter in der Wärmepumpe zu bestimmten Tageszeiten blockieren kann. (Die Auswahl erfolgt in Menü 4.2.3, nachdem die Funktion aktiviert wurde.)
 
-Zum Aktivieren der Funktion verbinden Sie potenzialfreie Schaltkontakte mit zwei Eingängen, die in Menü 7.4  „Verfügbare Ein-/Ausgänge“ (SG Ready A und SG Ready B) ausgewählt werden. 
+Zum Aktivieren der Funktion verbinden Sie potenzialfreie Schaltkontakte mit zwei Eingängen, die in Menü 7.4  „Verfügbare Ein-/Ausgänge“ (SG Ready A und SG Ready B) ausgewählt werden.
 
 Ein geschlossener oder geöffneter Kontakt bewirkt Folgendes:
 
@@ -127,17 +127,17 @@ Die Leistung der Elektroheizpatrone kann in Stufen abgerufen werden (vier Stufen
 .. list-table:: Elektrische Zusatzheizung für S1256-13 mit 3x230 V
 	:widths: 25 25 25 25
 	:header-rows: 1
-	
+
 	*	- Max. elektr. Zusatzheizung (kW)
 		- Max. Phasenstrom L1 (A)
-		- Max. Phasenstrom L2 (A)  
+		- Max. Phasenstrom L2 (A)
 		- Max. Phasenstrom L3 (A)
 
 	*	- 0
 		- \-
 		- \-
 		- \-
-  
+
 	*	- 2
 		- \-
 		- 8,7
@@ -152,9 +152,8 @@ Die Leistung der Elektroheizpatrone kann in Stufen abgerufen werden (vier Stufen
 		- 15,1
 		- 15,1
 		- 15,1
-  
+
 	*	- 9
 		- 15,1
 		- 27,2
 		- 27,3
-  
