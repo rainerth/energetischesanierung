@@ -14,6 +14,8 @@ Planung
    kollektor
    waermepumpe
    wallbox
+   modbus
+   mqtt
    smarthome
 
 

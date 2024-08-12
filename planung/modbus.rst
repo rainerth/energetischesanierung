@@ -1,6 +1,9 @@
 ##################################
-NIBE 1255 / 1256 Modbus Interface
+Geräte mit Modbus Interface
 ##################################
+
+NIBE 1255 / 1256 Modbus Interface
+=================================
 
 .. seealso:: https://github.com/henningms/nibe-s1255-modbus
 
