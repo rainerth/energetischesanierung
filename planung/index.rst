@@ -9,11 +9,12 @@ Planung
    photovoltaik
    akku
    inverter
-   anmeldung-pv-netze-bw
    einspeisung
+   anmeldung-pv-netze-bw-vorbereitung
+   anmeldung-pv-netze-bw
    kollektor
-   waermepumpe
    wallbox
+   waermepumpe
    modbus
    mqtt
    smarthome
