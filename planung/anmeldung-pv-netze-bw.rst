@@ -50,4 +50,4 @@ Datenblätter
 #. :download:`NIBE S1256 Wärmepumpe </_static/datenblaetter/NIBE_BLK_EVU_DatenerfassungsblattS1x56-13.pdf>`
 #. `Wallbox OpenWB Pro <https://openwb.de/main/?page_id=771#technischedaten>`_
 #. `OpenWB Dimm- und Controllbox <https://openwb.de/main/?page_id=1637>`_
-#. :downlad:</_static/datenblaetter/DB-NeMo-2.0-60-M-325-335-Wp.pdf>`
+#. :download:</_static/datenblaetter/DB-NeMo-2.0-60-M-325-335-Wp.pdf>`
