@@ -19,6 +19,13 @@ Anmeldung des Netzverknüpfungspunkts
 Anmeldung der Anlage
 ====================
 
+.. admonition:: Legende
+
+	✅ == erledigt
+
+	❗ == zu erledigen durch den Elektroinstallateur
+
+
 ✅ Übersichtsplan
 	Die Schemazeichnung muss alle schutzrelevanten Komponenten, die Technik für das Netzsicherheitsmanagement sowie die Installation vom Modul zum Netzverknüpfungspunkt enthalten. Eine einpolige Darstellung der Anlage ist ausreichend (neu sowie eventuelle Bestandsanlage muss erkennbar sein).
 
@@ -45,6 +52,14 @@ Anmeldung der Anlage
 	* `Anhang E der VDE-AR-N 4105:2018-11 <https://1drv.ms/b/s!AuFD38gz1WT71kFJoy-sYcWDfaym?e=cTuwDf>`_
 
 	* :download:`Einheitenzertifikat Deye SUN-12K-SG04LP3-EU</_static/datenblaetter/DEYSUN10K-Zertifikat-Einheiten.pdf>`
+
+❗ Meldung der Wallbox OpenWB Pro mit 22kW Ladeleistung
+	* `Wallbox OpenWB Pro <https://openwb.de/main/?page_id=771#technischedaten>`_
+
+
+❗ Meldung der Wärmepumpe NIBE S1256 über EVU Datenerfassungsblatt
+	* :download:`/_static/datenblaetter/NIBE_BLK_EVU_DatenerfassungsblattS1x56-13.pdf`
+
 
 Datenblätter
 ============
