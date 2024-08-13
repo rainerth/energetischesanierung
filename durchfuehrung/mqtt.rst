@@ -245,7 +245,7 @@ Wenn ein externer MQTT-Server zum Einsatz kommt, ist sehr zu empfehlen, für die
 	room       Technik
 
 
-Dies verhindert auch, dass mit ``autocreate`` beim Standard-MQTT-Server nicht undefiniert MQTT2 Devices anlegt. Beim Testserver wird `attr mqtt autocreate simple` gesetzt::
+Dies verhindert auch, dass mit ``autocreate`` beim Standard-MQTT-Server nicht undefiniert MQTT2 Devices anlegt. Beim Testserver wird `attr mqtt autocreate simple` gesetzt.
 
 
 Jetzt muss temporär die Dockerinstanz von :program:`deye-mqtt` temporär auf auf Port 1884 umgestellt werden, dazu wird die config.env geändert und die Instanz neu generiert::

@@ -1,6 +1,6 @@
 ######################################
 Vorbereitung zur Anmeldung der Anlagen
-#######################################
+######################################
 
 
 Schritt 1: Antrag auf Anschluss einer PV-Anlage per Mail
