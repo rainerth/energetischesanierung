@@ -32,19 +32,25 @@ Anmeldung der Anlage
 	.. figure:: ./images/pv-autark-MK40-V2.png
 		:target: ../_images/pv-autark-MK40-V2.png
 
-❗Inbetriebnahme-/Inbetriebsetzung
+❗ Meldung der Wallbox OpenWB Pro mit bis zu 22kW Ladeleistung
+	* `Wallbox OpenWB Pro <https://openwb.de/main/?page_id=771#technischedaten>`_
+
+
+❗ Meldung der Wärmepumpe NIBE S1256 über EVU Datenerfassungsblatt
+	* :download:`/_static/datenblaetter/NIBE_BLK_EVU_DatenerfassungsblattS1x56-13.pdf`
+
+❗ Inbetriebnahme-/Inbetriebsetzung
 	Mit diesem Formular informiert der Elektroinstallateur, dass der Zählerplatz fertiggestellt ist. Soll ein Zählerwechsel und/oder ein Zählereinbau von uns durchgeführt werden, wird dies ebenfalls mit diesem Formular beauftragt.
 
 	* `1000324017_inbetriebnahme-inbetriebsetzung-niederspannung.pdf <https://1drv.ms/b/s!AuFD38gz1WT7235sgCCg8SLXV_pc?e=UNZhsa>`_
 
-
-❗Datenblatt und Inbetriebsetzungsprotokoll Speicher
+❗ Datenblatt und Inbetriebsetzungsprotokoll Speicher
 	Hiermit bestätigt uns der Elektroinstallateur die Inbetriebnahme des Speichers. Achtung: Der Speicher muss durch den Anlagenbetreiber an das Marktstammdatenregister gemeldet werden (über die Homepage des Marktstammdatenregisters).
 
 	* `1000324017_e3-datenblatt-und-inbetriebsetzungsprotokoll-fuer-speicher.pdf <https://1drv.ms/b/s!AuFD38gz1WT723__JPB6LcadUs5v?e=QP68LW>`_
 
 
-❗Inbetriebnahme der Erzeugungsanlage
+❗ Inbetriebnahme der Erzeugungsanlage
 	Hiermit bestätigen Sie uns die Inbetriebnahme der Erzeugungsanlage nach VDE-AR-N 4105:2018-11 (ersetzt die Dokumente: E.2 Datenblatt EZA, E.8 Inbetriebsetzungsprotokoll für EZA und Erklärung zum Netzsicherheitsmanagement).
 
 	* `1000324017_inbetriebsetzungsprotokoll-fuer-erzeugungsanlagen-nach-vde-ar-n-4105.pdf <https://1drv.ms/b/s!AuFD38gz1WT73AA3wRxD6BBn5D8s?e=zNJIgu>`_
@@ -52,13 +58,6 @@ Anmeldung der Anlage
 	* `Anhang E der VDE-AR-N 4105:2018-11 <https://1drv.ms/b/s!AuFD38gz1WT71kFJoy-sYcWDfaym?e=cTuwDf>`_
 
 	* :download:`Einheitenzertifikat Deye SUN-12K-SG04LP3-EU</_static/datenblaetter/DEYSUN10K-Zertifikat-Einheiten.pdf>`
-
-❗ Meldung der Wallbox OpenWB Pro mit 22kW Ladeleistung
-	* `Wallbox OpenWB Pro <https://openwb.de/main/?page_id=771#technischedaten>`_
-
-
-❗ Meldung der Wärmepumpe NIBE S1256 über EVU Datenerfassungsblatt
-	* :download:`/_static/datenblaetter/NIBE_BLK_EVU_DatenerfassungsblattS1x56-13.pdf`
 
 
 Datenblätter
