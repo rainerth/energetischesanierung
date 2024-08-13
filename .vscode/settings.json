@@ -17,5 +17,6 @@
 		"Zubehöradapter"
 	],
 	"esbonio.server.enabled": true,
-	"esbonio.server.enabledInPyFiles": true
+	"esbonio.server.enabledInPyFiles": true,
+	"makefile.configureOnOpen": false
 }
