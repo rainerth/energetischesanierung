@@ -1165,7 +1165,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <UserObject label="FRE #2" link="https://rainerth.github.io/energetischesanierung/planung/einspeisung.html#fre-rundsteuerempfanger" linkTarget="_blank" id="GNeWTPV5OC2gUjN5yp8g-83">
+        <UserObject label="FRE #2&lt;br&gt;(Neu)" link="https://rainerth.github.io/energetischesanierung/planung/einspeisung.html#fre-rundsteuerempfanger" linkTarget="_blank" id="GNeWTPV5OC2gUjN5yp8g-83">
           <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="GNeWTPV5OC2gUjN5yp8g-81" vertex="1">
             <mxGeometry x="103" y="215" width="70" height="30" as="geometry" />
           </mxCell>
@@ -1210,14 +1210,26 @@
         <mxCell id="GNeWTPV5OC2gUjN5yp8g-91" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.transmission.3_line_bus;rotation=-45;" parent="GNeWTPV5OC2gUjN5yp8g-81" vertex="1">
           <mxGeometry x="208" y="460.00000000000006" width="30" height="14.64" as="geometry" />
         </mxCell>
-        <mxCell id="6OOqYuSAVLeJNRS9Hhoy-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="GNeWTPV5OC2gUjN5yp8g-81" source="6OOqYuSAVLeJNRS9Hhoy-0" target="GNeWTPV5OC2gUjN5yp8g-27">
+        <mxCell id="6OOqYuSAVLeJNRS9Hhoy-5" value="&lt;font style=&quot;font-size: 8px;&quot;&gt;R1&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="GNeWTPV5OC2gUjN5yp8g-81" source="6OOqYuSAVLeJNRS9Hhoy-0" target="6OOqYuSAVLeJNRS9Hhoy-4">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <UserObject label="FRE #1" link="https://rainerth.github.io/energetischesanierung/planung/einspeisung.html#fre-rundsteuerempfanger" linkTarget="_blank" id="6OOqYuSAVLeJNRS9Hhoy-0">
+        <UserObject label="&lt;div&gt;FRE #1&lt;br&gt;(Bestand)&lt;br&gt;&lt;/div&gt;" link="https://rainerth.github.io/energetischesanierung/planung/einspeisung.html#fre-rundsteuerempfanger" linkTarget="_blank" id="6OOqYuSAVLeJNRS9Hhoy-0">
           <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="GNeWTPV5OC2gUjN5yp8g-81">
-            <mxGeometry x="757" y="489.64" width="70" height="30" as="geometry" />
+            <mxGeometry x="730" y="330" width="70" height="30" as="geometry" />
           </mxCell>
         </UserObject>
+        <mxCell id="6OOqYuSAVLeJNRS9Hhoy-3" value="Modbus" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;endArrow=none;endFill=0;fontSize=9;verticalAlign=bottom;" edge="1" parent="GNeWTPV5OC2gUjN5yp8g-81" source="6OOqYuSAVLeJNRS9Hhoy-4" target="GNeWTPV5OC2gUjN5yp8g-27">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="837" y="515" as="sourcePoint" />
+            <mxPoint x="900" y="515" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="765" y="505" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6OOqYuSAVLeJNRS9Hhoy-4" value="Solar-Log" style="whiteSpace=wrap;html=1;aspect=fixed;shadow=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="GNeWTPV5OC2gUjN5yp8g-81">
+          <mxGeometry x="724.82" y="390.64" width="80.36" height="80.36" as="geometry" />
+        </mxCell>
         <mxCell id="GNeWTPV5OC2gUjN5yp8g-92" value="Texte" parent="GNeWTPV5OC2gUjN5yp8g-0" />
         <mxCell id="GNeWTPV5OC2gUjN5yp8g-93" value="Zähler für Bezug Haushalt" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="GNeWTPV5OC2gUjN5yp8g-92" vertex="1">
           <mxGeometry x="319" y="410" width="70" height="50" as="geometry" />
