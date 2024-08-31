@@ -142,7 +142,6 @@ locale_dirs = ['./_locales']
 # https://www.sphinx-doc.org/en/master/latex.html
 # https://docs.readthedocs.io/en/stable/guides/pdf-non-ascii-languages.html
 latex_engine = 'xelatex'
-latex_logo = '_static/trumpf_logo_150px.png'
 
 latex_documents = [
 	('index', project  + '_' + languagecode + '.tex', projectname + ' (' + project + ')', author, 'manual'),
