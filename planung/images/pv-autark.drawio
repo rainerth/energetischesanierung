@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0" version="24.7.6" pages="3">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:129.0) Gecko/20100101 Firefox/129.0" version="24.7.6" pages="3">
   <diagram name="MK7.1" id="099fd60b-425b-db50-ffb0-6b813814b670">
     <mxGraphModel dx="2298" dy="1465" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
@@ -787,7 +787,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="MK40-V2" id="UD_dbjVWE_ghaYJ5W2GC">
-    <mxGraphModel dx="1079" dy="605" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" background="none" math="0" shadow="0">
+    <mxGraphModel dx="1394" dy="735" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
         <mxCell id="GNeWTPV5OC2gUjN5yp8g-0" />
         <mxCell id="GNeWTPV5OC2gUjN5yp8g-1" parent="GNeWTPV5OC2gUjN5yp8g-0" />
@@ -1165,7 +1165,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <UserObject label="FRE" link="https://rainerth.github.io/energetischesanierung/planung/einspeisung.html#fre-rundsteuerempfanger" linkTarget="_blank" id="GNeWTPV5OC2gUjN5yp8g-83">
+        <UserObject label="FRE #2" link="https://rainerth.github.io/energetischesanierung/planung/einspeisung.html#fre-rundsteuerempfanger" linkTarget="_blank" id="GNeWTPV5OC2gUjN5yp8g-83">
           <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="GNeWTPV5OC2gUjN5yp8g-81" vertex="1">
             <mxGeometry x="103" y="215" width="70" height="30" as="geometry" />
           </mxCell>
@@ -1210,6 +1210,14 @@
         <mxCell id="GNeWTPV5OC2gUjN5yp8g-91" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.transmission.3_line_bus;rotation=-45;" parent="GNeWTPV5OC2gUjN5yp8g-81" vertex="1">
           <mxGeometry x="208" y="460.00000000000006" width="30" height="14.64" as="geometry" />
         </mxCell>
+        <mxCell id="6OOqYuSAVLeJNRS9Hhoy-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="GNeWTPV5OC2gUjN5yp8g-81" source="6OOqYuSAVLeJNRS9Hhoy-0" target="GNeWTPV5OC2gUjN5yp8g-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="FRE #1" link="https://rainerth.github.io/energetischesanierung/planung/einspeisung.html#fre-rundsteuerempfanger" linkTarget="_blank" id="6OOqYuSAVLeJNRS9Hhoy-0">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="GNeWTPV5OC2gUjN5yp8g-81">
+            <mxGeometry x="757" y="489.64" width="70" height="30" as="geometry" />
+          </mxCell>
+        </UserObject>
         <mxCell id="GNeWTPV5OC2gUjN5yp8g-92" value="Texte" parent="GNeWTPV5OC2gUjN5yp8g-0" />
         <mxCell id="GNeWTPV5OC2gUjN5yp8g-93" value="Zähler für Bezug Haushalt" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="GNeWTPV5OC2gUjN5yp8g-92" vertex="1">
           <mxGeometry x="319" y="410" width="70" height="50" as="geometry" />
@@ -1295,10 +1303,10 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="3cK8qqZNdHGB5e3Haadn-0" value="virtuelle Zähler" parent="GNeWTPV5OC2gUjN5yp8g-0" visible="0" />
-        <mxCell id="3cK8qqZNdHGB5e3Haadn-1" value="" style="shape=ext;double=1;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#fff2cc;strokeColor=#FF6666;dashed=1;dashPattern=8 8;opacity=30;fontColor=#009900;" vertex="1" parent="3cK8qqZNdHGB5e3Haadn-0">
+        <mxCell id="3cK8qqZNdHGB5e3Haadn-1" value="" style="shape=ext;double=1;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#fff2cc;strokeColor=#FF6666;dashed=1;dashPattern=8 8;opacity=30;fontColor=#009900;" parent="3cK8qqZNdHGB5e3Haadn-0" vertex="1">
           <mxGeometry x="1333" y="560" width="40" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="3cK8qqZNdHGB5e3Haadn-2" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;virtuelle Komponente&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="3cK8qqZNdHGB5e3Haadn-0">
+        <mxCell id="3cK8qqZNdHGB5e3Haadn-2" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;virtuelle Komponente&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;align=left;" parent="3cK8qqZNdHGB5e3Haadn-0" vertex="1">
           <mxGeometry x="1383" y="565" width="90" height="30" as="geometry" />
         </mxCell>
       </root>
