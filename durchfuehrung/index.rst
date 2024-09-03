@@ -6,5 +6,6 @@ Durchführung
    :maxdepth: 2
 
    energiezaehler
-   mqtt
+   deye-mqtt
    heizung
+   nibe-mqtt
