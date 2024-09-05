@@ -34,33 +34,34 @@ Die Daten werden dann in das data-Verzeichnis des Projekts kopiert (:file:`~/prj
 	import json
 	import yaml
 
-	# Pfade zu den Dateien
-	json_dateipfad = 'nibe/data/s1256.json'
-	yaml_dateipfad = 'nibe/data/s1256-config-coils.yaml'
+	# Paths to the files
+	json_file_path = 'nibe/data/s1256.json'
+	yaml_file_path = 'nibe/data/s1256-config-coils.yaml'
 
-	# Funktion zum Extrahieren der Werte aus den "name"-Tags
-	def extrahiere_name_werte(json_daten):
-		werte = [eintrag["name"] for eintrag in json_daten.values() if "name" in eintrag]
-		return werte
+	# Function to extract values from the "name" tags
+	def extract_name_values(json_data):
+		values = [entry["name"] for entry in json_data.values() if "name" in entry]
+		return values
 
-	# JSON-Datei einlesen
-	with open(json_dateipfad, 'r', encoding='utf-8') as json_datei:
-		json_daten = json.load(json_datei)
+	# Read JSON file
+	with open(json_file_path, 'r', encoding='utf-8') as json_file:
+		json_data = json.load(json_file)
 
-	# Werte extrahieren
-	werte = extrahiere_name_werte(json_daten)
+	# Extract values
+	values = extract_name_values(json_data)
 
-	# YAML-Datei schreiben
-	with open(yaml_dateipfad, 'w', encoding='utf-8') as yaml_datei:
-		yaml.dump(werte, yaml_datei, default_flow_style=False, sort_keys=False)
+	# Write YAML file
+	with open(yaml_file_path, 'w', encoding='utf-8') as yaml_file:
+		yaml.dump(values, yaml_file, default_flow_style=False, sort_keys=False)
 
-	print(f'Werte wurden in die Datei {yaml_dateipfad} geschrieben.')
+	print(f'Values have been written to the file {yaml_file_path}.')
+
 
 
 Konfiguration und Start des MQTT Servers
 ========================================
 
-Die Ausgabe wird in die Datei :file:`~/prj/nibe-mqtt/config.yaml` in der Rubrik ``coils:`` eingetragen und der Docker Container mit dieser Konfiguration gestartet. Einige Werte müssen noch auskommentiert wernden, da sie für Fehlermeldungen beim Start oder WARNINGs während der Ausführung führen.
+Die Ausgabe wird in die Datei :file:`~/prj/nibe-mqtt/config.yaml` in der Rubrik ``coils:`` eingetragen und der Docker Container mit dieser Konfiguration gestartet. Einige Werte müssen noch auskommentiert werden, da sie für Fehlermeldungen beim Start oder WARNINGs während der Ausführung führen.
 
 .. code-block:: bash
 
