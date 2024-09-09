@@ -9,3 +9,8 @@ Durchführung
    deye-mqtt
    heizung
    nibe-mqtt
+   telegraf-influxdb
+   modbus
+   mqtt
+   smarthome
+   support
