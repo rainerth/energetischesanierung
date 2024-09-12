@@ -1,0 +1,535 @@
+<!doctype html>
+<html class="no-js" lang="de" data-content_root="../">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Stichwortverzeichnis" href="../genindex.html" /><link rel="search" title="Suche" href="../search.html" /><link rel="next" title="Anfragen an den Support" href="support.html" /><link rel="prev" title="Geräte mit MQTT Interface" href="mqtt.html" />
+
+    <!-- Generated with Sphinx 7.4.7 and Furo 2024.08.06 -->
+        <title>Smart Home - EnergetischeSanierung 2024-04 Dokumentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=354aac6f" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=fd3f3429" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=302659d7" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/trumpf.css" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">EnergetischeSanierung 2024-04 Dokumentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  
+  <span class="sidebar-brand-text">EnergetischeSanierung 2024-04 Dokumentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder="Suche" name="q" aria-label="Suche">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Inhaltsverzeichnis:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../einleitung/index.html">Einleitung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../grundlagen/index.html">Grundlagen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../planung/index.html">Planung</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Planung</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../planung/photovoltaik.html">Photovoltaik</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../planung/akku.html">Akkuspeicher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../planung/inverter.html">Wechselrichter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../planung/einspeisung.html">Einspeisung ins öffentliche und Hausnetz</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../planung/anmeldung-pv-netze-bw.html">Anmeldung der Anlagen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../planung/kollektor.html">Kollektor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../planung/wallbox.html">Wallbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../planung/waermepumpe.html">Wärmepumpe</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Durchführung</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Durchführung</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="energiezaehler.html">Auslesen der Energiewerte der EHZ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deye-mqtt.html">Deye Wechselrichter MQTT Einbindung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="heizung.html">Aufbau der Heizung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nibe-mqtt.html">Einbindung der NIBE-S1256 Wärmempumpe via MQTT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="telegraf-influxdb.html">Persistierung und Visualisierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modbus.html">Geräte mit Modbus Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mqtt.html">Geräte mit MQTT Interface</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Smart Home</a></li>
+<li class="toctree-l2"><a class="reference internal" href="support.html">Anfragen an den Support</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ergebnisse/index.html">Ergebnisse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../diskussion/index.html">Diskussion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literaturverzeichnis/index.html">Literaturverzeichnis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../anhang/index.html">Anhang</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossar.html">Glossar</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="view-this-page">
+  <a class="muted-link" href="../_sources/durchfuehrung/smarthome.rst.txt" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div>
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <section id="smart-home">
+<h1>Smart Home<a class="headerlink" href="#smart-home" title="Link to this heading">¶</a></h1>
+<section id="setup-mit-fhem-influxdb-und-grafana">
+<h2>Setup mit FHEM, InfluxDB und Grafana<a class="headerlink" href="#setup-mit-fhem-influxdb-und-grafana" title="Link to this heading">¶</a></h2>
+<p>Eine existierende FHEM Installation soll um eine influxdb für Messwerte und Grafana zur Anzeige der Messwerte erweitern werden. Alternativ kann statt der influxdb auch mysql verwendet werden.</p>
+<section id="was-ist-der-vorteil-von-influxdb-gegenuber-mysql-in-diesem-kontext">
+<h3>Was ist der Vorteil von influxdb gegenüber mysql in diesem Kontext?<a class="headerlink" href="#was-ist-der-vorteil-von-influxdb-gegenuber-mysql-in-diesem-kontext" title="Link to this heading">¶</a></h3>
+<p>Der Vergleich zwischen InfluxDB und MySQL für das Speichern und Verwalten von Zeitreihendaten, wie sie bei FHEM-Messwerten anfallen, zeigt einige klare Vorteile von InfluxDB gegenüber MySQL in diesem speziellen Kontext:</p>
+<section id="vorteile-von-influxdb-gegenuber-mysql">
+<h4>Vorteile von InfluxDB gegenüber MySQL<a class="headerlink" href="#vorteile-von-influxdb-gegenuber-mysql" title="Link to this heading">¶</a></h4>
+<ol class="arabic simple">
+<li><p><strong>Optimierung für Zeitreihendaten</strong>:
+- <strong>InfluxDB</strong>: Speziell für Zeitreihendaten entwickelt. Sie bietet native Unterstützung für Zeitstempel und ermöglicht effiziente Abfragen und Aggregationen von Zeitreihendaten. Dies umfasst schnelle Abfragen von Zeitbereichen, kontinuierliche Datenaggregation und Rollups.
+- <strong>MySQL</strong>: Obwohl MySQL Zeitstempel unterstützt, ist es nicht speziell für Zeitreihendaten optimiert. Es kann bei großen Mengen an Zeitreihendaten weniger effizient sein und zusätzliche Komplexität bei Abfragen und Aggregationen aufweisen.</p></li>
+<li><p><strong>Einfache Verwaltung von großen Datenmengen</strong>:
+- <strong>InfluxDB</strong>: Entwickelt, um große Mengen an Zeitreihendaten zu speichern und zu verwalten, einschließlich effizienter Komprimierung und Datenaufbewahrung (Retention Policies). Dies hilft dabei, alte Daten automatisch zu archivieren oder zu löschen.
+- <strong>MySQL</strong>: Bei großen Mengen an Zeitreihendaten kann MySQL in Bezug auf Speicherplatz und Performance problematisch werden, insbesondere bei Abfragen über große Zeiträume und beim Umgang mit sehr vielen Datensätzen.</p></li>
+<li><p><strong>Abfrageoptimierung für Zeitreihendaten</strong>:
+- <strong>InfluxDB</strong>: Bietet speziell optimierte Funktionen für Zeitreihendaten wie <cite>GROUP BY time()</cite>, <cite>mean()</cite>, <cite>sum()</cite>, und <cite>derivative()</cite>, die für typisches Monitoring und Aggregation nützlich sind.
+- <strong>MySQL</strong>: Muss für solche zeitbasierten Aggregationen und Berechnungen möglicherweise kompliziertere Abfragen oder zusätzliche Tabellenstrukturen verwenden, was die Performance beeinträchtigen kann.</p></li>
+<li><p><strong>Retention Policies und Continuous Queries</strong>:
+- <strong>InfluxDB</strong>: Unterstützt Retention Policies (Automatisches Löschen alter Daten) und Continuous Queries (Automatisches Aggregieren von Daten über Zeit), was die Verwaltung von Datenvolumen und die Berechnung von Metriken erleichtert.
+- <strong>MySQL</strong>: Solche Funktionen müssen manuell implementiert werden, was zusätzlichen Aufwand bei der Datenverwaltung bedeutet.</p></li>
+<li><p><strong>Leistung und Skalierbarkeit</strong>:
+- <strong>InfluxDB</strong>: Kann effizient mit sehr großen Datenmengen umgehen und bietet Funktionen zur Horizontalen Skalierung (in den Enterprise-Versionen), die für große und stark wachsende Datensätze von Vorteil sind.
+- <strong>MySQL</strong>: Skaliert gut, aber das Handling von sehr großen Zeitreihendatenmengen kann komplizierter sein und erfordert zusätzliche Optimierungen oder Partitionierungen.</p></li>
+<li><p><strong>Schemafrei</strong>:
+- <strong>InfluxDB</strong>: Erlaubt Schemafreiheit bei der Datenspeicherung, was die Flexibilität erhöht und die Notwendigkeit reduziert, das Schema im Voraus zu definieren oder anzupassen.
+- <strong>MySQL</strong>: Erfordert ein festgelegtes Schema, was die Flexibilität einschränken und zusätzliche Anpassungen bei Änderungen an den Datenstrukturen erfordern kann.</p></li>
+</ol>
+</section>
+<section id="zusammenfassung">
+<h4>Zusammenfassung<a class="headerlink" href="#zusammenfassung" title="Link to this heading">¶</a></h4>
+<ul class="simple">
+<li><p><strong>InfluxDB</strong> ist besonders vorteilhaft, wenn du mit großen Mengen von Zeitstempeldaten arbeitest, schnelle und effiziente Zeitreihendaten-Abfragen benötigst, und von Funktionen wie Retention Policies und Continuous Queries profitieren möchtest.</p></li>
+<li><p><strong>MySQL</strong> ist ein bewährtes relationales Datenbankmanagementsystem, das ebenfalls Zeitstempeldaten verarbeiten kann, jedoch zusätzliche Komplexität und Aufwand für die Optimierung und Skalierung bei großen Zeitreihendatenmengen mit sich bringen kann.</p></li>
+</ul>
+<p>Für Anwendungsfälle, bei denen die Hauptanforderung eine effiziente Verarbeitung und Analyse von Zeitreihendaten ist (wie bei der Überwachung und Analyse von FHEM-Messwerten), bietet InfluxDB klare Vorteile.</p>
+</section>
+</section>
+</section>
+<section id="installation-von-influxdb-und-grafana-per-docker">
+<h2>Installation von InfluxDB und Grafana per Docker<a class="headerlink" href="#installation-von-influxdb-und-grafana-per-docker" title="Link to this heading">¶</a></h2>
+<p>Die Installation von InfluxDB und Grafana per Docker kann eine sehr praktische und effiziente Methode sein, um diese Dienste zu betreiben. Docker bietet eine isolierte Umgebung für jede Anwendung, vereinfacht die Installation und Konfiguration und erleichtert die Verwaltung und Skalierung.</p>
+<p>Hier ist eine Schritt-für-Schritt-Anleitung zur Installation von InfluxDB und Grafana per Docker:</p>
+<dl class="simple">
+<dt><strong>Vorbereitung</strong></dt><dd><p>Stelle sicher, dass Docker und Docker Compose auf deinem System installiert sind. Falls nicht, kannst du sie wie folgt installieren:</p>
+</dd>
+</dl>
+<p><strong>Docker installieren</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">update</span>
+<span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">docker</span><span class="o">.</span><span class="n">io</span>
+</pre></div>
+</div>
+<p><strong>Docker Compose installieren</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">curl</span> <span class="o">-</span><span class="n">L</span> <span class="s2">&quot;https://github.com/docker/compose/releases/download/$(curl -s https://api.github.com/repos/docker/compose/releases/latest | grep tag_name | cut -d &#39;&quot;</span><span class="s1">&#39; -f 4)/docker-compose-$(uname -s)-$(uname -m)&quot; -o /usr/local/bin/docker-compose</span>
+<span class="n">sudo</span> <span class="n">chmod</span> <span class="o">+</span><span class="n">x</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">docker</span><span class="o">-</span><span class="n">compose</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt><strong>Docker-Compose-Datei erstellen</strong></dt><dd><p>Erstelle ein Verzeichnis für deine Docker-Compose-Konfiguration und eine <cite>docker-compose.yml</cite>-Datei:</p>
+</dd>
+</dl>
+<p><strong>Erstelle das Verzeichnis</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="o">-</span><span class="n">p</span> <span class="o">~/</span><span class="n">docker</span><span class="o">/</span><span class="n">influxdb</span><span class="o">-</span><span class="n">grafana</span>
+<span class="n">cd</span> <span class="o">~/</span><span class="n">docker</span><span class="o">/</span><span class="n">influxdb</span><span class="o">-</span><span class="n">grafana</span>
+</pre></div>
+</div>
+<p><strong>Erstelle die `docker-compose.yml`-Datei</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">version</span><span class="p">:</span> <span class="s1">&#39;3&#39;</span>
+<span class="n">services</span><span class="p">:</span>
+        <span class="n">influxdb</span><span class="p">:</span>
+        <span class="n">image</span><span class="p">:</span> <span class="n">influxdb</span><span class="p">:</span><span class="n">latest</span>
+        <span class="n">container_name</span><span class="p">:</span> <span class="n">influxdb</span>
+        <span class="n">ports</span><span class="p">:</span>
+                <span class="o">-</span> <span class="s2">&quot;8086:8086&quot;</span>
+        <span class="n">volumes</span><span class="p">:</span>
+                <span class="o">-</span> <span class="n">influxdb</span><span class="o">-</span><span class="n">data</span><span class="p">:</span><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">influxdb</span>
+        <span class="n">networks</span><span class="p">:</span>
+                <span class="o">-</span> <span class="n">monitoring</span>
+
+        <span class="n">grafana</span><span class="p">:</span>
+        <span class="n">image</span><span class="p">:</span> <span class="n">grafana</span><span class="o">/</span><span class="n">grafana</span><span class="p">:</span><span class="n">latest</span>
+        <span class="n">container_name</span><span class="p">:</span> <span class="n">grafana</span>
+        <span class="n">ports</span><span class="p">:</span>
+                <span class="o">-</span> <span class="s2">&quot;3000:3000&quot;</span>
+        <span class="n">depends_on</span><span class="p">:</span>
+                <span class="o">-</span> <span class="n">influxdb</span>
+        <span class="n">networks</span><span class="p">:</span>
+                <span class="o">-</span> <span class="n">monitoring</span>
+
+<span class="n">volumes</span><span class="p">:</span>
+        <span class="n">influxdb</span><span class="o">-</span><span class="n">data</span><span class="p">:</span>
+
+<span class="n">networks</span><span class="p">:</span>
+        <span class="n">monitoring</span><span class="p">:</span>
+</pre></div>
+</div>
+<dl>
+<dt><strong>Dienste starten</strong></dt><dd><p>Starte die Docker-Container mit Docker Compose:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span><span class="o">-</span><span class="n">compose</span> <span class="n">up</span> <span class="o">-</span><span class="n">d</span>
+</pre></div>
+</div>
+</dd>
+<dt>Alternative::</dt><dd><p>grafana läuft bereits als systemd Service. InfluxDB wird als Docker Container gestartet:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> \
+<span class="o">--</span><span class="n">name</span> <span class="n">influxdb2</span> \
+<span class="o">--</span><span class="n">publish</span> <span class="mi">8086</span><span class="p">:</span><span class="mi">8086</span> \
+<span class="o">--</span><span class="n">mount</span> <span class="nb">type</span><span class="o">=</span><span class="n">volume</span><span class="p">,</span><span class="n">source</span><span class="o">=</span><span class="n">influxdb2</span><span class="o">-</span><span class="n">data</span><span class="p">,</span><span class="n">target</span><span class="o">=/</span><span class="n">mnt</span><span class="o">/</span><span class="n">db</span><span class="o">/</span><span class="n">influx01</span> \
+<span class="o">--</span><span class="n">mount</span> <span class="nb">type</span><span class="o">=</span><span class="n">volume</span><span class="p">,</span><span class="n">source</span><span class="o">=</span><span class="n">influxdb2</span><span class="o">-</span><span class="n">config</span><span class="p">,</span><span class="n">target</span><span class="o">=/</span><span class="n">etc</span><span class="o">/</span><span class="n">influxdb2</span> \
+<span class="o">--</span><span class="n">env</span> <span class="n">DOCKER_INFLUXDB_INIT_MODE</span><span class="o">=</span><span class="n">setup</span> \
+<span class="o">--</span><span class="n">env</span> <span class="n">DOCKER_INFLUXDB_INIT_USERNAME</span><span class="o">=</span><span class="n">admin</span> \
+<span class="o">--</span><span class="n">env</span> <span class="n">DOCKER_INFLUXDB_INIT_PASSWORD</span><span class="o">=</span><span class="n">dracha35</span> \
+<span class="o">--</span><span class="n">env</span> <span class="n">DOCKER_INFLUXDB_INIT_ORG</span><span class="o">=</span><span class="n">DFVB</span> \
+<span class="o">--</span><span class="n">env</span> <span class="n">DOCKER_INFLUXDB_INIT_BUCKET</span><span class="o">=</span><span class="n">ogn</span> \
+<span class="n">influxdb</span><span class="p">:</span><span class="mi">2</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<section id="konfiguration-der-influxdb">
+<h3>Konfiguration der InfluxDB<a class="headerlink" href="#konfiguration-der-influxdb" title="Link to this heading">¶</a></h3>
+<dl>
+<dt><strong>Erstelle eine Datenbank in InfluxDB</strong></dt><dd><p>Du kannst dies mit dem <cite>influx</cite> CLI-Tool tun. Starte den InfluxDB-Container:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">exec</span> <span class="o">-</span><span class="n">it</span> <span class="n">influxdb</span> <span class="n">influx</span>
+</pre></div>
+</div>
+<p>Dann führe die folgenden Befehle im InfluxDB-CLI aus:</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">fhem</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="ss">&quot;fhem_user&quot;</span><span class="w"> </span><span class="k">WITH</span><span class="w"> </span><span class="n">PASSWORD</span><span class="w"> </span><span class="s1">&#39;your_password&#39;</span>
+<span class="k">GRANT</span><span class="w"> </span><span class="k">ALL</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="ss">&quot;fhem&quot;</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="ss">&quot;fhem_user&quot;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</section>
+<section id="konfiguration-von-grafana">
+<h3>Konfiguration von Grafana<a class="headerlink" href="#konfiguration-von-grafana" title="Link to this heading">¶</a></h3>
+<dl class="simple">
+<dt><strong>Öffne Grafana im Browser</strong>:</dt><dd><p>Gehe zu <cite>http://localhost:3000</cite>. Der Standardbenutzername und das Passwort sind <cite>admin</cite> und <cite>admin</cite>.</p>
+</dd>
+<dt><strong>Füge InfluxDB als Datenquelle hinzu</strong>:</dt><dd><ul class="simple">
+<li><p>Melde dich bei Grafana an.</p></li>
+<li><p>Gehe zu „Configuration“ (Zahnrad-Symbol) &gt; „Data Sources“.</p></li>
+<li><p>Klicke auf „Add data source“.</p></li>
+<li><p>Wähle „InfluxDB“ aus.</p></li>
+<li><p>Setze die URL auf <cite>http://influxdb:8086</cite> (Dies ist der Name des InfluxDB-Services im Docker-Netzwerk).</p></li>
+<li><p>Setze den „Database“-Namen auf <cite>fhem</cite>.</p></li>
+<li><p>Setze den „User“ und „Password“ auf die Anmeldedaten, die du in InfluxDB erstellt hast.</p></li>
+<li><p>Klicke auf „Save &amp; Test“.</p></li>
+</ul>
+</dd>
+<dt><strong>Erstelle Dashboards in Grafana</strong>:</dt><dd><ul class="simple">
+<li><p>Gehe zu „Create“ (Plus-Symbol) &gt; „Dashboard“.</p></li>
+<li><p>Füge Panels hinzu und konfiguriere sie, um Daten aus der InfluxDB anzuzeigen.</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="id1">
+<h3>Zusammenfassung<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><strong>Docker und Docker Compose</strong> bieten eine einfache Möglichkeit, InfluxDB und Grafana zu installieren und zu verwalten.</p></li>
+<li><p><strong>`docker-compose.yml`</strong> definiert die Konfiguration der beiden Container und sorgt für eine einfache Verwaltung.</p></li>
+<li><p><strong>InfluxDB</strong> wird über Docker-Volumen persistent gehalten.</p></li>
+<li><p><strong>Grafana</strong> wird über Docker-Compose verwaltet und startet nach InfluxDB.</p></li>
+</ul>
+<p>Diese Methode ist besonders nützlich für Testumgebungen und kleinere Installationen. Für Produktionsumgebungen solltest du zusätzliche Überlegungen zu Datensicherung, Sicherheit und Skalierung einbeziehen.</p>
+<p><a class="reference external" href="https://github.com/tsunami42/tsm_restore?tab=readme-ov-file">https://github.com/tsunami42/tsm_restore?tab=readme-ov-file</a></p>
+</section>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="support.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Anfragen an den Support</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="mqtt.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Geräte mit MQTT Interface</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2024, Rainer Thieringer | Creative Commons Lizenz 4.0 (BY-NC-SA 4.0)
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Smart Home</a><ul>
+<li><a class="reference internal" href="#setup-mit-fhem-influxdb-und-grafana">Setup mit FHEM, InfluxDB und Grafana</a><ul>
+<li><a class="reference internal" href="#was-ist-der-vorteil-von-influxdb-gegenuber-mysql-in-diesem-kontext">Was ist der Vorteil von influxdb gegenüber mysql in diesem Kontext?</a><ul>
+<li><a class="reference internal" href="#vorteile-von-influxdb-gegenuber-mysql">Vorteile von InfluxDB gegenüber MySQL</a></li>
+<li><a class="reference internal" href="#zusammenfassung">Zusammenfassung</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#installation-von-influxdb-und-grafana-per-docker">Installation von InfluxDB und Grafana per Docker</a><ul>
+<li><a class="reference internal" href="#konfiguration-der-influxdb">Konfiguration der InfluxDB</a></li>
+<li><a class="reference internal" href="#konfiguration-von-grafana">Konfiguration von Grafana</a></li>
+<li><a class="reference internal" href="#id1">Zusammenfassung</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="../_static/documentation_options.js?v=a651434f"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/furo.js?v=5fa4622c"></script>
+    <script src="../_static/translations.js?v=79cc9f76"></script>
+    </body>
+</html>

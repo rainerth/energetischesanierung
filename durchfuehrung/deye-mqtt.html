@@ -1,0 +1,1078 @@
+<!doctype html>
+<html class="no-js" lang="de" data-content_root="../">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Stichwortverzeichnis" href="../genindex.html" /><link rel="search" title="Suche" href="../search.html" /><link rel="next" title="Aufbau der Heizung" href="heizung.html" /><link rel="prev" title="Auslesen der Energiewerte der EHZ" href="energiezaehler.html" />
+
+    <!-- Generated with Sphinx 7.4.7 and Furo 2024.08.06 -->
+        <title>Deye Wechselrichter MQTT Einbindung - EnergetischeSanierung 2024-04 Dokumentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=354aac6f" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=fd3f3429" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=302659d7" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/trumpf.css" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">EnergetischeSanierung 2024-04 Dokumentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  
+  <span class="sidebar-brand-text">EnergetischeSanierung 2024-04 Dokumentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder="Suche" name="q" aria-label="Suche">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Inhaltsverzeichnis:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../einleitung/index.html">Einleitung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../grundlagen/index.html">Grundlagen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../planung/index.html">Planung</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Planung</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../planung/photovoltaik.html">Photovoltaik</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../planung/akku.html">Akkuspeicher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../planung/inverter.html">Wechselrichter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../planung/einspeisung.html">Einspeisung ins öffentliche und Hausnetz</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../planung/anmeldung-pv-netze-bw.html">Anmeldung der Anlagen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../planung/kollektor.html">Kollektor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../planung/wallbox.html">Wallbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../planung/waermepumpe.html">Wärmepumpe</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Durchführung</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Durchführung</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="energiezaehler.html">Auslesen der Energiewerte der EHZ</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Deye Wechselrichter MQTT Einbindung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="heizung.html">Aufbau der Heizung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nibe-mqtt.html">Einbindung der NIBE-S1256 Wärmempumpe via MQTT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="telegraf-influxdb.html">Persistierung und Visualisierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modbus.html">Geräte mit Modbus Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mqtt.html">Geräte mit MQTT Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="smarthome.html">Smart Home</a></li>
+<li class="toctree-l2"><a class="reference internal" href="support.html">Anfragen an den Support</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ergebnisse/index.html">Ergebnisse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../diskussion/index.html">Diskussion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literaturverzeichnis/index.html">Literaturverzeichnis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../anhang/index.html">Anhang</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossar.html">Glossar</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="view-this-page">
+  <a class="muted-link" href="../_sources/durchfuehrung/deye-mqtt.rst.txt" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div>
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <section id="deye-wechselrichter-mqtt-einbindung">
+<span id="ref-deye-mqtt"></span><h1>Deye Wechselrichter MQTT Einbindung<a class="headerlink" href="#deye-wechselrichter-mqtt-einbindung" title="Link to this heading">¶</a></h1>
+<p>Das <a class="reference external" href="https://github.com/kbialek/deye-inverter-mqtt">Github Projekt deye-inverter-mqtt</a> kann der Deye Wechselrichter ausgelesen werden und an einen MQTT Server zur weiteren Verteilung übergeben werden. Eine Anleitung zur Installation und Konfiguration ist auf der Github-Seite zu finden.</p>
+<section id="konfiguration">
+<h2>Konfiguration<a class="headerlink" href="#konfiguration" title="Link to this heading">¶</a></h2>
+<p>In der <code class="docutils literal notranslate"><span class="pre">config.env</span></code> wird im Wesentlichen die IP-Adresse und der Port des MQTT Servers angegeben. IN diesem Fall läuft ein Mosquitto Server auf einem Linux-System unter der Adresse <code class="docutils literal notranslate"><span class="pre">x.x.x.1</span></code> und der Deye ist über WLAN-Stick unter der Adressse <code class="docutils literal notranslate"><span class="pre">x.x.x.2</span></code> ins Netzwerk eingebunden.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cat<span class="w"> </span>config.env
+<span class="nv">DEYE_LOGGER_IP_ADDRESS</span><span class="o">=</span>x.x.x.2
+<span class="c1"># DEYE_LOGGER_PORT=8899</span>
+<span class="nv">DEYE_LOGGER_SERIAL_NUMBER</span><span class="o">=</span>XXXXXXX
+<span class="c1"># DEYE_LOGGER_PROTOCOL=tcp</span>
+<span class="c1"># DEYE_LOGGER_MAX_REG_RANGE_LENGTH=256</span>
+
+<span class="nv">MQTT_HOST</span><span class="o">=</span>x.x.x.1
+<span class="c1"># MQTT_PORT=1883</span>
+<span class="c1"># MQTT_USERNAME=user</span>
+<span class="c1"># MQTT_PASSWORD=password</span>
+<span class="c1"># MQTT_TOPIC_PREFIX=deye</span>
+<span class="c1"># MQTT_TLS_ENABLED=true</span>
+<span class="c1"># MQTT_TLS_INSECURE=true</span>
+<span class="c1"># MQTT_TLS_CA_CERT_PATH=certs/ca.crt</span>
+<span class="c1"># MQTT_TLS_CLIENT_CERT_PATH=certs/client.crt</span>
+<span class="c1"># MQTT_TLS_CLIENT_KEY_PATH=certs/client.key</span>
+
+<span class="c1"># LOG_LEVEL=INFO</span>
+<span class="c1"># LOG_STREAM=STDOUT</span>
+<span class="c1"># PLUGINS_DIR=plugins</span>
+<span class="c1"># PLUGINS_ENABLED=deye_plugin_sample,deye_plugin_custom</span>
+<span class="c1"># DEYE_DATA_READ_INTERVAL=60</span>
+<span class="c1"># DEYE_PUBLISH_ON_CHANGE=false</span>
+<span class="c1"># DEYE_PUBLISH_ON_CHANGE_MAX_INTERVAL=360</span>
+<span class="c1"># DEYE_METRIC_GROUPS=deye_sg04lp3, deye_sg04lp3_battery, deye_sg04lp3_ups, deye_sg04lp3_timeofuse, deye_sg04lp3_generator, settings</span>
+<span class="nv">DEYE_METRIC_GROUPS</span><span class="o">=</span>deye_sg04lp3,deye_sg04lp3_battery,deye_sg04lp3_ups,deye_sg04lp3_timeofuse,deye_sg04lp3_generator,settings
+
+<span class="c1"># DEYE_FEATURE_MQTT_PUBLISHER=true</span>
+<span class="c1"># DEYE_FEATURE_TIME_OF_USE=false</span>
+<span class="c1"># DEYE_FEATURE_ACTIVE_POWER_REGULATION=false</span>
+<span class="c1"># DEYE_FEATURE_SET_TIME=false</span>
+
+<span class="c1">## Sample multiinverter configuration with two loggers</span>
+<span class="c1">#</span>
+<span class="c1"># DEYE_LOGGER_COUNT=2</span>
+
+<span class="c1"># DEYE_LOGGER_1_IP_ADDRESS=192.168.0.1</span>
+<span class="c1"># DEYE_LOGGER_1_SERIAL_NUMBER=1234567890</span>
+<span class="c1"># DEYE_LOGGER_1_PROTOCOL=at</span>
+
+<span class="c1"># DEYE_LOGGER_2_IP_ADDRESS=192.168.0.2</span>
+<span class="c1"># DEYE_LOGGER_2_SERIAL_NUMBER=1234567891</span>
+<span class="c1"># DEYE_LOGGER_2_PROTOCOL=at</span>
+</pre></div>
+</div>
+</section>
+<section id="installation-unter-verwendung-von-docker">
+<h2>Installation unter Verwendung von Docker<a class="headerlink" href="#installation-unter-verwendung-von-docker" title="Link to this heading">¶</a></h2>
+<p>Auf dem zentralen Linux Server <code class="docutils literal notranslate"><span class="pre">lx01</span></code> läuft ein Mosquitto MQTT Server (ehemals Broker genannt) und eine Docker Instanz des <strong class="program">ghcr.io/kbialek/deye-inverter-mqtt</strong> Images.</p>
+<p>Container Starten:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>docker run -d --name deye-mqtt \
+        --env-file $HOME/prj/deye-inverter-mqtt/config.env \
+        --restart unless-stopped \
+        ghcr.io/kbialek/deye-inverter-mqtt
+
+``-d`` will detach the container, so it will run in the background
+
+``--restart=unless-stopped`` will make docker to restart the container on host reboot
+</pre></div>
+</div>
+<p>Status des Docker Containers:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ docker ps
+CONTAINER ID   IMAGE                                COMMAND                  CREATED         STATUS                          PORTS                                                                     NAMES
+22087776b50c   ghcr.io/kbialek/deye-inverter-mqtt   &quot;python ./deye_docke…&quot;   3 weeks ago     Up 15 hours                                                                                               deye-mqtt
+</pre></div>
+</div>
+<p>Stoppen und entfernen des Containers:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">stop</span> <span class="n">deye</span><span class="o">-</span><span class="n">mqtt</span>
+<span class="n">docker</span> <span class="n">rm</span> <span class="o">-</span><span class="n">v</span> <span class="n">deye</span><span class="o">-</span><span class="n">mqtt</span>
+</pre></div>
+</div>
+<p>Logfiles inspizieren:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">logs</span> <span class="n">deye</span><span class="o">-</span><span class="n">mqtt</span>
+</pre></div>
+</div>
+</section>
+<section id="betrieb">
+<h2>Betrieb<a class="headerlink" href="#betrieb" title="Link to this heading">¶</a></h2>
+<p>Mit <strong class="command">mosquitto_sub</strong> kann der MQTT Datenverkehr beobachtet werden:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ mosquitto_sub -h x.x.x.1 -t &quot;deye/#&quot; -F &#39;@Y-@m-@d @H:@M:@S : %t : %p&#39;
+2024-08-11 10:31:12 : deye/status : online
+2024-08-11 10:31:40 : deye/logger_status : online
+2024-08-11 10:31:40 : deye/dc/pv1/power : 4480.0
+2024-08-11 10:31:40 : deye/dc/pv2/power : 2069.0
+2024-08-11 10:31:40 : deye/dc/pv1/voltage : 599.5
+2024-08-11 10:31:40 : deye/dc/pv2/voltage : 575.0
+2024-08-11 10:31:40 : deye/dc/pv1/current : 7.5
+2024-08-11 10:31:40 : deye/dc/pv2/current : 3.6
+2024-08-11 10:31:40 : deye/day_energy : 14.3
+2024-08-11 10:31:40 : deye/total_energy : 2030.7
+2024-08-11 10:31:40 : deye/battery/daily_charge : 8.4
+2024-08-11 10:31:40 : deye/battery/daily_discharge : 7.3
+2024-08-11 10:31:40 : deye/battery/total_charge : 356.8
+2024-08-11 10:31:40 : deye/battery/total_discharge : 331.5
+2024-08-11 10:31:40 : deye/battery/power : -6316.0
+2024-08-11 10:31:40 : deye/battery/voltage : 55.2
+2024-08-11 10:31:40 : deye/battery/soc : 93.0
+2024-08-11 10:31:40 : deye/battery/current : -114.5
+2024-08-11 10:31:40 : deye/battery/temperature : 25.0
+2024-08-11 10:31:40 : deye/ac/total_power : -4116.0
+2024-08-11 10:31:40 : deye/ac/l1/voltage : 236.0
+2024-08-11 10:31:40 : deye/ac/l2/voltage : 237.2
+2024-08-11 10:31:40 : deye/ac/l3/voltage : 235.9
+2024-08-11 10:31:40 : deye/ac/l1/ct/internal : 27.0
+2024-08-11 10:31:40 : deye/ac/l2/ct/internal : 30.0
+2024-08-11 10:31:40 : deye/ac/l3/ct/internal : -8.0
+2024-08-11 10:31:40 : deye/ac/l1/ct/external : -1940.0
+2024-08-11 10:31:40 : deye/ac/l2/ct/external : -1131.0
+2024-08-11 10:31:40 : deye/ac/l3/ct/external : -1045.0
+2024-08-11 10:31:40 : deye/ac/daily_energy_bought : 0.6
+2024-08-11 10:31:40 : deye/ac/total_energy_bought : 51.4
+2024-08-11 10:31:40 : deye/ac/daily_energy_sold : 0.8
+2024-08-11 10:31:40 : deye/ac/total_energy_sold : 1652.5
+2024-08-11 10:31:40 : deye/ac/ups/total_power : 0.0
+2024-08-11 10:31:40 : deye/ac/ups/l1/power : 0.0
+2024-08-11 10:31:40 : deye/ac/ups/l2/power : 0.0
+2024-08-11 10:31:40 : deye/ac/ups/l3/power : 0.0
+2024-08-11 10:31:40 : deye/ac/ups/l1/voltage : 235.7
+2024-08-11 10:31:40 : deye/ac/ups/l2/voltage : 236.1
+2024-08-11 10:31:40 : deye/ac/ups/l3/voltage : 236.6
+2024-08-11 10:31:40 : deye/ac/ups/daily_energy : 13.0
+2024-08-11 10:31:40 : deye/ac/ups/total_energy : 771.9
+2024-08-11 10:31:40 : deye/ac/l1/current : -0.3
+2024-08-11 10:31:40 : deye/ac/l2/current : -0.3
+2024-08-11 10:31:40 : deye/ac/l3/current : 0.0
+2024-08-11 10:31:40 : deye/ac/l1/power : -31.0
+2024-08-11 10:31:40 : deye/ac/l2/power : -43.0
+2024-08-11 10:31:40 : deye/ac/l3/power : 31.0
+2024-08-11 10:31:40 : deye/radiator_temp : 25.0
+2024-08-11 10:31:40 : deye/ac/temperature : 52.8
+2024-08-11 10:31:40 : deye/timeofuse/selling : 255.0
+2024-08-11 10:31:40 : deye/timeofuse/time/1 : 100.0
+2024-08-11 10:31:40 : deye/timeofuse/time/2 : 500.0
+2024-08-11 10:31:40 : deye/timeofuse/time/3 : 900.0
+2024-08-11 10:31:40 : deye/timeofuse/time/4 : 1300.0
+2024-08-11 10:31:40 : deye/timeofuse/time/5 : 1700.0
+2024-08-11 10:31:40 : deye/timeofuse/time/6 : 2100.0
+2024-08-11 10:31:40 : deye/timeofuse/power/1 : 12000.0
+2024-08-11 10:31:40 : deye/timeofuse/power/2 : 12000.0
+2024-08-11 10:31:40 : deye/timeofuse/power/3 : 12000.0
+2024-08-11 10:31:40 : deye/timeofuse/power/4 : 12000.0
+2024-08-11 10:31:40 : deye/timeofuse/power/5 : 12000.0
+2024-08-11 10:31:40 : deye/timeofuse/power/6 : 12000.0
+2024-08-11 10:31:40 : deye/timeofuse/voltage/1 : 49.0
+2024-08-11 10:31:40 : deye/timeofuse/voltage/2 : 49.0
+2024-08-11 10:31:40 : deye/timeofuse/voltage/3 : 49.0
+2024-08-11 10:31:40 : deye/timeofuse/voltage/4 : 49.0
+2024-08-11 10:31:40 : deye/timeofuse/voltage/5 : 49.0
+2024-08-11 10:31:40 : deye/timeofuse/voltage/6 : 49.0
+2024-08-11 10:31:40 : deye/timeofuse/soc/1 : 70.0
+2024-08-11 10:31:40 : deye/timeofuse/soc/2 : 30.0
+2024-08-11 10:31:40 : deye/timeofuse/soc/3 : 80.0
+2024-08-11 10:31:40 : deye/timeofuse/soc/4 : 80.0
+2024-08-11 10:31:40 : deye/timeofuse/soc/5 : 50.0
+2024-08-11 10:31:40 : deye/timeofuse/soc/6 : 50.0
+2024-08-11 10:31:40 : deye/timeofuse/enabled/1 : 0.0
+2024-08-11 10:31:40 : deye/timeofuse/enabled/2 : 0.0
+2024-08-11 10:31:40 : deye/timeofuse/enabled/3 : 0.0
+2024-08-11 10:31:40 : deye/timeofuse/enabled/4 : 0.0
+2024-08-11 10:31:40 : deye/timeofuse/enabled/5 : 0.0
+2024-08-11 10:31:40 : deye/timeofuse/enabled/6 : 0.0
+2024-08-11 10:31:40 : deye/ac/generator/a/voltage : 0.7
+2024-08-11 10:31:40 : deye/ac/generator/b/voltage : 0.3
+2024-08-11 10:31:40 : deye/ac/generator/c/voltage : 0.4
+2024-08-11 10:31:40 : deye/ac/generator/a/power : 0.0
+2024-08-11 10:31:40 : deye/ac/generator/b/power : 0.0
+2024-08-11 10:31:40 : deye/ac/generator/c/power : 0.0
+2024-08-11 10:31:40 : deye/ac/generator/total_power : 0.0
+2024-08-11 10:31:40 : deye/ac/generator/daily_energy : 0.0
+2024-08-11 10:31:40 : deye/settings/active_power_regulation : 0.0
+</pre></div>
+</div>
+</section>
+<section id="einbinden-in-fhem">
+<h2>Einbinden in FHEM<a class="headerlink" href="#einbinden-in-fhem" title="Link to this heading">¶</a></h2>
+<div class="admonition seealso">
+<p class="admonition-title">Siehe auch</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://wiki.fhem.de/wiki/MQTT2-Module_-_Praxisbeispiele">https://wiki.fhem.de/wiki/MQTT2-Module_-_Praxisbeispiele</a></p></li>
+<li><p><a class="reference external" href="https://wiki.fhem.de/wiki/MQTT2_DEVICE_-_Schritt_f%C3%BCr_Schritt">https://wiki.fhem.de/wiki/MQTT2_DEVICE_-_Schritt_f%C3%BCr_Schritt</a></p></li>
+<li><p><a class="reference external" href="https://wiki.fhem.de/wiki/MQTT_GENERIC_BRIDGE">https://wiki.fhem.de/wiki/MQTT_GENERIC_BRIDGE</a></p></li>
+</ul>
+</div>
+<p>Bei aktiviertem <cite>autocreate</cite> legt FHEM bei Eintreffen von MQTT-Nachrichten automatisch für jedes Device eine Instanz des Modules <cite>MQTT2_DEVICE</cite> an.</p>
+<p>Wenn ein externer MQTT-Server zum Einsatz kommt, ist sehr zu empfehlen, für die Beschäftigung mit einem neuen, unbekannten Device zunächst einen MQTT2_SERVER einzurichten. Ist der Port 1883 bereits belegt, nimmt man einfach einen anderen Port, z.B. 1884:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">define</span> <span class="n">m2server</span> <span class="n">MQTT2_SERVER</span> <span class="mi">1884</span> <span class="k">global</span>
+
+<span class="nb">list</span> <span class="n">m2server</span>
+
+<span class="n">Internals</span><span class="p">:</span>
+<span class="n">CFGFN</span>
+<span class="n">CONNECTS</span>   <span class="mi">2</span>
+<span class="n">Clients</span>    <span class="p">:</span><span class="n">MQTT2_DEVICE</span><span class="p">:</span><span class="n">MQTT_GENERIC_BRIDGE</span><span class="p">:</span>
+<span class="n">ClientsKeepOrder</span> <span class="mi">1</span>
+<span class="n">DEF</span>        <span class="mi">1884</span> <span class="k">global</span>
+<span class="n">FD</span>         <span class="mi">74</span>
+<span class="n">FUUID</span>      <span class="mi">66</span><span class="n">b8870d</span><span class="o">-</span><span class="n">f33f</span><span class="o">-</span><span class="n">d1b0</span><span class="o">-</span><span class="mi">0</span><span class="n">f65</span><span class="o">-</span><span class="n">f56c8dec9410ebb8</span>
+<span class="n">NAME</span>       <span class="n">m2server</span>
+<span class="n">NR</span>         <span class="mi">408</span>
+<span class="n">PORT</span>       <span class="mi">1884</span>
+<span class="n">STATE</span>      <span class="n">Initialized</span>
+<span class="n">TYPE</span>       <span class="n">MQTT2_SERVER</span>
+<span class="n">eventCount</span> <span class="mi">3</span>
+<span class="n">Helper</span><span class="p">:</span>
+        <span class="n">DBLOG</span><span class="p">:</span>
+        <span class="n">nrclients</span><span class="p">:</span>
+                <span class="n">logdb</span><span class="p">:</span>
+                <span class="n">TIME</span>       <span class="mf">1723370775.21739</span>
+                <span class="n">VALUE</span>      <span class="mi">1</span>
+<span class="n">MatchList</span><span class="p">:</span>
+        <span class="mi">1</span><span class="p">:</span><span class="n">MQTT2_DEVICE</span> <span class="o">^.</span>
+        <span class="mi">2</span><span class="p">:</span><span class="n">MQTT_GENERIC_BRIDGE</span> <span class="o">^.</span>
+<span class="n">READINGS</span><span class="p">:</span>
+        <span class="mi">2024</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">11</span> <span class="mi">12</span><span class="p">:</span><span class="mi">06</span><span class="p">:</span><span class="mi">15</span>   <span class="n">nrclients</span>       <span class="mi">1</span>
+        <span class="mi">2024</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">11</span> <span class="mi">11</span><span class="p">:</span><span class="mi">40</span><span class="p">:</span><span class="mi">29</span>   <span class="n">state</span>           <span class="n">Initialized</span>
+<span class="n">clients</span><span class="p">:</span>
+        <span class="n">m2server_172</span><span class="mf">.18.0.3_53645</span> <span class="mi">1</span>
+<span class="n">hmccu</span><span class="p">:</span>
+<span class="n">retain</span><span class="p">:</span>
+<span class="n">Attributes</span><span class="p">:</span>
+<span class="n">autocreate</span> <span class="n">simple</span>
+<span class="n">mqttAlias</span>  <span class="n">MQTT</span> <span class="n">autocreate</span> <span class="n">Testserver</span>
+<span class="n">room</span>       <span class="n">Technik</span>
+</pre></div>
+</div>
+<p>Dies verhindert auch, dass mit <code class="docutils literal notranslate"><span class="pre">autocreate</span></code> beim Standard-MQTT-Server nicht undefiniert MQTT2 Devices anlegt. Beim Testserver wird <cite>attr mqtt autocreate simple</cite> gesetzt.</p>
+<p>Jetzt muss temporär die Dockerinstanz von <strong class="program">deye-mqtt</strong> temporär auf auf Port 1884 umgestellt werden, dazu wird die config.env geändert und die Instanz neu generiert:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>docker stop deye-mqtt
+docker rm -v deye-mqtt
+docker run -d --name deye-mqtt --env-file $HOME/prj/deye-inverter-mqtt/config.env --restart unless-stopped ghcr.io/kbialek/deye-inverter-mqtt
+</pre></div>
+</div>
+<p>Der DEYE Inverter wird automatisch angelegt, allerdings gibt es einige FHEM-Werte, die mehrfach belegt sind und somit überschrieben werden:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>list deye_inverter_nnnnnnnn
+
+Internals:
+CFGFN
+CID        deye_inverter_nnnnnnnn
+DEF        deye_inverter_nnnnnnnn
+FUUID      66b88d18-f33f-d1b0-18fe-12286307fbce0ba7
+IODev      m2server
+LASTInputDev m2server
+MSGCNT     979
+NAME       MQTT2_deye_inverter_nnnnnnnn
+NR         409
+STATE      ???
+TYPE       MQTT2_DEVICE
+eventCount 1069
+m2server_CONN m2server_172.18.0.3_53645
+m2server_MSGCNT 979
+m2server_TIME 2024-08-11 12:17:40
+Helper:
+        DBLOG:
+        active_power_regulation:
+                logdb:
+                TIME       1723371460.2513
+                VALUE      0.0
+        current:
+                logdb:
+                TIME       1723371460.19088
+                VALUE      -1.1
+        daily_charge:
+                logdb:
+                TIME       1723371460.13956
+                VALUE      10.9
+        daily_discharge:
+                logdb:
+                TIME       1723371460.14098
+                VALUE      7.3
+        daily_energy:
+                logdb:
+                TIME       1723371460.24999
+                VALUE      0.0
+        daily_energy_bought:
+                logdb:
+                TIME       1723371460.17016
+                VALUE      0.6
+        daily_energy_sold:
+                logdb:
+                TIME       1723371460.17276
+                VALUE      13.1
+        day_energy:
+                logdb:
+                TIME       1723371460.13614
+                VALUE      24.4
+        enabled_1:
+                logdb:
+                TIME       1723371460.23268
+                VALUE      0.0
+        enabled_2:
+                logdb:
+                TIME       1723371460.23397
+                VALUE      0.0
+        enabled_3:
+                logdb:
+                TIME       1723371460.23521
+                VALUE      0.0
+        enabled_4:
+                logdb:
+                TIME       1723371460.23643
+                VALUE      0.0
+        enabled_5:
+                logdb:
+                TIME       1723371460.23766
+                VALUE      0.0
+        enabled_6:
+                logdb:
+                TIME       1723371460.23884
+                VALUE      0.0
+        external:
+                logdb:
+                TIME       1723371460.16886
+                VALUE      -3015.0
+        internal:
+                logdb:
+                TIME       1723371460.16492
+                VALUE      181.0
+        logger_status:
+                logdb:
+                TIME       1723371460.12659
+                VALUE      online
+        power:
+                logdb:
+                TIME       1723371460.24722
+                VALUE      0.0
+        power_1:
+                logdb:
+                TIME       1723371460.20813
+                VALUE      12000.0
+        power_2:
+                logdb:
+                TIME       1723371460.20978
+                VALUE      12000.0
+        power_3:
+                logdb:
+                TIME       1723371460.21131
+                VALUE      12000.0
+        power_4:
+                logdb:
+                TIME       1723371460.2126
+                VALUE      12000.0
+        power_5:
+                logdb:
+                TIME       1723371460.21385
+                VALUE      12000.0
+        power_6:
+                logdb:
+                TIME       1723371460.21513
+                VALUE      12000.0
+        radiator_temp:
+                logdb:
+                TIME       1723371460.19675
+                VALUE      25.0
+        selling:
+                logdb:
+                TIME       1723371460.19921
+                VALUE      255.0
+        soc:
+                logdb:
+                TIME       1723371460.14698
+                VALUE      100.0
+        soc_1:
+                logdb:
+                TIME       1723371460.2244
+                VALUE      70.0
+        soc_2:
+                logdb:
+                TIME       1723371460.22565
+                VALUE      30.0
+        soc_3:
+                logdb:
+                TIME       1723371460.22689
+                VALUE      80.0
+        soc_4:
+                logdb:
+                TIME       1723371460.22858
+                VALUE      80.0
+        soc_5:
+                logdb:
+                TIME       1723371460.23009
+                VALUE      50.0
+        soc_6:
+                logdb:
+                TIME       1723371460.2314
+                VALUE      50.0
+        status:
+                logdb:
+                TIME       1723370776.24225
+                VALUE      online
+        temperature:
+                logdb:
+                TIME       1723371460.19804
+                VALUE      51.2
+        time_1:
+                logdb:
+                TIME       1723371460.2004
+                VALUE      100.0
+        time_2:
+                logdb:
+                TIME       1723371460.20177
+                VALUE      500.0
+        time_3:
+                logdb:
+                TIME       1723371460.20306
+                VALUE      900.0
+        time_4:
+                logdb:
+                TIME       1723371460.20436
+                VALUE      1300.0
+        time_5:
+                logdb:
+                TIME       1723371460.20558
+                VALUE      1700.0
+        time_6:
+                logdb:
+                TIME       1723371460.2069
+                VALUE      2100.0
+        total_charge:
+                logdb:
+                TIME       1723371460.1422
+                VALUE      359.4
+        total_discharge:
+                logdb:
+                TIME       1723371460.1433
+                VALUE      331.5
+        total_energy:
+                logdb:
+                TIME       1723371460.18674
+                VALUE      771.9
+        total_energy_bought:
+                logdb:
+                TIME       1723371460.17143
+                VALUE      51.4
+        total_energy_sold:
+                logdb:
+                TIME       1723371460.17474
+                VALUE      1664.8
+        total_power:
+                logdb:
+                TIME       1723371460.24863
+                VALUE      0.0
+        voltage:
+                logdb:
+                TIME       1723371460.24256
+                VALUE      0.5
+        voltage_1:
+                logdb:
+                TIME       1723371460.21632
+                VALUE      49.0
+        voltage_2:
+                logdb:
+                TIME       1723371460.21758
+                VALUE      49.0
+        voltage_3:
+                logdb:
+                TIME       1723371460.21905
+                VALUE      49.0
+        voltage_4:
+                logdb:
+                TIME       1723371460.22035
+                VALUE      49.0
+        voltage_5:
+                logdb:
+                TIME       1723371460.22182
+                VALUE      49.0
+        voltage_6:
+                logdb:
+                TIME       1723371460.22314
+                VALUE      49.0
+READINGS:
+        2024-08-11 12:06:16   IODev           m2server
+        2024-08-11 12:17:40   active_power_regulation 0.0
+        2024-08-11 12:17:40   current         -1.1
+        2024-08-11 12:17:40   daily_charge    10.9
+        2024-08-11 12:17:40   daily_discharge 7.3
+        2024-08-11 12:17:40   daily_energy    0.0
+        2024-08-11 12:17:40   daily_energy_bought 0.6
+        2024-08-11 12:17:40   daily_energy_sold 13.1
+        2024-08-11 12:17:40   day_energy      24.4
+        2024-08-11 12:17:40   enabled_1       0.0
+        2024-08-11 12:17:40   enabled_2       0.0
+        2024-08-11 12:17:40   enabled_3       0.0
+        2024-08-11 12:17:40   enabled_4       0.0
+        2024-08-11 12:17:40   enabled_5       0.0
+        2024-08-11 12:17:40   enabled_6       0.0
+        2024-08-11 12:17:40   external        -3015.0
+        2024-08-11 12:17:40   internal        181.0
+        2024-08-11 12:17:40   logger_status   online
+        2024-08-11 12:17:40   power           0.0
+        2024-08-11 12:17:40   power_1         12000.0
+        2024-08-11 12:17:40   power_2         12000.0
+        2024-08-11 12:17:40   power_3         12000.0
+        2024-08-11 12:17:40   power_4         12000.0
+        2024-08-11 12:17:40   power_5         12000.0
+        2024-08-11 12:17:40   power_6         12000.0
+        2024-08-11 12:17:40   radiator_temp   25.0
+        2024-08-11 12:17:40   selling         255.0
+        2024-08-11 12:17:40   soc             100.0
+        2024-08-11 12:17:40   soc_1           70.0
+        2024-08-11 12:17:40   soc_2           30.0
+        2024-08-11 12:17:40   soc_3           80.0
+        2024-08-11 12:17:40   soc_4           80.0
+        2024-08-11 12:17:40   soc_5           50.0
+        2024-08-11 12:17:40   soc_6           50.0
+        2024-08-11 12:06:16   status          online
+        2024-08-11 12:17:40   temperature     51.2
+        2024-08-11 12:17:40   time_1          100.0
+        2024-08-11 12:17:40   time_2          500.0
+        2024-08-11 12:17:40   time_3          900.0
+        2024-08-11 12:17:40   time_4          1300.0
+        2024-08-11 12:17:40   time_5          1700.0
+        2024-08-11 12:17:40   time_6          2100.0
+        2024-08-11 12:17:40   total_charge    359.4
+        2024-08-11 12:17:40   total_discharge 331.5
+        2024-08-11 12:17:40   total_energy    771.9
+        2024-08-11 12:17:40   total_energy_bought 51.4
+        2024-08-11 12:17:40   total_energy_sold 1664.8
+        2024-08-11 12:17:40   total_power     0.0
+        2024-08-11 12:17:40   voltage         0.5
+        2024-08-11 12:17:40   voltage_1       49.0
+        2024-08-11 12:17:40   voltage_2       49.0
+        2024-08-11 12:17:40   voltage_3       49.0
+        2024-08-11 12:17:40   voltage_4       49.0
+        2024-08-11 12:17:40   voltage_5       49.0
+        2024-08-11 12:17:40   voltage_6       49.0
+hmccu:
+Attributes:
+readingList deye_inverter_nnnnnnnn:deye/status:.* status
+deye_inverter_nnnnnnnn:deye/logger_status:.* logger_status
+deye_inverter_nnnnnnnn:deye/dc/pv1/power:.* power
+deye_inverter_nnnnnnnn:deye/dc/pv2/power:.* power
+deye_inverter_nnnnnnnn:deye/dc/pv1/voltage:.* voltage
+deye_inverter_nnnnnnnn:deye/dc/pv2/voltage:.* voltage
+deye_inverter_nnnnnnnn:deye/dc/pv1/current:.* current
+deye_inverter_nnnnnnnn:deye/dc/pv2/current:.* current
+deye_inverter_nnnnnnnn:deye/day_energy:.* day_energy
+deye_inverter_nnnnnnnn:deye/total_energy:.* total_energy
+deye_inverter_nnnnnnnn:deye/battery/daily_charge:.* daily_charge
+deye_inverter_nnnnnnnn:deye/battery/daily_discharge:.* daily_discharge
+deye_inverter_nnnnnnnn:deye/battery/total_charge:.* total_charge
+deye_inverter_nnnnnnnn:deye/battery/total_discharge:.* total_discharge
+deye_inverter_nnnnnnnn:deye/battery/power:.* power
+deye_inverter_nnnnnnnn:deye/battery/voltage:.* voltage
+deye_inverter_nnnnnnnn:deye/battery/soc:.* soc
+deye_inverter_nnnnnnnn:deye/battery/current:.* current
+deye_inverter_nnnnnnnn:deye/battery/temperature:.* temperature
+deye_inverter_nnnnnnnn:deye/ac/total_power:.* total_power
+deye_inverter_nnnnnnnn:deye/ac/l1/voltage:.* voltage
+deye_inverter_nnnnnnnn:deye/ac/l2/voltage:.* voltage
+deye_inverter_nnnnnnnn:deye/ac/l3/voltage:.* voltage
+deye_inverter_nnnnnnnn:deye/ac/l1/ct/internal:.* internal
+deye_inverter_nnnnnnnn:deye/ac/l2/ct/internal:.* internal
+deye_inverter_nnnnnnnn:deye/ac/l3/ct/internal:.* internal
+deye_inverter_nnnnnnnn:deye/ac/l1/ct/external:.* external
+deye_inverter_nnnnnnnn:deye/ac/l2/ct/external:.* external
+deye_inverter_nnnnnnnn:deye/ac/l3/ct/external:.* external
+deye_inverter_nnnnnnnn:deye/ac/daily_energy_bought:.* daily_energy_bought
+deye_inverter_nnnnnnnn:deye/ac/total_energy_bought:.* total_energy_bought
+deye_inverter_nnnnnnnn:deye/ac/daily_energy_sold:.* daily_energy_sold
+deye_inverter_nnnnnnnn:deye/ac/total_energy_sold:.* total_energy_sold
+deye_inverter_nnnnnnnn:deye/ac/ups/total_power:.* total_power
+deye_inverter_nnnnnnnn:deye/ac/ups/l1/power:.* power
+deye_inverter_nnnnnnnn:deye/ac/ups/l2/power:.* power
+deye_inverter_nnnnnnnn:deye/ac/ups/l3/power:.* power
+deye_inverter_nnnnnnnn:deye/ac/ups/l1/voltage:.* voltage
+deye_inverter_nnnnnnnn:deye/ac/ups/l2/voltage:.* voltage
+deye_inverter_nnnnnnnn:deye/ac/ups/l3/voltage:.* voltage
+deye_inverter_nnnnnnnn:deye/ac/ups/daily_energy:.* daily_energy
+deye_inverter_nnnnnnnn:deye/ac/ups/total_energy:.* total_energy
+deye_inverter_nnnnnnnn:deye/ac/l1/current:.* current
+deye_inverter_nnnnnnnn:deye/ac/l2/current:.* current
+deye_inverter_nnnnnnnn:deye/ac/l3/current:.* current
+deye_inverter_nnnnnnnn:deye/ac/l1/power:.* power
+deye_inverter_nnnnnnnn:deye/ac/l2/power:.* power
+deye_inverter_nnnnnnnn:deye/ac/l3/power:.* power
+deye_inverter_nnnnnnnn:deye/radiator_temp:.* radiator_temp
+deye_inverter_nnnnnnnn:deye/ac/temperature:.* temperature
+deye_inverter_nnnnnnnn:deye/timeofuse/selling:.* selling
+deye_inverter_nnnnnnnn:deye/timeofuse/time/1:.* time_1
+deye_inverter_nnnnnnnn:deye/timeofuse/time/2:.* time_2
+deye_inverter_nnnnnnnn:deye/timeofuse/time/3:.* time_3
+deye_inverter_nnnnnnnn:deye/timeofuse/time/4:.* time_4
+deye_inverter_nnnnnnnn:deye/timeofuse/time/5:.* time_5
+deye_inverter_nnnnnnnn:deye/timeofuse/time/6:.* time_6
+deye_inverter_nnnnnnnn:deye/timeofuse/power/1:.* power_1
+deye_inverter_nnnnnnnn:deye/timeofuse/power/2:.* power_2
+deye_inverter_nnnnnnnn:deye/timeofuse/power/3:.* power_3
+deye_inverter_nnnnnnnn:deye/timeofuse/power/4:.* power_4
+deye_inverter_nnnnnnnn:deye/timeofuse/power/5:.* power_5
+deye_inverter_nnnnnnnn:deye/timeofuse/power/6:.* power_6
+deye_inverter_nnnnnnnn:deye/timeofuse/voltage/1:.* voltage_1
+deye_inverter_nnnnnnnn:deye/timeofuse/voltage/2:.* voltage_2
+deye_inverter_nnnnnnnn:deye/timeofuse/voltage/3:.* voltage_3
+deye_inverter_nnnnnnnn:deye/timeofuse/voltage/4:.* voltage_4
+deye_inverter_nnnnnnnn:deye/timeofuse/voltage/5:.* voltage_5
+deye_inverter_nnnnnnnn:deye/timeofuse/voltage/6:.* voltage_6
+deye_inverter_nnnnnnnn:deye/timeofuse/soc/1:.* soc_1
+deye_inverter_nnnnnnnn:deye/timeofuse/soc/2:.* soc_2
+deye_inverter_nnnnnnnn:deye/timeofuse/soc/3:.* soc_3
+deye_inverter_nnnnnnnn:deye/timeofuse/soc/4:.* soc_4
+deye_inverter_nnnnnnnn:deye/timeofuse/soc/5:.* soc_5
+deye_inverter_nnnnnnnn:deye/timeofuse/soc/6:.* soc_6
+deye_inverter_nnnnnnnn:deye/timeofuse/enabled/1:.* enabled_1
+deye_inverter_nnnnnnnn:deye/timeofuse/enabled/2:.* enabled_2
+deye_inverter_nnnnnnnn:deye/timeofuse/enabled/3:.* enabled_3
+deye_inverter_nnnnnnnn:deye/timeofuse/enabled/4:.* enabled_4
+deye_inverter_nnnnnnnn:deye/timeofuse/enabled/5:.* enabled_5
+deye_inverter_nnnnnnnn:deye/timeofuse/enabled/6:.* enabled_6
+deye_inverter_nnnnnnnn:deye/ac/generator/a/voltage:.* voltage
+deye_inverter_nnnnnnnn:deye/ac/generator/b/voltage:.* voltage
+deye_inverter_nnnnnnnn:deye/ac/generator/c/voltage:.* voltage
+deye_inverter_nnnnnnnn:deye/ac/generator/a/power:.* power
+deye_inverter_nnnnnnnn:deye/ac/generator/b/power:.* power
+deye_inverter_nnnnnnnn:deye/ac/generator/c/power:.* power
+deye_inverter_nnnnnnnn:deye/ac/generator/total_power:.* total_power
+deye_inverter_nnnnnnnn:deye/ac/generator/daily_energy:.* daily_energy
+deye_inverter_nnnnnnnn:deye/settings/active_power_regulation:.* active_power_regulation
+room       MQTT2_DEVICE
+</pre></div>
+</div>
+<p>Die Zuweisungen werden jetzt in FHEM auf eindeutige Benennungen angepasst und das Device umgestellt:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">attr</span> <span class="n">MQTT2_deye_inverter_nnnnnnnn</span> <span class="n">IODev</span> <span class="n">mqtt</span>
+<span class="n">attr</span> <span class="n">mqttGeneric</span> <span class="n">subscriptions</span> <span class="n">deye</span><span class="o">/</span><span class="c1">#:deye_inverter_</span>
+
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">status</span><span class="p">:</span><span class="o">.*</span> <span class="n">status</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">logger_status</span><span class="p">:</span><span class="o">.*</span> <span class="n">logger_status</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">dc</span><span class="o">/</span><span class="n">pv1</span><span class="o">/</span><span class="n">power</span><span class="p">:</span><span class="o">.*</span> <span class="n">pv1_power</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">dc</span><span class="o">/</span><span class="n">pv2</span><span class="o">/</span><span class="n">power</span><span class="p">:</span><span class="o">.*</span> <span class="n">pv2_power</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">dc</span><span class="o">/</span><span class="n">pv1</span><span class="o">/</span><span class="n">voltage</span><span class="p">:</span><span class="o">.*</span> <span class="n">pv1_voltage</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">dc</span><span class="o">/</span><span class="n">pv2</span><span class="o">/</span><span class="n">voltage</span><span class="p">:</span><span class="o">.*</span> <span class="n">pv2_voltage</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">dc</span><span class="o">/</span><span class="n">pv1</span><span class="o">/</span><span class="n">current</span><span class="p">:</span><span class="o">.*</span> <span class="n">pv1_current</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">dc</span><span class="o">/</span><span class="n">pv2</span><span class="o">/</span><span class="n">current</span><span class="p">:</span><span class="o">.*</span> <span class="n">pv2_current</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">day_energy</span><span class="p">:</span><span class="o">.*</span> <span class="n">day_energy</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">total_energy</span><span class="p">:</span><span class="o">.*</span> <span class="n">total_energy</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">battery</span><span class="o">/</span><span class="n">daily_charge</span><span class="p">:</span><span class="o">.*</span> <span class="n">battery_daily_charge</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">battery</span><span class="o">/</span><span class="n">daily_discharge</span><span class="p">:</span><span class="o">.*</span> <span class="n">battery_daily_discharge</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">battery</span><span class="o">/</span><span class="n">total_charge</span><span class="p">:</span><span class="o">.*</span> <span class="n">battery_total_charge</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">battery</span><span class="o">/</span><span class="n">total_discharge</span><span class="p">:</span><span class="o">.*</span> <span class="n">battery_total_discharge</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">battery</span><span class="o">/</span><span class="n">power</span><span class="p">:</span><span class="o">.*</span> <span class="n">battery_power</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">battery</span><span class="o">/</span><span class="n">voltage</span><span class="p">:</span><span class="o">.*</span> <span class="n">battery_voltage</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">battery</span><span class="o">/</span><span class="n">soc</span><span class="p">:</span><span class="o">.*</span> <span class="n">battery_soc</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">battery</span><span class="o">/</span><span class="n">current</span><span class="p">:</span><span class="o">.*</span> <span class="n">battery_current</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">battery</span><span class="o">/</span><span class="n">temperature</span><span class="p">:</span><span class="o">.*</span> <span class="n">battery_temperature</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">ac</span><span class="o">/</span><span class="n">total_power</span><span class="p">:</span><span class="o">.*</span> <span class="n">ac_total_power</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">ac</span><span class="o">/</span><span class="n">l1</span><span class="o">/</span><span class="n">voltage</span><span class="p">:</span><span class="o">.*</span> <span class="n">acl1_voltage</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">ac</span><span class="o">/</span><span class="n">l2</span><span class="o">/</span><span class="n">voltage</span><span class="p">:</span><span class="o">.*</span> <span class="n">acl2_voltage</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">ac</span><span class="o">/</span><span class="n">l3</span><span class="o">/</span><span class="n">voltage</span><span class="p">:</span><span class="o">.*</span> <span class="n">acl3_voltage</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">ac</span><span class="o">/</span><span class="n">l1</span><span class="o">/</span><span class="n">ct</span><span class="o">/</span><span class="n">internal</span><span class="p">:</span><span class="o">.*</span> <span class="n">acl1_internal</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">ac</span><span class="o">/</span><span class="n">l2</span><span class="o">/</span><span class="n">ct</span><span class="o">/</span><span class="n">internal</span><span class="p">:</span><span class="o">.*</span> <span class="n">acl2_internal</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">ac</span><span class="o">/</span><span class="n">l3</span><span class="o">/</span><span class="n">ct</span><span class="o">/</span><span class="n">internal</span><span class="p">:</span><span class="o">.*</span> <span class="n">acl3_internal</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">ac</span><span class="o">/</span><span class="n">l1</span><span class="o">/</span><span class="n">ct</span><span class="o">/</span><span class="n">external</span><span class="p">:</span><span class="o">.*</span> <span class="n">acl1_external</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">ac</span><span class="o">/</span><span class="n">l2</span><span class="o">/</span><span class="n">ct</span><span class="o">/</span><span class="n">external</span><span class="p">:</span><span class="o">.*</span> <span class="n">acl2_external</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">ac</span><span class="o">/</span><span class="n">l3</span><span class="o">/</span><span class="n">ct</span><span class="o">/</span><span class="n">external</span><span class="p">:</span><span class="o">.*</span> <span class="n">acl3_external</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">ac</span><span class="o">/</span><span class="n">daily_energy_bought</span><span class="p">:</span><span class="o">.*</span> <span class="n">daily_energy_bought</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">ac</span><span class="o">/</span><span class="n">total_energy_bought</span><span class="p">:</span><span class="o">.*</span> <span class="n">total_energy_bought</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">ac</span><span class="o">/</span><span class="n">daily_energy_sold</span><span class="p">:</span><span class="o">.*</span> <span class="n">daily_energy_sold</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">ac</span><span class="o">/</span><span class="n">total_energy_sold</span><span class="p">:</span><span class="o">.*</span> <span class="n">total_energy_sold</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">ac</span><span class="o">/</span><span class="n">ups</span><span class="o">/</span><span class="n">total_power</span><span class="p">:</span><span class="o">.*</span> <span class="n">ups_total_power</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">ac</span><span class="o">/</span><span class="n">ups</span><span class="o">/</span><span class="n">l1</span><span class="o">/</span><span class="n">power</span><span class="p">:</span><span class="o">.*</span> <span class="n">upsl1_power</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">ac</span><span class="o">/</span><span class="n">ups</span><span class="o">/</span><span class="n">l2</span><span class="o">/</span><span class="n">power</span><span class="p">:</span><span class="o">.*</span> <span class="n">upsl2_power</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">ac</span><span class="o">/</span><span class="n">ups</span><span class="o">/</span><span class="n">l3</span><span class="o">/</span><span class="n">power</span><span class="p">:</span><span class="o">.*</span> <span class="n">up2l3_power</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">ac</span><span class="o">/</span><span class="n">ups</span><span class="o">/</span><span class="n">l1</span><span class="o">/</span><span class="n">voltage</span><span class="p">:</span><span class="o">.*</span> <span class="n">upsl1_voltage</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">ac</span><span class="o">/</span><span class="n">ups</span><span class="o">/</span><span class="n">l2</span><span class="o">/</span><span class="n">voltage</span><span class="p">:</span><span class="o">.*</span> <span class="n">upsl2_voltage</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">ac</span><span class="o">/</span><span class="n">ups</span><span class="o">/</span><span class="n">l3</span><span class="o">/</span><span class="n">voltage</span><span class="p">:</span><span class="o">.*</span> <span class="n">upsl3_voltage</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">ac</span><span class="o">/</span><span class="n">ups</span><span class="o">/</span><span class="n">daily_energy</span><span class="p">:</span><span class="o">.*</span> <span class="n">ups_daily_energy</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">ac</span><span class="o">/</span><span class="n">ups</span><span class="o">/</span><span class="n">total_energy</span><span class="p">:</span><span class="o">.*</span> <span class="n">ups_total_energy</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">ac</span><span class="o">/</span><span class="n">l1</span><span class="o">/</span><span class="n">current</span><span class="p">:</span><span class="o">.*</span> <span class="n">acl1_current</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">ac</span><span class="o">/</span><span class="n">l2</span><span class="o">/</span><span class="n">current</span><span class="p">:</span><span class="o">.*</span> <span class="n">acl2_current</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">ac</span><span class="o">/</span><span class="n">l3</span><span class="o">/</span><span class="n">current</span><span class="p">:</span><span class="o">.*</span> <span class="n">acl3_current</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">ac</span><span class="o">/</span><span class="n">l1</span><span class="o">/</span><span class="n">power</span><span class="p">:</span><span class="o">.*</span> <span class="n">acl1_power</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">ac</span><span class="o">/</span><span class="n">l2</span><span class="o">/</span><span class="n">power</span><span class="p">:</span><span class="o">.*</span> <span class="n">acl2_power</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">ac</span><span class="o">/</span><span class="n">l3</span><span class="o">/</span><span class="n">power</span><span class="p">:</span><span class="o">.*</span> <span class="n">acl3_power</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">radiator_temp</span><span class="p">:</span><span class="o">.*</span> <span class="n">radiator_temp</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">ac</span><span class="o">/</span><span class="n">temperature</span><span class="p">:</span><span class="o">.*</span> <span class="n">ac_temperature</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">timeofuse</span><span class="o">/</span><span class="n">selling</span><span class="p">:</span><span class="o">.*</span> <span class="n">timeofuse_selling</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">timeofuse</span><span class="o">/</span><span class="n">time</span><span class="o">/</span><span class="mi">1</span><span class="p">:</span><span class="o">.*</span> <span class="n">timeofuse_time_1</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">timeofuse</span><span class="o">/</span><span class="n">time</span><span class="o">/</span><span class="mi">2</span><span class="p">:</span><span class="o">.*</span> <span class="n">timeofuse_time_2</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">timeofuse</span><span class="o">/</span><span class="n">time</span><span class="o">/</span><span class="mi">3</span><span class="p">:</span><span class="o">.*</span> <span class="n">timeofuse_time_3</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">timeofuse</span><span class="o">/</span><span class="n">time</span><span class="o">/</span><span class="mi">4</span><span class="p">:</span><span class="o">.*</span> <span class="n">timeofuse_time_4</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">timeofuse</span><span class="o">/</span><span class="n">time</span><span class="o">/</span><span class="mi">5</span><span class="p">:</span><span class="o">.*</span> <span class="n">timeofuse_time_5</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">timeofuse</span><span class="o">/</span><span class="n">time</span><span class="o">/</span><span class="mi">6</span><span class="p">:</span><span class="o">.*</span> <span class="n">timeofuse_time_6</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">timeofuse</span><span class="o">/</span><span class="n">power</span><span class="o">/</span><span class="mi">1</span><span class="p">:</span><span class="o">.*</span> <span class="n">timeofuse_power_1</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">timeofuse</span><span class="o">/</span><span class="n">power</span><span class="o">/</span><span class="mi">2</span><span class="p">:</span><span class="o">.*</span> <span class="n">timeofuse_power_2</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">timeofuse</span><span class="o">/</span><span class="n">power</span><span class="o">/</span><span class="mi">3</span><span class="p">:</span><span class="o">.*</span> <span class="n">timeofuse_power_3</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">timeofuse</span><span class="o">/</span><span class="n">power</span><span class="o">/</span><span class="mi">4</span><span class="p">:</span><span class="o">.*</span> <span class="n">timeofuse_power_4</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">timeofuse</span><span class="o">/</span><span class="n">power</span><span class="o">/</span><span class="mi">5</span><span class="p">:</span><span class="o">.*</span> <span class="n">timeofuse_power_5</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">timeofuse</span><span class="o">/</span><span class="n">power</span><span class="o">/</span><span class="mi">6</span><span class="p">:</span><span class="o">.*</span> <span class="n">timeofuse_power_6</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">timeofuse</span><span class="o">/</span><span class="n">voltage</span><span class="o">/</span><span class="mi">1</span><span class="p">:</span><span class="o">.*</span> <span class="n">timeofuse_voltage_1</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">timeofuse</span><span class="o">/</span><span class="n">voltage</span><span class="o">/</span><span class="mi">2</span><span class="p">:</span><span class="o">.*</span> <span class="n">timeofuse_voltage_2</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">timeofuse</span><span class="o">/</span><span class="n">voltage</span><span class="o">/</span><span class="mi">3</span><span class="p">:</span><span class="o">.*</span> <span class="n">timeofuse_voltage_3</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">timeofuse</span><span class="o">/</span><span class="n">voltage</span><span class="o">/</span><span class="mi">4</span><span class="p">:</span><span class="o">.*</span> <span class="n">timeofuse_voltage_4</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">timeofuse</span><span class="o">/</span><span class="n">voltage</span><span class="o">/</span><span class="mi">5</span><span class="p">:</span><span class="o">.*</span> <span class="n">timeofuse_voltage_5</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">timeofuse</span><span class="o">/</span><span class="n">voltage</span><span class="o">/</span><span class="mi">6</span><span class="p">:</span><span class="o">.*</span> <span class="n">timeofuse_voltage_6</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">timeofuse</span><span class="o">/</span><span class="n">soc</span><span class="o">/</span><span class="mi">1</span><span class="p">:</span><span class="o">.*</span> <span class="n">timeofuse_soc_1</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">timeofuse</span><span class="o">/</span><span class="n">soc</span><span class="o">/</span><span class="mi">2</span><span class="p">:</span><span class="o">.*</span> <span class="n">timeofuse_soc_2</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">timeofuse</span><span class="o">/</span><span class="n">soc</span><span class="o">/</span><span class="mi">3</span><span class="p">:</span><span class="o">.*</span> <span class="n">timeofuse_soc_3</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">timeofuse</span><span class="o">/</span><span class="n">soc</span><span class="o">/</span><span class="mi">4</span><span class="p">:</span><span class="o">.*</span> <span class="n">timeofuse_soc_4</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">timeofuse</span><span class="o">/</span><span class="n">soc</span><span class="o">/</span><span class="mi">5</span><span class="p">:</span><span class="o">.*</span> <span class="n">timeofuse_soc_5</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">timeofuse</span><span class="o">/</span><span class="n">soc</span><span class="o">/</span><span class="mi">6</span><span class="p">:</span><span class="o">.*</span> <span class="n">timeofuse_soc_6</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">timeofuse</span><span class="o">/</span><span class="n">enabled</span><span class="o">/</span><span class="mi">1</span><span class="p">:</span><span class="o">.*</span> <span class="n">timeofuse_enabled_1</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">timeofuse</span><span class="o">/</span><span class="n">enabled</span><span class="o">/</span><span class="mi">2</span><span class="p">:</span><span class="o">.*</span> <span class="n">timeofuse_enabled_2</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">timeofuse</span><span class="o">/</span><span class="n">enabled</span><span class="o">/</span><span class="mi">3</span><span class="p">:</span><span class="o">.*</span> <span class="n">timeofuse_enabled_3</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">timeofuse</span><span class="o">/</span><span class="n">enabled</span><span class="o">/</span><span class="mi">4</span><span class="p">:</span><span class="o">.*</span> <span class="n">timeofuse_enabled_4</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">timeofuse</span><span class="o">/</span><span class="n">enabled</span><span class="o">/</span><span class="mi">5</span><span class="p">:</span><span class="o">.*</span> <span class="n">timeofuse_enabled_5</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">timeofuse</span><span class="o">/</span><span class="n">enabled</span><span class="o">/</span><span class="mi">6</span><span class="p">:</span><span class="o">.*</span> <span class="n">timeofuse_enabled_6</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">ac</span><span class="o">/</span><span class="n">generator</span><span class="o">/</span><span class="n">a</span><span class="o">/</span><span class="n">voltage</span><span class="p">:</span><span class="o">.*</span> <span class="n">generator_a_voltage</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">ac</span><span class="o">/</span><span class="n">generator</span><span class="o">/</span><span class="n">b</span><span class="o">/</span><span class="n">voltage</span><span class="p">:</span><span class="o">.*</span> <span class="n">generator_b_voltage</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">ac</span><span class="o">/</span><span class="n">generator</span><span class="o">/</span><span class="n">c</span><span class="o">/</span><span class="n">voltage</span><span class="p">:</span><span class="o">.*</span> <span class="n">generator_c_voltage</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">ac</span><span class="o">/</span><span class="n">generator</span><span class="o">/</span><span class="n">a</span><span class="o">/</span><span class="n">power</span><span class="p">:</span><span class="o">.*</span> <span class="n">generator_a_power</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">ac</span><span class="o">/</span><span class="n">generator</span><span class="o">/</span><span class="n">b</span><span class="o">/</span><span class="n">power</span><span class="p">:</span><span class="o">.*</span> <span class="n">generator_b_power</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">ac</span><span class="o">/</span><span class="n">generator</span><span class="o">/</span><span class="n">c</span><span class="o">/</span><span class="n">power</span><span class="p">:</span><span class="o">.*</span> <span class="n">generator_c_power</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">ac</span><span class="o">/</span><span class="n">generator</span><span class="o">/</span><span class="n">total_power</span><span class="p">:</span><span class="o">.*</span> <span class="n">generator_total_power</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">ac</span><span class="o">/</span><span class="n">generator</span><span class="o">/</span><span class="n">daily_energy</span><span class="p">:</span><span class="o">.*</span> <span class="n">generator_daily_energy</span>
+<span class="n">deye_inverter_2798476009</span><span class="p">:</span><span class="n">deye</span><span class="o">/</span><span class="n">settings</span><span class="o">/</span><span class="n">active_power_regulation</span><span class="p">:</span><span class="o">.*</span> <span class="n">active_power_regulation</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="heizung.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Aufbau der Heizung</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="energiezaehler.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Auslesen der Energiewerte der EHZ</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2024, Rainer Thieringer | Creative Commons Lizenz 4.0 (BY-NC-SA 4.0)
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Deye Wechselrichter MQTT Einbindung</a><ul>
+<li><a class="reference internal" href="#konfiguration">Konfiguration</a></li>
+<li><a class="reference internal" href="#installation-unter-verwendung-von-docker">Installation unter Verwendung von Docker</a></li>
+<li><a class="reference internal" href="#betrieb">Betrieb</a></li>
+<li><a class="reference internal" href="#einbinden-in-fhem">Einbinden in FHEM</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="../_static/documentation_options.js?v=a651434f"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/furo.js?v=5fa4622c"></script>
+    <script src="../_static/translations.js?v=79cc9f76"></script>
+    </body>
+</html>

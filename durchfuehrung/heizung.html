@@ -1,0 +1,616 @@
+<!doctype html>
+<html class="no-js" lang="de" data-content_root="../">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Stichwortverzeichnis" href="../genindex.html" /><link rel="search" title="Suche" href="../search.html" /><link rel="next" title="Einbindung der NIBE-S1256 Wärmempumpe via MQTT" href="nibe-mqtt.html" /><link rel="prev" title="Deye Wechselrichter MQTT Einbindung" href="deye-mqtt.html" />
+
+    <!-- Generated with Sphinx 7.4.7 and Furo 2024.08.06 -->
+        <title>Aufbau der Heizung - EnergetischeSanierung 2024-04 Dokumentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=354aac6f" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=fd3f3429" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=302659d7" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/trumpf.css" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">EnergetischeSanierung 2024-04 Dokumentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  
+  <span class="sidebar-brand-text">EnergetischeSanierung 2024-04 Dokumentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder="Suche" name="q" aria-label="Suche">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Inhaltsverzeichnis:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../einleitung/index.html">Einleitung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../grundlagen/index.html">Grundlagen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../planung/index.html">Planung</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Planung</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../planung/photovoltaik.html">Photovoltaik</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../planung/akku.html">Akkuspeicher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../planung/inverter.html">Wechselrichter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../planung/einspeisung.html">Einspeisung ins öffentliche und Hausnetz</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../planung/anmeldung-pv-netze-bw.html">Anmeldung der Anlagen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../planung/kollektor.html">Kollektor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../planung/wallbox.html">Wallbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../planung/waermepumpe.html">Wärmepumpe</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Durchführung</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Durchführung</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="energiezaehler.html">Auslesen der Energiewerte der EHZ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deye-mqtt.html">Deye Wechselrichter MQTT Einbindung</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Aufbau der Heizung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nibe-mqtt.html">Einbindung der NIBE-S1256 Wärmempumpe via MQTT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="telegraf-influxdb.html">Persistierung und Visualisierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modbus.html">Geräte mit Modbus Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mqtt.html">Geräte mit MQTT Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="smarthome.html">Smart Home</a></li>
+<li class="toctree-l2"><a class="reference internal" href="support.html">Anfragen an den Support</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ergebnisse/index.html">Ergebnisse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../diskussion/index.html">Diskussion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literaturverzeichnis/index.html">Literaturverzeichnis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../anhang/index.html">Anhang</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossar.html">Glossar</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="view-this-page">
+  <a class="muted-link" href="../_sources/durchfuehrung/heizung.rst.txt" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div>
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <section id="aufbau-der-heizung">
+<h1>Aufbau der Heizung<a class="headerlink" href="#aufbau-der-heizung" title="Link to this heading">¶</a></h1>
+<section id="nibe-warmepumpe">
+<h2>NIBE Wärmepumpe<a class="headerlink" href="#nibe-warmepumpe" title="Link to this heading">¶</a></h2>
+<p>Mit dem Zubehör AXC können zusätzliche Funktionen umgesetzt werden.</p>
+<figure class="align-default">
+<img alt="../_images/NIBE_AA25.png" src="../_images/NIBE_AA25.png" />
+</figure>
+<p>NIBE bietet dazu 3 Varianten von AXC an, laut dem technischen Berater der Firma NIBE sind diese jedoch alle baugleich und können per DIP-Schalter auf die benötigte Funktion eingestellt werden.</p>
+<p>In den Handbüchern sind diese Funktionen den einzelnen Varianten zugeordnet:</p>
+<p>AXC 30:</p>
+<ul class="simple">
+<li><p>Mischventilgesteuerte Zusatzheizung</p></li>
+<li><p><strong>Stufengeregelte Zusatzheizung</strong></p></li>
+<li><p><strong>Zusätzlicher Heiz- und Kühlkreis</strong></p></li>
+<li><p>Brauchwasserkomfort</p></li>
+<li><p>Aktive Kühlung (Vierrohr)</p></li>
+<li><p>Anschluss mehrerer Wärmepumpen</p></li>
+</ul>
+<p>AXC 40</p>
+<ul class="simple">
+<li><p>Mischventilgesteuerte Zusatzheizung</p></li>
+<li><p>Stufengeregelte Zusatzheizung</p></li>
+<li><p>Pumpe für Brauchwasserzirkulation</p></li>
+<li><p>Grundwasserpumpe</p></li>
+</ul>
+<p>AXC 50</p>
+<ul class="simple">
+<li><p><strong>mischventilgesteuerte Zusatzheizung</strong></p></li>
+<li><p>stufengeregelte Zusatzheizung</p></li>
+<li><p>Grundwasserpumpe</p></li>
+<li><p>zusätzliches Klimatisierungssystem</p></li>
+<li><p>Brauchwasserkomfort</p></li>
+<li><p>passive Kühlung (Vierrohrsystem)</p></li>
+<li><p><strong>passive Kühlung (Zweirohrsystem)AA5-S2</strong></p></li>
+<li><p>passive/aktive Kühlung (Zweirohrsystem)</p></li>
+<li><p>mischventilgesteuertes Wärmequellenmedium</p></li>
+<li><p>Poolerwärmung.</p></li>
+</ul>
+<section id="mischventilgesteuerte-zusatzheizung">
+<span id="ref-00000101"></span><h3>mischventilgesteuerte Zusatzheizung<a class="headerlink" href="#mischventilgesteuerte-zusatzheizung" title="Link to this heading">¶</a></h3>
+<p>DIP <code class="docutils literal notranslate"><span class="pre">0000</span> <span class="pre">0101</span></code></p>
+<p>Mit dieser Funktion kann eine externe Zusatzheizung, z.B. ein Öl- oder Gasheizkessel bzw. ein Fernwärmeübertrager, den Heizbetrieb unterstützen.</p>
+<p>Das Innenmodul steuert ein Mischventil (QN11) und eine Umwälzpumpe (GP10) über die Zubehörplatine in AXC 30/40/50. Kann die Wärmepumpe die korrekte Vorlauftemperatur (BT25) nicht aufrechterhalten, startet die Zusatzheizung. Nach einem Anstieg der Kesseltemperatur (BT52) auf ca. 55 °C sendet das Innenmodul ein Signal an das Mischventil (QN11), um den Zufluss von Heizungswasser freizugeben. Das Mischventil (QN11) wird so geregelt, dass die tatsächliche Vorlauftemperatur dem theoretisch errechneten Sollwert des Innenmoduls entspricht. Wenn der Heizbedarf so weit sinkt, dass keine Zusatzheizung mehr benötigt wird, schließt sich das Mischventil (QN11) vollständig. Die Werkseinstellung für die minimale Laufzeit, die den Heizkessel in Bereitschaft hält, beträgt 12 h (einstellbar in Menü 5.3.2).</p>
+<p>Ab Softwareversion 8061R4 kann das Mischventil (QN11) mit einem analogen Steuersignal von 0-10 V gesteuert werden.</p>
+<p>Die Funktion „smart energy source“ kann ausgewählt werden, wenn eine automatische Festlegung des Vorrangs zwischen Wärmepumpen- und Zusatzheizungsbetrieb je nach niedrigstem Preis oder geringster Umweltbelastung stattfinden soll.</p>
+</section>
+<section id="stufengeregelte-zusatzheizung">
+<span id="ref-00010111"></span><h3>Stufengeregelte Zusatzheizung<a class="headerlink" href="#stufengeregelte-zusatzheizung" title="Link to this heading">¶</a></h3>
+<p>DIP <code class="docutils literal notranslate"><span class="pre">0001</span> <span class="pre">0111</span></code></p>
+<p>Mit dieser Funktion kann eine externe Zusatzheizung, z.B. ein Elektroheizkessel, den Heizbetrieb unterstützen.</p>
+<p>Mit der Zubehörplatine in AXC 30/40/50 stehen drei weitere potenzialfreie Relais für die Steuerung der Zusatzheizung zur Verfügung. Dies ergibt zusätzlich 3 lineare oder 7 binäre Stufen.</p>
+<p>Der Volumenstrom durch die Zusatzheizung wird entweder mit der Ladepumpe (GP12) oder der externen Umwälzpumpe (GP10) sichergestellt.</p>
+<p>Eine externe stufengeregelte Zusatzheizung kann über bis zu drei potenzialfreie Relais in F1345/F1355 (3 Stufen linear oder 7 Stufen binär) gesteuert werden. Mit dem Zubehör AXC 50 stehen Ihnen drei weitere potenzialfreie Relais für eine Zusatzheizungssteuerung zur Verfügung.</p>
+<p>Dies ergibt dann maximal 3 + 3 lineare oder 7 + 7 binäre Stufen.</p>
+<p>Der Volumenstrom durch die Zusatzheizung wird entweder mit der Ladepumpe (GP12) oder der externen Umwälzpumpe (GP10) sichergestellt.</p>
+<p>Ab Softwareversion 7952R2 kann die stufengeregelte Zusatzheizung auch mit einem analogen Steuersignal von 0-10 V gesteuert werden.</p>
+<figure class="align-default">
+<img alt="../_images/NIBE_AXC30_elektrische_zusatzheizung.png" src="../_images/NIBE_AXC30_elektrische_zusatzheizung.png" />
+</figure>
+</section>
+<section id="zusatzlicher-heiz-und-kuhlkreis">
+<span id="ref-00000010"></span><h3>Zusätzlicher Heiz- und Kühlkreis<a class="headerlink" href="#zusatzlicher-heiz-und-kuhlkreis" title="Link to this heading">¶</a></h3>
+<p>DIP für Klimatisierungssystem 2: <code class="docutils literal notranslate"><span class="pre">0000</span> <span class="pre">0010</span></code></p>
+<p>Diese Zubehörfunktion wird eingesetzt, wenn SMO 40 in einem Haus mit bis zu vier verschiedenen Klimatisierungssystemen installiert ist, die mit unterschiedlichen Vorlauftemperaturen betrieben werden sollen, z.B. wenn ein Gebäude über Heizkörper und Fußbodenheizung verfügt.</p>
+</section>
+<section id="brauchwasserkomfort">
+<span id="ref-00101001"></span><h3>Brauchwasserkomfort<a class="headerlink" href="#brauchwasserkomfort" title="Link to this heading">¶</a></h3>
+<p>DIP <code class="docutils literal notranslate"><span class="pre">0010</span> <span class="pre">1001</span></code></p>
+<p>Diese Funktion ermöglicht vorübergehenden Luxus, Mischventil und Brauchwasserzirkulation.</p>
+<dl class="simple">
+<dt>Vorübergehender Luxus (Extra-Brauchwasser)</dt><dd><p>Wenn eine Elektroheizpatrone im Speicher installiert ist, kann zeitgleich Brauchwasserwärme erzeugt werden, während die Wärmepumpe gleichzeitig dem Heizbetrieb Vorrang einräumt.</p>
+</dd>
+<dt>Mischventil</dt><dd><p>Ein Fühler ermittelt die Brauchwasser-Austrittstemperatur zum Brauchwassernetz und stellt das Mischventil am letzten Brauchwasserspeicher entsprechend ein, bis die Solltemperatur erreicht wurde.</p>
+</dd>
+<dt>Brauchwasserzirkulation (BWZ)</dt><dd><p>Eine Pumpe kann zeitgesteuert die Brauchwasserzirkulation vornehmen</p>
+</dd>
+</dl>
+</section>
+<section id="brauchwasserzirkulation">
+<span id="ref-00001001"></span><h3>Brauchwasserzirkulation<a class="headerlink" href="#brauchwasserzirkulation" title="Link to this heading">¶</a></h3>
+<p>DIP <code class="docutils literal notranslate"><span class="pre">0000</span> <span class="pre">1001</span></code></p>
+<p>Eine Pumpe kann zeitgesteuert die Brauchwasserzirkulation vornehmen.</p>
+</section>
+<section id="passive-kuhlung-im-vierrohrsystem">
+<span id="ref-00010011"></span><h3>Passive Kühlung im Vierrohrsystem<a class="headerlink" href="#passive-kuhlung-im-vierrohrsystem" title="Link to this heading">¶</a></h3>
+<p>DIP <code class="docutils literal notranslate"><span class="pre">0001</span> <span class="pre">0011</span></code></p>
+<p>Das Kühlsystem ist mit dem Wärmequellenkreis der Wärmepumpe verbunden, wobei die Kältezufuhr vom Kollektor über die Umwälzpumpe und das Mischventil
+erfolgt.</p>
+<p>Bei einem Kühlbedarf (eine Auslösung erfolgt per Außenfühler und evtl. vorhandenem Raumfühler) wird die Umwälzpumpe aktiviert. Das Mischventil führt die Steuerung so aus, dass der Kältefühler den aktuellen Sollwert entsprechend der Außenlufttemperatur sowie den eingestellten Minimalwert für die Kühltemperatur erreicht (damit sich keine Kondensflüssigkeit bildet).</p>
+<div class="admonition attention">
+<p class="admonition-title">Achtung</p>
+<p>Dieses Zubehör kann eine Aktualisierung der Software in F1345/F1355 erforderlich machen. In der Wärmepumpe wird mindestens Programmversion 2755 benötigt.</p>
+</div>
+</section>
+<section id="passive-kuhlung-im-zweirohrsystem">
+<span id="ref-00010010"></span><h3>Passive Kühlung im Zweirohrsystem<a class="headerlink" href="#passive-kuhlung-im-zweirohrsystem" title="Link to this heading">¶</a></h3>
+<p>DIP <code class="docutils literal notranslate"><span class="pre">0001</span> <span class="pre">0010</span></code></p>
+<p>Der Wärmequellenkreis ist über ein Umschaltventil mit einem Wärmeübertrager verbunden. Die Sekundärseite des Wärmeübertragers ist mit dem Heizkreis über ein Mischventil und eine Umwälzpumpe verbunden.</p>
+<p>Bei einem Kühlbedarf (eine Auslösung erfolgt per Außenfühler und evtl. vorhandenem Raumfühler oder per Fernbedienung) werden das Mischventil und die Umwälzpumpe aktiviert. Das Mischventil sorgt unter anderem dafür, dass der Kältefühler den aktuellen Sollwert entsprechend der Aussenlufttemperatur erreicht sowie den eingestellten Minimalwert für die Kühltemperatur nicht unterschreitet (damit sich keine Kondensflüssigkeit bildet).</p>
+<div class="admonition attention">
+<p class="admonition-title">Achtung</p>
+<p>Dieses Zubehör kann eine Aktualisierung der Software in F1345/F1355 erforderlich machen. In der Wärmepumpe wird mindestens Programmversion 2755 benötigt.</p>
+</div>
+<figure class="align-default">
+<img alt="../_images/NIBE_symbole.png" src="../_images/NIBE_symbole.png" />
+</figure>
+</section>
+</section>
+<section id="zubehor">
+<h2>Zubehör<a class="headerlink" href="#zubehor" title="Link to this heading">¶</a></h2>
+<dl>
+<dt>Zusätzlicher Heiz- und Kühlkreis</dt><dd><p>In Gebäuden mit mehreren Klimatisierungssystemen, die unterschiedliche Vorlauftemperaturen erfordern, kann das Zubehör ECS 40/ECS 41 angeschlossen werden. Ein Mischventil senkt hierbei die Temperatur z. B. für die Fußbodenheizung.</p>
+<figure class="align-default">
+<img alt="../_images/NIBE_ecs40_ecs41.png" src="../_images/NIBE_ecs40_ecs41.png" />
+</figure>
+<figure class="align-default">
+<img alt="../_images/NIBE_zusaetzlicher_heizkreis.png" src="../_images/NIBE_zusaetzlicher_heizkreis.png" />
+</figure>
+<p><a class="reference download internal" download="" href="../_downloads/b3e16a962036fa27abf133b8b858b8b2/NIBE_ECS_41_231401-2.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Zubehör</span> <span class="pre">ECS</span> <span class="pre">40/ECS</span> <span class="pre">41</span></code></a></p>
+</dd>
+<dt>Kühlung</dt><dd><p>Das Zubehör PCS 44 ermöglicht den Anschluss von passiver Kühlung, z.B. mit Gebläsekonvektoren. Das Kühlsystem wird mit dem Wärmequellenkreis der Wärmepumpe verbunden, wobei die Kältezufuhr vom Kollektor über eine Umwälzpumpe und das Mischventil erfolgt.</p>
+<p>Um eine Kondensatbildung zu vermeiden, müssen Rohrleitungen und andere kalte Oberflächen mit diffusionsdichtem Material isoliert werden.</p>
+<p>Liegt ein hoher Kühlbedarf vor, sind Kälteverbraucher mit Tropfschale und Kondensatanschluss erforderlich.</p>
+<p>Das Wärmequellensystem ist mit einem Druckausdehnungsgefäß auszustatten. Ein eventuell vorhandenes Niveaugefäß wird ersetzt.</p>
+<figure class="align-default">
+<img alt="../_images/NIBE_passive_kuehlung.png" src="../_images/NIBE_passive_kuehlung.png" />
+</figure>
+</dd>
+<dt>Außenfühler</dt><dd><p>Der Außenluftfühler (BT1) ist an einem schattigen Platz an der Nord- oder Nordwestseite des Hauses zu befestigen, wo keine störende Einstrahlung z. B. durch die Morgensonne erfolgt.</p>
+<p>Der Außenluftfühler wird an Anschlussklemme AA2-X28:14 und AA2-X29:GND angeschlossen.</p>
+</dd>
+<dt>Zubehör mit Zubehörplatine (AA5)</dt><dd><p>Zubehör mit Zubehörplatine (AA5) wird an Anschlussklemme AA2-X30:1, 3, 4 in S1256 angeschlossen.</p>
+</dd>
+<dt>Verfügbare Eingänge</dt><dd><p>Verfügbare Eingänge an der Basisplatine (AA2) für diese Funktionen sind AA2-X28:3-11. Die jeweilige Funktion wird an den verfügbaren Eingang sowie an GND (AA2-X29) angeschlossen.</p>
+</dd>
+<dt>Verfügbare Ausgänge</dt><dd><p>Verfügbarer Ausgang: AA2-X27. Der Ausgang ist ein potenzialfrei wechselndes Relais. Ist S1256 abgeschaltet oder im Reservebetrieb, befindet sich das Relais im Modus C-NC.</p>
+</dd>
+</dl>
+<div class="admonition attention">
+<p class="admonition-title">Achtung</p>
+<p>Der Relaisausgang darf mit maximal 2 A bei Wirklast (230 V~) belastet werden.</p>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Hinweis</p>
+<p>Das Zubehör AXC ist erforderlich, wenn mehr als eine Funktion mit dem AUX-Ausgang verbunden werden soll.</p>
+</div>
+<div class="table-wrapper docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head stub"><p>Eingang</p></th>
+<th class="head"><p>Funktion</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>AA2-X28:3</p></th>
+<td><p>Außentemperatursensor</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>AA2-X28:4</p></th>
+<td><p>Kühlung/Heizung (BT74), entscheidet über eine Umschaltung zwischen Kühl- und Heizbetrieb (auswählbar, wenn die Kühlfunktion in Menü 7.2.1 „Zubehör hinzufügen/entfernen“ aktiviert ist).</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>AA2-X28:5</p></th>
+<td><p>Externer Rücklauffühler (BT71)</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>AA2-X28:6</p></th>
+<td><p>anzeigender Brauchwasserfühler für BWZ (BT70). Wird am Vorlauf platziert.</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>AA2-X28:7</p></th>
+<td><p>anzeigender Brauchwasserfühler für BWZ (BT82). Wird am Rücklauf platziert.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>AA2-X28:8</p></th>
+<td><p>?</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>AA2-X28:9</p></th>
+<td><p>?</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>AA2-X28:10</p></th>
+<td><p>?</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>AA2-X28:11</p></th>
+<td><p>?</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="table-wrapper docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head stub"><p>Ausgänge</p></th>
+<th class="head"><p>Funktion</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>AA2-X27</p></th>
+<td><p>Brauchwasserumwälzpumpe (Zirkulationspumpe)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="axc-1-passive-kuhlung">
+<h2>AXC #1: Passive Kühlung<a class="headerlink" href="#axc-1-passive-kuhlung" title="Link to this heading">¶</a></h2>
+<dl class="simple">
+<dt>Funktion</dt><dd><p>Steuerung der Kühlfunktion mit Wärmetauscher.</p>
+</dd>
+</dl>
+<p>DIP <code class="docutils literal notranslate"><span class="pre">0001</span> <span class="pre">0010</span></code></p>
+<div class="admonition seealso">
+<p class="admonition-title">Siehe auch</p>
+<p><a class="reference internal" href="#ref-00010010"><span class="std std-ref">Passive Kühlung im Zweirohrsystem</span></a></p>
+</div>
+</section>
+<section id="axc-2-fuszbodenheizung-fbh">
+<h2>AXC #2: Fußbodenheizung (FBH)<a class="headerlink" href="#axc-2-fuszbodenheizung-fbh" title="Link to this heading">¶</a></h2>
+<dl class="simple">
+<dt>Funktion:</dt><dd><p>Regelung der Fußbodenheizung</p>
+</dd>
+</dl>
+</section>
+<section id="axc-3-heizkorper">
+<h2>AXC #3: Heizkörper<a class="headerlink" href="#axc-3-heizkorper" title="Link to this heading">¶</a></h2>
+<dl class="simple">
+<dt>Funktion:</dt><dd><p>Trennung der Heizkörper bei Kühlbetrieb, sonst mit Kondenswasser zu rechnen ist.</p>
+</dd>
+</dl>
+</section>
+<section id="installationsvariante-brauchwasserzirkulation">
+<h2>Installationsvariante Brauchwasserzirkulation<a class="headerlink" href="#installationsvariante-brauchwasserzirkulation" title="Link to this heading">¶</a></h2>
+<p>Eine Umwälzpumpe zur Zirkulation des Brauchwassers kann von S1256 gesteuert werden. Das zirkulierende Wasser muss eine Temperatur haben, die sowohl eine Bakterienansiedlung als auch ein Verbrühen verhindert; nationale Normen sind zu beachten.</p>
+<p>Der BWZ-Rücklauf kann mit Anschluss XL5 bzw. mit einem freistehenden Brauchwasserspeicher verbunden werden. Wenn nach der Wärmepumpe ein elektrischer Brauchwasserspeicher angeschlossen wird, muss der BWZ-Rücklauf mit dem Speicher verbunden werden.</p>
+<p>Die Umwälzpumpe wird über den AUX-Ausgang in Menü 7.4 - „Verfügbare Ein-/Ausgänge“ aktiviert.</p>
+<p>Die BWZ kann um Brauchwasserfühler für BWZ (BT70) und (BT82) ergänzt werden, die über den AUX-Eingang in Menü 7.4 - „Verfügbare Ein-/Ausgänge“ angeschlossen werden.</p>
+<figure class="align-default">
+<img alt="../_images/brauchwasserzirkulation.png" src="../_images/brauchwasserzirkulation.png" />
+</figure>
+</section>
+<section id="optionen-bei-mangelhafter-heizleistung">
+<h2>Optionen bei mangelhafter Heizleistung<a class="headerlink" href="#optionen-bei-mangelhafter-heizleistung" title="Link to this heading">¶</a></h2>
+<section id="zusatzlicher-brauchwasserspeicher">
+<h3>Zusätzlicher Brauchwasserspeicher<a class="headerlink" href="#zusatzlicher-brauchwasserspeicher" title="Link to this heading">¶</a></h3>
+<p>Wenn eine größere Badewanne oder ein anderer großer Brauchwasserverbraucher angeschlossen wird, sollte die Anlage um einen zusätzlichen Brauchwasserspeicher ergänzt werden.</p>
+<dl class="simple">
+<dt>Brauchwasserspeicher mit Elektroheizpatrone</dt><dd><p>In einem Brauchwasserspeicher mit Elektroheizpatrone wird das Wasser primär von der Wärmepumpe erwärmt. Die Elektroheizpatrone des Brauchwasserspeichers wird zum Warmhalten verwendet sowie bei nicht ausreichender Leistung der Wärmepumpe.</p>
+</dd>
+</dl>
+</section>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="nibe-mqtt.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Einbindung der NIBE-S1256 Wärmempumpe via MQTT</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="deye-mqtt.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Deye Wechselrichter MQTT Einbindung</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2024, Rainer Thieringer | Creative Commons Lizenz 4.0 (BY-NC-SA 4.0)
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Aufbau der Heizung</a><ul>
+<li><a class="reference internal" href="#nibe-warmepumpe">NIBE Wärmepumpe</a><ul>
+<li><a class="reference internal" href="#mischventilgesteuerte-zusatzheizung">mischventilgesteuerte Zusatzheizung</a></li>
+<li><a class="reference internal" href="#stufengeregelte-zusatzheizung">Stufengeregelte Zusatzheizung</a></li>
+<li><a class="reference internal" href="#zusatzlicher-heiz-und-kuhlkreis">Zusätzlicher Heiz- und Kühlkreis</a></li>
+<li><a class="reference internal" href="#brauchwasserkomfort">Brauchwasserkomfort</a></li>
+<li><a class="reference internal" href="#brauchwasserzirkulation">Brauchwasserzirkulation</a></li>
+<li><a class="reference internal" href="#passive-kuhlung-im-vierrohrsystem">Passive Kühlung im Vierrohrsystem</a></li>
+<li><a class="reference internal" href="#passive-kuhlung-im-zweirohrsystem">Passive Kühlung im Zweirohrsystem</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#zubehor">Zubehör</a></li>
+<li><a class="reference internal" href="#axc-1-passive-kuhlung">AXC #1: Passive Kühlung</a></li>
+<li><a class="reference internal" href="#axc-2-fuszbodenheizung-fbh">AXC #2: Fußbodenheizung (FBH)</a></li>
+<li><a class="reference internal" href="#axc-3-heizkorper">AXC #3: Heizkörper</a></li>
+<li><a class="reference internal" href="#installationsvariante-brauchwasserzirkulation">Installationsvariante Brauchwasserzirkulation</a></li>
+<li><a class="reference internal" href="#optionen-bei-mangelhafter-heizleistung">Optionen bei mangelhafter Heizleistung</a><ul>
+<li><a class="reference internal" href="#zusatzlicher-brauchwasserspeicher">Zusätzlicher Brauchwasserspeicher</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="../_static/documentation_options.js?v=a651434f"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/furo.js?v=5fa4622c"></script>
+    <script src="../_static/translations.js?v=79cc9f76"></script>
+    </body>
+</html>
