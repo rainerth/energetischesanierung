@@ -164,3 +164,6 @@ _build/
 
 # temporary
 *~
+
+# secret
+snippets.rst
