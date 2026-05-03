@@ -60,16 +60,11 @@ Daraus ergeben sich diese Maximalwerte:
 Anordnung der Module auf dem Dach
 ----------------------------------
 
-Eine Anordnung der 3 Strings von Ost nach West (vertikale Ausrichtung) ist empfehlenswert, um die Sonneneinstrahlung in den Morgen- und Abendstunden optimal zu nutzen. Da das Dach nach Norden ausgerichtet ist, kann die vertikale Anordnung helfen, die Effizienz zu steigern, indem sie eine breitere Abdeckung des Himmels ermöglicht.
+Die 3 Strings sind **vertikal von oben nach unten** verschaltet — jeder String fasst also Module aus allen vier Reihen zusammen, vom Dachfirst bis zur Traufe. Diese Stringführung wurde gewählt, weil am unteren Dachrand mit Verschattung durch benachbarte Gebäude in den Abendstunden zu rechnen ist.
 
-Das Programm Sunny Design von SMA hilft bei der genauen Planung und Ausrichtung der Module auf dem Dach helfen. Es berücksichtigt die spezifischen Gegebenheiten des Standorts und zeigt Ihnen die optimale Anordnung der Module, um die Leistung zu maximieren.
+Bei einer horizontalen Stringführung (eine ganze Reihe pro String, von Ost nach West) würde der Schatten der unteren Dachkante einen kompletten String unter Last fallen lassen — die MPPT-Regelung des Wechselrichters müsste den Arbeitspunkt für diesen String drastisch absenken, der Ertrag bricht zusammen. Bei der gewählten vertikalen Stringführung verteilt sich die Verschattung gleichmäßig auf alle drei Strings: pro String sind nur die ein bis zwei Module in den untersten Reihen betroffen, die über die im Modul verbauten Bypass-Dioden überbrückt werden. Der Rest des Strings bleibt voll arbeitsfähig.
 
-.. figure:: ./images/sma-sunnydesign-modulausrichtung.png
-	:width: 800px
-	:align: center
-	:alt: Modulausrichtung
-
-	Modulausrichtung mit Sunny Design
+Zur Vorabplanung wurde das Programm Sunny Design von SMA verwendet; die endgültige Stringführung weicht aus dem oben genannten Verschattungsgrund von dessen Vorschlag ab.
 
 
 
@@ -147,15 +142,15 @@ Für Ihre spezifische Situation, in der die Anlage nach Norden ausgerichtet ist 
 Anordnung der Module und Strings
 --------------------------------
 
-Für ein Setup mit vier Reihen à 14 Modulen und insgesamt 56 Modulen, die auf drei Strings aufgeteilt werden müssen, hier einige Überlegungen:
+Für das Setup mit vier Reihen à 14 Modulen und insgesamt 56 Modulen, aufgeteilt auf drei Strings (2 × 19 + 1 × 18), wurde folgende Stringführung gewählt:
 
 Anordnung der Strings:
-	Das System hat 2 Strings mit jeweils 19 Modulen und einen String mit 18 Modulen.
-	Da keine Verschattung vorliegt und die Module in Nordausrichtung montiert werden, ist es wichtig, eine möglichst effiziente Nutzung der Modulfläche zu gewährleisten.
+	Jeder String läuft **vertikal von oben nach unten** durch alle vier Reihen, von der Dachfirst bis zur Traufe. Damit enthält jeder der drei Strings Module aus jeder Reihe — der oberen Reihe ebenso wie der untersten.
 
-Vertikale vs. horizontale Anordnung:
-	Vertikale Anordnung (von Ost nach West): Diese Anordnung könnte vorteilhaft sein, um das Licht in den Morgen- und Abendstunden besser einzufangen, wenn die Sonne tiefer steht. Da die Module in Nordrichtung ausgerichtet sind, kann die vertikale Anordnung helfen, die Effizienz zu steigern, indem sie eine breitere Abdeckung des Himmels ermöglicht.
-	Horizontale Anordnung (von oben nach unten): Diese Konfiguration kann die Installation vereinfachen, da sie oft leichter an die typische Form von Dachziegeln angepasst werden kann. Sie bietet jedoch möglicherweise nicht die optimale Ausnutzung der verfügbaren Sonneneinstrahlung, besonders früh und spät am Tag.
+Begründung — erwartete Verschattung am unteren Dachrand:
+	An der unteren Dachkante ist in den Abendstunden mit Verschattung durch benachbarte Gebäude zu rechnen. Bei einer horizontalen Stringführung (eine Reihe pro String) würde der Schatten einer ganzen Reihe einen kompletten String stilllegen: die MPPT-Regelung müsste den Arbeitspunkt drastisch absenken und der Ertrag dieses Strings bricht zusammen.
 
-Empfehlung:
-	Aufgrund der Nordausrichtung und der Möglichkeit, das Licht am Morgen und Abend optimal zu nutzen, wäre eine vertikale Anordnung der Strings empfehlenswert. Dadurch könnten die Module effektiver die verfügbare Sonneneinstrahlung zu diesen Zeiten einfangen.
+	Bei der gewählten vertikalen Führung verteilt sich die Verschattung gleichmäßig auf alle drei Strings — pro String fallen nur ein bis zwei Module in den untersten Reihen aus, die durch die im Modul verbauten Bypass-Dioden überbrückt werden. Der Rest des Strings arbeitet weiter im optimalen MPPT-Bereich.
+
+Verworfene Alternative:
+	Eine horizontale Stringführung von Ost nach West (eine Reihe pro String) hätte die Installation vereinfacht und das Licht in den Morgen- und Abendstunden ohne Verschattung gleichmäßig verteilt. Wegen der erwarteten Verschattung am unteren Dachrand überwiegt der Nachteil des kompletten String-Ausfalls jedoch deutlich.
