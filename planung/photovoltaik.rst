@@ -60,9 +60,15 @@ Daraus ergeben sich diese Maximalwerte:
 Anordnung der Module auf dem Dach
 ----------------------------------
 
-Die 3 Strings sind **vertikal von oben nach unten** verschaltet — jeder String fasst also Module aus allen vier Reihen zusammen, vom Dachfirst bis zur Traufe. Diese Stringführung wurde gewählt, weil am unteren Dachrand mit Verschattung durch benachbarte Gebäude in den Abendstunden zu rechnen ist.
+Die 3 Strings sind in **horizontalen Bändern von oben nach unten** verschaltet:
 
-Bei einer horizontalen Stringführung (eine ganze Reihe pro String, von Ost nach West) würde der Schatten der unteren Dachkante einen kompletten String unter Last fallen lassen — die MPPT-Regelung des Wechselrichters müsste den Arbeitspunkt für diesen String drastisch absenken, der Ertrag bricht zusammen. Bei der gewählten vertikalen Stringführung verteilt sich die Verschattung gleichmäßig auf alle drei Strings: pro String sind nur die ein bis zwei Module in den untersten Reihen betroffen, die über die im Modul verbauten Bypass-Dioden überbrückt werden. Der Rest des Strings bleibt voll arbeitsfähig.
+* **String 1** liegt in den **oberen Reihen** (19 Module — Dachfirst-nah)
+* **String 2** liegt in den **mittleren Reihen** (19 Module)
+* **String 3** liegt in den **unteren Reihen** (18 Module — Traufe-nah)
+
+Diese Reihenfolge wurde gewählt, weil am unteren Dachrand mit Verschattung durch benachbarte Gebäude zu rechnen ist. Wenn der Schatten von unten heraufzieht, fällt zuerst und ausschließlich **String 3** in eine reduzierte Arbeitslage. Dessen MPPT-Regler senkt den Arbeitspunkt für diesen String entsprechend ab — die Strings 1 und 2 in den oberen Reihen bleiben davon unbeeinflusst und produzieren weiter mit voller Leistung an ihren eigenen MPPT-Reglern.
+
+Bei einer Stringführung quer zur Verschattungsrichtung (also vertikal vom First zur Traufe, jeder String mit Modulen aus allen vier Reihen) würde der Schatten am unteren Rand alle drei Strings gleichzeitig treffen — jeder String würde Leistung verlieren, statt nur einer.
 
 Zur Vorabplanung wurde das Programm Sunny Design von SMA verwendet; die endgültige Stringführung weicht aus dem oben genannten Verschattungsgrund von dessen Vorschlag ab.
 
@@ -145,12 +151,14 @@ Anordnung der Module und Strings
 Für das Setup mit vier Reihen à 14 Modulen und insgesamt 56 Modulen, aufgeteilt auf drei Strings (2 × 19 + 1 × 18), wurde folgende Stringführung gewählt:
 
 Anordnung der Strings:
-	Jeder String läuft **vertikal von oben nach unten** durch alle vier Reihen, von der Dachfirst bis zur Traufe. Damit enthält jeder der drei Strings Module aus jeder Reihe — der oberen Reihe ebenso wie der untersten.
+	Die drei Strings sind **horizontal in Bändern von oben nach unten** verschaltet:
+
+	* **String 1 (19 Module)** liegt in den oberen Reihen (Dachfirst-nah).
+	* **String 2 (19 Module)** liegt in den mittleren Reihen.
+	* **String 3 (18 Module)** liegt in den unteren Reihen (Traufe-nah).
 
 Begründung — erwartete Verschattung am unteren Dachrand:
-	An der unteren Dachkante ist in den Abendstunden mit Verschattung durch benachbarte Gebäude zu rechnen. Bei einer horizontalen Stringführung (eine Reihe pro String) würde der Schatten einer ganzen Reihe einen kompletten String stilllegen: die MPPT-Regelung müsste den Arbeitspunkt drastisch absenken und der Ertrag dieses Strings bricht zusammen.
-
-	Bei der gewählten vertikalen Führung verteilt sich die Verschattung gleichmäßig auf alle drei Strings — pro String fallen nur ein bis zwei Module in den untersten Reihen aus, die durch die im Modul verbauten Bypass-Dioden überbrückt werden. Der Rest des Strings arbeitet weiter im optimalen MPPT-Bereich.
+	An der unteren Dachkante ist mit Verschattung durch benachbarte Gebäude zu rechnen. Bei der gewählten Anordnung trifft der von unten heraufziehende Schatten zuerst und ausschließlich **String 3** in den unteren Reihen. Dessen MPPT-Regler senkt den Arbeitspunkt für diesen String ab; die Strings 1 und 2 hängen an eigenen MPPT-Reglern und produzieren ungestört mit voller Leistung weiter.
 
 Verworfene Alternative:
-	Eine horizontale Stringführung von Ost nach West (eine Reihe pro String) hätte die Installation vereinfacht und das Licht in den Morgen- und Abendstunden ohne Verschattung gleichmäßig verteilt. Wegen der erwarteten Verschattung am unteren Dachrand überwiegt der Nachteil des kompletten String-Ausfalls jedoch deutlich.
+	Eine Stringführung quer zur Verschattungsrichtung — also vertikal vom First zur Traufe, jeder String mit Modulen aus allen vier Reihen — hätte zur Folge, dass der Schatten am unteren Rand **alle drei Strings gleichzeitig** trifft und damit die Erträge des Gesamtsystems beeinträchtigt. Mit der gewählten horizontalen Schichtung ist der Verlust auf den einen tatsächlich verschatteten String 3 begrenzt.
