@@ -60,6 +60,36 @@ Eine AUX-Funktion lässt sich auch ohne physischen Kontakt über Modbus auslöse
 		:delim: ;
 		:stub-columns: 1
 
+.. attention::
+
+	**Der Export zeigt nur die Register, die zum Zeitpunkt des Exports aktiv waren.** Die hier eingebundene Datei stammt vom September 2024. Sie enthält für die zusätzlichen Klimatisierungssysteme nur einen Teil der Register:
+
+	.. list-table::
+		:header-rows: 1
+		:stub-columns: 1
+
+		*	-	Größe
+			-	im Export von 2024
+			-	heute im Gerät
+
+		*	-	Heizkurve, Offset, Min- und Max-Vorlauf, berechneter Vorlauf, externe Verstellung
+			-	nur CS1
+			-	CS1, CS2 und CS3
+
+		*	-	Raumfühler verwenden, Raumsollwert, Raumfühlerfaktor
+			-	CS1, CS2 und CS3
+			-	CS1, CS2 und CS3
+
+	Die Erklärung ist naheliegend: Zum Zeitpunkt des Exports waren die Zubehörplatinen für die zusätzlichen Klimatisierungssysteme noch nicht aktiviert. Die zugehörigen Register erscheinen erst danach.
+
+	**Praktische Folge:** Nach jeder Änderung an der Zubehörkonfiguration muss der Export neu erzeugt werden, sonst fehlen genau die Werte, um die es dann geht. Eine Konfiguration, die aus einem alten Export abgeleitet wurde, pollt unbemerkt nur einen Teil der Anlage. In diesem Projekt hat das dazu geführt, dass die Sollwerte der Fußbodenheizung und der Heizkörper über Monate gar nicht aufgezeichnet wurden, obwohl sie im Gerät verfügbar waren.
+
+	Eine Ausnahme bleibt: Der Heizungsoffset für CS2, der nach dem Adressmuster auf 40030 liegen müsste, fehlt **auch heute**. Dieses Register gibt es im Gerät nicht, siehe :doc:`raumtemperatur`.
+
+.. note::
+
+	Die Spalte ``Register`` in der Tabelle enthält die rohe Register-ID, nicht die 4xxxx-Schreibweise. Die Umrechnung lautet ``40001 + ID`` für Holding-Register und ``30001 + ID`` für Input-Register. Der Außentemperaturfühler BT1 steht im Export also als Input-Register 1 und wird als 30002 adressiert.
+
 
 
 Modbus zu MQTT
