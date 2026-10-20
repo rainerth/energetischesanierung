@@ -19,6 +19,12 @@ jobs:
         with:
           python-version: '3.x'
 
+      - name: Install Graphviz
+        # Die Schemata unter durchfuehrung/diagramme werden mit sphinx.ext.graphviz
+        # gerendert und brauchen das Systemprogramm dot. Ohne diesen Schritt baut
+        # Sphinx die Seiten, laesst die Diagramme aber weg.
+        run: sudo apt-get update && sudo apt-get install -y graphviz
+
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip

@@ -12,6 +12,12 @@ Mit dem Zubehör AXC können zusätzliche Funktionen umgesetzt werden.
 
 NIBE bietet dazu 3 Varianten von AXC an, laut dem technischen Berater der Firma NIBE sind diese jedoch alle baugleich und können per DIP-Schalter auf die benötigte Funktion eingestellt werden.
 
+.. note::
+
+	Die Funktionsbeschreibungen in diesem Abschnitt sind den NIBE-Zubehörhandbüchern entnommen. Dort beziehen sich einzelne Sätze auf andere Baureihen, etwa F1345 oder F1355, weil dasselbe Zubehör für mehrere Wärmepumpen gilt. Für Programmversionen und Klemmenbezeichnungen ist deshalb immer das Handbuch der **S1256** maßgeblich, nicht der zitierte Text.
+
+	Was in dieser Anlage tatsächlich verbaut und eingestellt ist, steht unter :ref:`ref_ist_konfiguration`.
+
 In den Handbüchern sind diese Funktionen den einzelnen Varianten zugeordnet:
 
 AXC 30:
@@ -72,7 +78,7 @@ Mit der Zubehörplatine in AXC 30/40/50 stehen drei weitere potenzialfreie Relai
 
 Der Volumenstrom durch die Zusatzheizung wird entweder mit der Ladepumpe (GP12) oder der externen Umwälzpumpe (GP10) sichergestellt.
 
-Eine externe stufengeregelte Zusatzheizung kann über bis zu drei potenzialfreie Relais in F1345/F1355 (3 Stufen linear oder 7 Stufen binär) gesteuert werden. Mit dem Zubehör AXC 50 stehen Ihnen drei weitere potenzialfreie Relais für eine Zusatzheizungssteuerung zur Verfügung.
+Eine externe stufengeregelte Zusatzheizung kann über bis zu drei potenzialfreie Relais (3 Stufen linear oder 7 Stufen binär) gesteuert werden. Mit dem Zubehör AXC 50 stehen drei weitere potenzialfreie Relais für eine Zusatzheizungssteuerung zur Verfügung.
 
 Dies ergibt dann maximal 3 + 3 lineare oder 7 + 7 binäre Stufen.
 
@@ -90,7 +96,13 @@ Zusätzlicher Heiz- und Kühlkreis
 
 DIP für Klimatisierungssystem 2: ``0000 0010``
 
-Diese Zubehörfunktion wird eingesetzt, wenn SMO 40 in einem Haus mit bis zu vier verschiedenen Klimatisierungssystemen installiert ist, die mit unterschiedlichen Vorlauftemperaturen betrieben werden sollen, z.B. wenn ein Gebäude über Heizkörper und Fußbodenheizung verfügt.
+Diese Zubehörfunktion wird eingesetzt, wenn ein Haus mehrere Klimatisierungssysteme hat, die mit unterschiedlichen Vorlauftemperaturen betrieben werden sollen, zum Beispiel Heizkörper und Fußbodenheizung.
+
+.. important::
+
+	Das Zusatzsystem muss eine **niedrigere** Betriebstemperatur haben als Klimatisierungssystem 1. Das ist keine Empfehlung, sondern eine Installationsvoraussetzung des Herstellers, und sie hat eine physikalische Ursache: das Mischventil kann nur beimischen, also absenken. Fordert das Zusatzsystem mehr, als im Vorlauf ansteht, bleibt ihm nur, vollständig zu öffnen, und seine eigene Heizkurve ist ohne Wirkung.
+
+	Wie sich das in dieser Anlage auswirkt und wie man es erkennt, steht in :doc:`raumtemperatur`.
 
 .. _ref_00101001:
 
@@ -153,6 +165,10 @@ Bei einem Kühlbedarf (eine Auslösung erfolgt per Außenfühler und evtl. vorha
 Zubehör
 =======
 
+.. note::
+
+	Der folgende Abschnitt listet die Zubehörvarianten auf, die NIBE für diese Baureihe anbietet. Es sind **Alternativen aus dem Katalog**, nicht die Bestückung dieser Anlage. Was hier verbaut ist, steht unter :ref:`ref_ist_konfiguration`: drei Zubehörplatinen AXC, ein zusätzliches Klimatisierungssystem für die Fußbodenheizung, eines für die Heizkörper und die passive Kühlung im Zweirohrsystem. Weder ECS 40 oder ECS 41 noch PCS 44 sind hier im Einsatz.
+
 Zusätzlicher Heiz- und Kühlkreis
 	In Gebäuden mit mehreren Klimatisierungssystemen, die unterschiedliche Vorlauftemperaturen erfordern, kann das Zubehör ECS 40/ECS 41 angeschlossen werden. Ein Mischventil senkt hierbei die Temperatur z. B. für die Fußbodenheizung.
 
@@ -192,73 +208,209 @@ Verfügbare Ausgänge
 
 .. hint:: Das Zubehör AXC ist erforderlich, wenn mehr als eine Funktion mit dem AUX-Ausgang verbunden werden soll.
 
+.. _ref_aux:
+
+Die AUX-Eingänge sind frei belegbar
+-----------------------------------
+
+.. warning::
+
+	Eine frühere Fassung dieser Dokumentation hat die Klemmen ``AA2-X28:3`` bis ``:11`` mit festen Funktionen aufgelistet, etwa ``X28:5`` als externen Rücklauffühler. **Das war falsch.** Die Klemmen sind nicht funktionsgebunden. Das Handbuch listet an dieser Stelle lediglich auf, welche Funktionen man einem AUX-Eingang *zuweisen kann*; welche Funktion auf welchem Eingang liegt, wird in Menü 7.4 „Verfügbare Ein-/Ausgänge“ festgelegt.
+
+Die Klemmen auf der Basisplatine (AA2) sind den AUX-Eingängen fest zugeordnet, die Funktion dahinter ist frei wählbar:
+
+.. list-table:: Klemmenzuordnung der AUX-Eingänge
+	:header-rows: 1
+	:stub-columns: 1
+
+	*	-	Klemme
+		-	Eingang
+
+	*	-	AA2-X28:3
+		-	AUX1
+
+	*	-	AA2-X28:4
+		-	AUX2
+
+	*	-	AA2-X28:5
+		-	AUX3
+
+	*	-	AA2-X28:6
+		-	AUX4
+
+	*	-	AA2-X28:7
+		-	AUX5
+
+	*	-	AA2-X28:8
+		-	AUX6
+
+Die jeweilige Funktion wird an den Eingang und an GND (AA2-X29) angeschlossen. Der Außenluftfühler (BT1) liegt **nicht** auf einem AUX-Eingang, sondern auf AA2-X28:14, der externe Vorlauffühler (BT25) auf AA2-X28:12.
+
+Als Fühler stehen laut Handbuch zur Auswahl:
+
+* sechs frei platzierbare Fühler BT37.1 bis BT37.6
+* Kühlung/Heizung (BT74), entscheidet über die Umschaltung zwischen Kühl- und Heizbetrieb
+* externer Rücklauffühler (BT71)
+* anzeigender Brauchwasserfühler für die Zirkulation (BT70), am Vorlauf
+* anzeigender Brauchwasserfühler für die Zirkulation (BT82), am Rücklauf
+
+Dazu kommen Wächterfunktionen, etwa ein Alarm von externen Einheiten, ein Druckwächter für das Klimatisierungssystem oder ein Niveau-, Druck- und Volumenstromwächter für das Wärmequellenmedium, sowie eine Reihe von Funktionsaktivierungen über potenzialfreie Kontakte.
+
+Über Modbus wird die Zuordnung als Funktions-ID in das jeweilige Register geschrieben. Die vollständige Liste der IDs steht in der technischen Information „MODBUS S-SERIES“. Ein Auszug der hier relevanten Werte:
+
+.. list-table:: Funktions-IDs für AUX-Eingänge, Auszug
+	:header-rows: 1
+	:stub-columns: 1
+
+	*	-	ID
+		-	Funktion
+		-	Art
+
+	*	-	2
+		-	externe Verstellung aktivieren
+		-	Kontakt
+
+	*	-	6
+		-	Heizung blockieren
+		-	Kontakt
+
+	*	-	13
+		-	Niveauwächter Wärmequellenmedium
+		-	Kontakt
+
+	*	-	20
+		-	SG Ready, Eingang A
+		-	Kontakt
+
+	*	-	21
+		-	SG Ready, Eingang B
+		-	Kontakt
+
+	*	-	27
+		-	Rücklauftemperatur (BT71)
+		-	Fühler
+
+	*	-	49, 50, 62, 63
+		-	frei platzierbare Fühler BT37.1 bis BT37.4
+		-	Fühler
+
 .. list-table::
+	:header-rows: 1
+	:stub-columns: 1
+
+	*	-	Ausgang
+		-	Funktion
+
+	*	-	AA2-X27
+		-	potenzialfrei wechselndes Relais, frei belegbar
+
+
+.. _ref_ist_konfiguration:
+
+Konfiguration dieser Anlage
+===========================
+
+Verbaut sind **drei Zubehörplatinen**, die über DIP-Schalter auf unterschiedliche Funktionen eingestellt sind.
+
+.. list-table:: Zubehörplatinen
+	:header-rows: 1
+	:stub-columns: 1
+
+	*	-	Platine
+		-	Funktion
+		-	Kennung
+
+	*	-	AXC 50 (AA25)
+		-	passive Kühlung im Zweirohrsystem
+		-	\-
+
+	*	-	AXC 30
+		-	zusätzliches Klimatisierungssystem, Fußbodenheizung
+		-	EP21, CS2
+
+	*	-	AXC 30
+		-	zusätzliches Klimatisierungssystem, Heizkörper Obergeschoss
+		-	EP22, CS3
+
+.. note::
+
+	In älteren Notizen zu dieser Anlage heißen die Platinen „AXS-Box 1/2/3“. Laut Rechnung sind es drei Stück **AXC 30**; die Kühlfunktion folgt der Beschreibung aus dem Handbuch des AXC 50, weil dort das Kapitel „Passive Kühlung im Zweirohrsystem“ steht. Die Zubehörteile ECS 40 und ECS 41, die das Handbuch für einen zusätzlichen Heizkreis nennt, sind hier **nicht** verbaut.
+
+Belegung der AUX-Eingänge, aus den Registern gelesen:
+
+.. list-table:: Tatsächliche AUX-Belegung
 	:header-rows: 1
 	:stub-columns: 1
 
 	*	-	Eingang
+		-	ID
 		-	Funktion
 
-	*	-	AA2-X28:3
-		-	Außentemperatursensor
+	*	-	AUX1
+		-	13
+		-	Niveauwächter Wärmequellenmedium
 
-	*	-	AA2-X28:4
-		-	Kühlung/Heizung (BT74), entscheidet über eine Umschaltung zwischen Kühl- und Heizbetrieb (auswählbar, wenn die Kühlfunktion in Menü 7.2.1 "Zubehör hinzufügen/entfernen" aktiviert ist).
+	*	-	AUX2
+		-	27
+		-	externer Rücklauffühler BT71
 
-	*	-	AA2-X28:5
-		-	Externer Rücklauffühler (BT71)
+	*	-	AUX3 bis AUX7
+		-	0
+		-	frei
 
-	*	-	AA2-X28:6
-		-	anzeigender Brauchwasserfühler für BWZ (BT70). Wird am Vorlauf platziert.
+	*	-	AUX8
+		-	20
+		-	SG Ready, Eingang A
 
-	*	-	AA2-X28:7
-		-	anzeigender Brauchwasserfühler für BWZ (BT82). Wird am Rücklauf platziert.
+	*	-	AUX9
+		-	21
+		-	SG Ready, Eingang B
 
-	*	-	AA2-X28:8
-		-	?
+.. hint::
 
-	*	-	AA2-X28:9
-		-	?
+	Der externe Rücklauffühler BT71 gehört zur Kühlfunktion. Das Handbuch des AXC 50 schreibt für die passive Kühlung im Zweirohrsystem vor, ihn am Rücklauf des Klimatisierungssystems anzubringen, als Anlegefühler mit Wärmeleitpaste und Aluminiumband. Weil in dieser Anlage zusätzlich der Pufferspeicher zwischen Hauskreis und Wärmepumpe sitzt, misst er dort faktisch die Temperatur am Pufferausgang und nicht das Gemisch der beiden Kreisrückläufe. Für die Regelung ist das ohne Folgen, der Messwert heißt aber irreführend.
 
-	*	-	AA2-X28:10
-		-	?
-
-	*	-	AA2-X28:11
-		-	?
-
-.. list-table::
-	:header-rows: 1
-	:stub-columns: 1
-
-	*	-	Ausgänge
-		-	Funktion
-
-	*	-	AA2-X27
-		-	Brauchwasserumwälzpumpe (Zirkulationspumpe)
-
-
-AXC #1: Passive Kühlung
-=======================
-
-Funktion
-	Steuerung der Kühlfunktion mit Wärmetauscher.
+Platine 1: passive Kühlung
+--------------------------
 
 DIP ``0001 0010``
 
+Steuert die Kühlfunktion über den Plattenwärmeübertrager EP24. Das Umschaltventil QN12 im Solevorlauf leitet die Sole im Kühlbetrieb über den Übertrager statt über den Verdampfer, die Umwälzpumpe GP13 fördert den Hauskreis, und das Mischventil QN18 im Rücklauf hält die Vorlauftemperatur über dem eingestellten Minimum, damit sich kein Kondensat bildet. Der externe Vorlauffühler BT25 ist dabei die Regelgröße.
+
 .. seealso:: :ref:`ref_00010010`
 
+Platine 2: Fußbodenheizung, Klimatisierungssystem 2
+---------------------------------------------------
 
-AXC #2: Fußbodenheizung (FBH)
-=============================
+DIP ``0000 0010``
 
-Funktion:
-	Regelung der Fußbodenheizung
+Versorgt 16 Heizkreise, zehn im Erdgeschoss und sechs im Untergeschoss, über EP21. Diese Platine hat ein **Mischventil** und senkt damit die Puffertemperatur auf den Sollwert von CS2 ab. Vorlauf- und Rücklauffühler (EP21-BT2 und EP21-BT3) gehören zum Lieferumfang und werden für die Mischerregelung gebraucht.
 
-AXC #3: Heizkörper
-==================
+Einstellbar sind Mischventilverstärkung und Mischventilwartezeit sowie die Pumpensteuerung. **Keine** dieser Einstellungen wirkt auf die Wärmeerzeugung; dazu :doc:`raumtemperatur`.
 
-Funktion:
-	Trennung der Heizkörper bei Kühlbetrieb, sonst mit Kondenswasser zu rechnen ist.
+.. seealso:: :ref:`ref_00000010`
+
+Platine 3: Heizkörper Obergeschoss, Klimatisierungssystem 3
+-----------------------------------------------------------
+
+DIP ``0000 0010``
+
+Versorgt die Heizkörper im Obergeschoss über EP22. Die Platine ist wie Platine 2 als zusätzliches Klimatisierungssystem konfiguriert und meldet sich der Regelung auch als gemischtes System, **hydraulisch ist hier aber kein Mischventil verbaut**.
+
+.. admonition:: Gemessen
+
+	Der Unterschied zwischen den beiden Kreisen lässt sich an den Fühlern nachweisen. Über 209 Heizphasen betrug die Absenkung zwischen Puffervorlauf und Kreisvorlauf
+
+	* am Heizkörperkreis EP22 im Median **2,51 K**, was dem Leitungsverlust entspricht,
+	* am Fußbodenkreis EP21 im Median **4,14 K**, also eine echte Mischung.
+
+	Der Vergleich der beiden Kreise ist der Beleg: der eine mischt, der andere nicht.
+
+Praktische Folge: Der Sollwert von CS3 ist eine Anforderung an den Puffer, kein Stellsignal. Es gibt nichts, was den Vorlauf für das Obergeschoss herunterregeln könnte. Eine Mindestvorlauftemperatur auf CS3 wirkt deshalb nur nach oben, nie nach unten.
+
+Die zweite Aufgabe dieser Platine ist die **Trennung der Heizkörper im Kühlbetrieb**. Ohne sie würde am Heizkörper Kondensat anfallen.
+
+.. seealso:: :ref:`ref_00000010`
 
 
 Installationsvariante Brauchwasserzirkulation

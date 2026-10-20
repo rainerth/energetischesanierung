@@ -1,0 +1,65 @@
+// Stromlaufschema Merowingerstrasse, Stand 20.10.2026.
+// Belegte Quellen: KACO meta.csv (Typ und Seriennummer Sued-WR), planung/
+// photovoltaik.rst (Modultyp und Stringaufteilung Nord), pv-anlagen.yaml
+// (Generatorleistungen), sml-mqtt.py (Zuordnung der vier IR-Lesekoepfe).
+// Nicht enthalten, weil nicht belegt: Kapazitaet des Batteriespeichers und
+// die Aufteilung der Endstromkreise im Verteiler.
+digraph strom {
+  rankdir=TB;
+  compound=true;
+  newrank=true;
+  nodesep=0.3;
+  ranksep=0.5;
+  bgcolor="transparent";
+  fontname="Helvetica";
+  fontsize=10;
+  node [fontname="Helvetica", fontsize=9, style=filled, shape=box, color="#555555"];
+  edge [fontname="Helvetica", fontsize=8, color="#555555"];
+
+  subgraph cluster_erzeugung {
+    label="Erzeugung";
+    style=invis;
+    subgraph cluster_sued {
+      label="PV Süd, 2019";
+      style=filled; color="#fff6d5"; fontsize=10;
+      PVS  [label="Generator Süd\n12,6 kWp, 30°", fillcolor="#ffeeaa"];
+      KACO [label="KACO blueplanet 15.0 TL3\n1 von 2 MPP-Trackern belegt", fillcolor="#ffd966"];
+      Z3   [label="Z3 Zähler\nPV Süd", shape=cylinder, fillcolor="#ffe0b2"];
+      PVS -> KACO -> Z3;
+    }
+    subgraph cluster_nord {
+      label="PV Nord mit Speicher, 2024";
+      style=filled; color="#e3f0ff"; fontsize=10;
+      PVN  [label="Generator Nord\n18,48 kWp\n56 × 330 Wp, Strings 19/19/18", fillcolor="#cfe4ff"];
+      DEYE [label="Deye SUN-12K-SG04LP3-EU\nHybrid, 3-phasig", fillcolor="#9fc9f3"];
+      BAT  [label="Batteriespeicher\nLiFePO4", shape=box3d, fillcolor="#bcd9ee"];
+      Z4   [label="Z4 Zähler\nDeye-Ausgang", shape=cylinder, fillcolor="#ffe0b2"];
+      PVN -> DEYE;
+      DEYE -> BAT [dir=both, label="laden\nentladen"];
+      DEYE -> Z4;
+    }
+  }
+
+  Schiene [label="Hauptverteilung", shape=box, fillcolor="#e8e8e8", width=5, height=0.35];
+
+  Z1   [label="Z1 EVU-Zähler\nbilanziert die ganze Liegenschaft", shape=cylinder, fillcolor="#ffe0b2"];
+  HAK  [label="Hausanschluss", fillcolor="#dddddd"];
+  Netz [label="Verteilnetz", shape=house, fillcolor="#dddddd"];
+
+  Z2   [label="Z2 Unterzähler\nnur Haushalt", shape=cylinder, fillcolor="#ffe0b2"];
+  Haus [label="Haushalt", fillcolor="#e8e8e8"];
+  WP   [label="NIBE S1256-13\nWärmepumpe", fillcolor="#f8b49c"];
+  WB   [label="openWB\nWallbox", fillcolor="#cfeec6"];
+
+  Netz -> HAK [dir=both, label="Bezug und Einspeisung"];
+  HAK -> Z1 [dir=both];
+  Z1 -> Schiene [dir=both];
+  Z3 -> Schiene;
+  Z4 -> Schiene;
+  Schiene -> Z2 -> Haus;
+  Schiene -> WP;
+  Schiene -> WB;
+
+  { rank=same; Z3; Z4; }
+  { rank=same; Z2; WP; WB; }
+}

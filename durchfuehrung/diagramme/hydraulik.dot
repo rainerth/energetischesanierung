@@ -1,0 +1,88 @@
+// Hydraulikschema Merowingerstrasse, Stand 20.10.2026.
+// Quellen: NIBE PL1.115 (passive Kuehlung S1155-25), AXC 50 IHB 231157-8 Kap. 9,
+// S1256 IHB DE 2326-2, Bantle-Rechnung 19.11.2024 (Komponententypen),
+// eigene Messungen an der Anlage.
+// Bewusst ohne Momentanwerte: das Schema zeigt die Struktur, nicht einen Zustand.
+// Der Kaeltekreis ist zu einem Knoten zusammengefasst, weil seine Details fuer
+// das Verstaendnis der Hydraulik nichts beitragen.
+digraph hydraulik {
+  rankdir=TB;
+  compound=true;
+  newrank=true;
+  nodesep=0.35;
+  ranksep=0.45;
+  bgcolor="transparent";
+  fontname="Helvetica";
+  fontsize=10;
+  node [fontname="Helvetica", fontsize=9, style=filled, shape=box, color="#555555"];
+  edge [fontname="Helvetica", fontsize=8, color="#555555"];
+
+  RGK [label="Ringgrabenkollektor\n300 m, Sole 30 % Propylenglykol", fillcolor="#c9b79c"];
+  BT1 [label="BT1 Außenluft", shape=oval, fillcolor="#d8e8f8"];
+
+  subgraph cluster_wp {
+    label="NIBE S1256-13 (EB100)";
+    style=filled; color="#ececec"; fontsize=10;
+    GP2  [label="GP2 Wärmequellenpumpe", fillcolor="#fdf3c0"];
+    KK   [label="Kältekreis\nVerdampfer, Verdichter,\nVerflüssiger, Expansionsventil", fillcolor="#f8b49c"];
+    QN10 [label="QN10 Umschaltventil\nHeizung / Brauchwasser", shape=diamond, fillcolor="#e0e0e0"];
+    BWS  [label="Brauchwasserspeicher\nintegriert", fillcolor="#f8b49c"];
+    EB1  [label="EB1 Elektroheizkassette", fillcolor="#f8b49c"];
+    GP1  [label="GP1 Heizmedienpumpe\nBT2 Vorlauf, BT3 Rücklauf", fillcolor="#fdf3c0"];
+  }
+
+  subgraph cluster_axc50 {
+    label="AXC 50 (AA25): passive Kühlung, Zweirohrsystem";
+    style=filled; color="#d8e8f8"; fontsize=10;
+    QN12 [label="QN12 Umschaltventil\nHeizen / Kühlen, im Solevorlauf", shape=diamond, fillcolor="#e0e0e0"];
+    EP24 [label="EP24 Plattenwärmeübertrager\nSole gegen Heizkreis", fillcolor="#bcd9ee"];
+    GP13 [label="GP13 Umwälzpumpe Kühlung", fillcolor="#fdf3c0"];
+    QN18 [label="QN18 Mischventil Kühlung\nim Rücklauf, mit BT71", shape=diamond, fillcolor="#e0e0e0"];
+  }
+
+  Puffer [label="Pufferspeicher ACF 50, 50 l\nhydraulische Entkopplung, BT25 am Vorlauf", shape=box3d, fillcolor="#bcd9ee"];
+
+  subgraph cluster_kreise {
+    style=invis;
+    subgraph cluster_ep21 {
+      label="EP21, Klimatisierungssystem 2";
+      style=filled; color="#cfeec6"; fontsize=10;
+      MIX2 [label="Mischventil CS2\nregelt den Vorlauf selbst", shape=diamond, fillcolor="#e0e0e0"];
+      P21  [label="Umwälzpumpe\nGrundfos ALPHA2 L 25-60\nEP21-BT2 / EP21-BT3", fillcolor="#fdf3c0"];
+      FBH  [label="Fußbodenheizung\n16 Kreise: 10 im EG, 6 im UG", fillcolor="#cfeec6"];
+      MIX2 -> P21 -> FBH;
+    }
+    subgraph cluster_ep22 {
+      label="EP22, Klimatisierungssystem 3";
+      style=filled; color="#f8dcc8"; fontsize=10;
+      P22  [label="Umwälzpumpe Biral\nEP22-BT2 / EP22-BT3", fillcolor="#fdf3c0"];
+      HK   [label="Heizkörper Obergeschoss\nkein Stellglied,\nbekommt Puffertemperatur", fillcolor="#f8dcc8"];
+      P22 -> HK;
+    }
+  }
+
+  RGK -> GP2 -> QN12;
+  QN12 -> KK [label="Heizen"];
+  QN12 -> EP24 [label="Kühlen", style=dashed];
+  KK -> RGK [label="Sole zurück", style=dotted];
+  EP24 -> RGK [style=dotted];
+  BT1 -> KK [style=dotted, label="Witterungsführung"];
+
+  KK -> QN10;
+  QN10 -> BWS [label="Brauchwasser"];
+  QN10 -> GP1 [label="Heizung"];
+  EB1 -> GP1 [style=dashed, label="Zusatzheizung"];
+  GP1 -> Puffer [label="Vorlauf"];
+  EP24 -> GP13 [style=dashed];
+  GP13 -> Puffer [style=dashed, label="Kühlvorlauf"];
+
+  Puffer -> MIX2 [label="Vorlauf"];
+  Puffer -> P22 [label="Vorlauf"];
+  FBH -> QN18 [label="Rücklauf"];
+  HK -> QN18 [label="Rücklauf"];
+  QN18 -> Puffer;
+  Puffer -> GP1 [label="Rücklauf zur\nWärmepumpe", style=bold, constraint=false];
+
+  { rank=same; RGK; BT1; }
+  { rank=same; MIX2; P22; }
+}

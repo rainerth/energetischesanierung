@@ -1,0 +1,34 @@
+// Messpfad der Energiedaten, Stand 20.10.2026.
+// Quellen: sml-mqtt.py (systemd-Dienst sml-mqtt.service), telegraf.conf
+// (abonnierte Topics), nibe-mqtt und deye-inverter-mqtt (Container).
+digraph messpfad {
+  rankdir=LR;
+  bgcolor="transparent";
+  fontname="Helvetica";
+  fontsize=10;
+  node [fontname="Helvetica", fontsize=9, style=filled, shape=box, color="#555555"];
+  edge [fontname="Helvetica", fontsize=8, color="#555555"];
+
+  subgraph cluster_q {
+    label="Datenquellen";
+    style=filled; color="#f4f4f4"; fontsize=10;
+    Zaehler [label="vier Zähler\nIR-Leseköpfe, SML", fillcolor="#ffe0b2"];
+    WPq [label="NIBE S1256\nModbus/TCP", fillcolor="#f8b49c"];
+    WRq [label="Deye-Wechselrichter\nModbus", fillcolor="#9fc9f3"];
+    WBq [label="openWB", fillcolor="#cfeec6"];
+  }
+
+  SMLB [label="SML-Bridge\nsml-mqtt.service", fillcolor="#efe3f7"];
+  NMQ  [label="nibe-mqtt", fillcolor="#efe3f7"];
+  DMQ  [label="deye-mqtt", fillcolor="#efe3f7"];
+  MQTT [label="MQTT-Broker", shape=component, fillcolor="#e0d0f0"];
+  TG   [label="Telegraf", fillcolor="#efe3f7"];
+  IDB  [label="InfluxDB\nBucket rth-merowingerstr", shape=cylinder, fillcolor="#d8c4ec"];
+  GRAF [label="Grafana\nDashboards", shape=note, fillcolor="#d8c4ec"];
+
+  Zaehler -> SMLB -> MQTT;
+  WPq -> NMQ -> MQTT;
+  WRq -> DMQ -> MQTT;
+  WBq -> MQTT;
+  MQTT -> TG -> IDB -> GRAF;
+}

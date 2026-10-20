@@ -39,6 +39,13 @@ extensions = [
 	'sphinx.ext.githubpages',
 ]
 
+# Graphviz-Diagramme als SVG ausgeben. Die Schemata in durchfuehrung/diagramme
+# sind gross; als PNG werden sie in der Seitenbreite unleserlich, als SVG
+# skalieren sie verlustfrei und bleiben im Browser zoombar.
+# Fuer den LaTeX-Build wandelt sphinx.ext.imgconverter das SVG um.
+graphviz_output_format = 'svg'
+
+
 intersphinx_mapping = {
 	'hasecke': ('https://softwaredocumentation.blob.core.windows.net/haseckesphinxbuch/html/', None),
 }

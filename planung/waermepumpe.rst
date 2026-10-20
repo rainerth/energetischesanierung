@@ -52,6 +52,12 @@ Im Verdampfer der Wärmepumpe gibt das Wärmequellenmedium (Frostschutzflüssigk
 Montage
 =======
 
+.. note::
+
+	Die folgenden Punkte stammen aus der **Planungsphase** und enthalten Varianten, die zur Diskussion standen. Umgesetzt wurde am Ende die passive Kühlung im Zweirohrsystem nach dem Hydraulikplan PL1.115, mit einem Pufferspeicher ACF 50 mit 50 Litern. Die hier erwähnten Alternativen PCS 44, PCM S42 und der Trennspeicher UKV 100 sind **nicht** verbaut.
+
+	Den gebauten Stand zeigt :doc:`/durchfuehrung/anlagenschema`.
+
 .. figure:: ./images/nibe1256-niveaugefaess.png
 
 #. Isolieren Sie alle Wärmequellenleitungen im Innenbereich gegen Kondensation.

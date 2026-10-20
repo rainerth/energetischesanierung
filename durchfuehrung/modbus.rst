@@ -12,7 +12,9 @@ NIBE 1255 / 1256 Modbus Interface
 
 .. attention::
 
-	In diversen Foren ist zu lesen, man soll bei der Nibe nicht zu intensiv schreiben, man kann den internen SSD Speicher schädigen.
+	In diversen Foren ist zu lesen, man solle bei der NIBE nicht zu häufig schreiben, weil das den internen Speicher schädigen könne. **Diese Behauptung ist nicht aus einer Herstellerquelle belegt**, weder im Installateurhandbuch noch in der technischen Information zu Modbus findet sich eine Aussage dazu.
+
+	Unabhängig davon ist Zurückhaltung beim Schreiben sinnvoll: Einstellwerte ändern sich im normalen Betrieb nicht, ein zyklisches Schreiben hat also ohnehin keinen Zweck. Lesen ist davon nicht betroffen.
 
 
 mbpoll
@@ -37,7 +39,17 @@ Beispiel: Auslesen des Registers 1 ``Current outdoor temperature (BT1)`` und 8,9
 Relevante NIBE MODBUS Register
 ==============================
 
-AUX: 2741
+Die Adressierung folgt der NIBE-Schreibweise: Holding-Register ``40001 + ID``, Input-Register ``30001 + ID``. Welche Register die Raumtemperatur beeinflussen und worauf dabei zu achten ist, steht in :doc:`raumtemperatur`.
+
+AUX über Modbus
+---------------
+
+Eine AUX-Funktion lässt sich auch ohne physischen Kontakt über Modbus auslösen. Dazu wird die Funktions-ID in das Register **2740** geschrieben und der Zustand anschließend über Register **2741** gesetzt, mit 0 für aus und 1 für ein. Das Gerät braucht dafür mindestens Softwareversion 2.4.3.
+
+.. attention::
+
+	Es gibt nur einen solchen Kanal. Ist er bereits belegt, etwa um die Heizung bei geöffneter Tür zu blockieren (Funktions-ID 6), steht er für nichts anderes mehr zur Verfügung.
+
 
 
 .. only:: html
