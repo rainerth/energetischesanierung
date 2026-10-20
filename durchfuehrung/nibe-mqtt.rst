@@ -61,9 +61,32 @@ Die Daten werden dann in das data-Verzeichnis des Projekts kopiert (:file:`~/prj
 Konfiguration und Start des MQTT Servers
 ========================================
 
-Die Ausgabe wird in die Datei :file:`~/prj/nibe-mqtt/config.yaml` in der Rubrik ``coils:`` eingetragen und der Docker Container mit dieser Konfiguration gestartet. Einige Werte müssen noch auskommentiert werden, da sie für Fehlermeldungen beim Start oder WARNINGs während der Ausführung führen.
+Die Ausgabe wird in die Datei :file:`~/prj/nibe-mqtt/config.yaml` in der Rubrik ``coils:`` eingetragen und der Docker-Container mit dieser Konfiguration gestartet.
 
 .. code-block:: bash
 
-	docker run -ti --name nibe-mqtt --pull=always --rm -p 9999:9999/udp -v "/home/rainerth/prj/nibe-mqtt/config.yaml:/config/nibe-mqtt/config.yaml:ro" yozik04/nibe-mqtt:latest
+	docker run -d --name nibe-mqtt --restart=unless-stopped \
+		-v "/home/rainerth/prj/nibe-mqtt/config.yaml:/config/nibe-mqtt/config.yaml" \
+		yozik04/nibe-mqtt:latest
+
+Stand Oktober 2026 werden **942 Register** im Abstand von 60 Sekunden abgefragt.
+
+
+Tote Register kosten Laufzeit und Logvolumen
+--------------------------------------------
+
+Nicht jedes Register aus dem Export beantwortet die Anlage auch. Fragt man eines ab, das es im Gerät nicht gibt, antwortet sie mit einer Modbus-Ausnahme, die Bibliothek wiederholt den Versuch dreimal und schreibt eine Zeile ins Log. Bei jedem Pollzyklus erneut.
+
+.. attention::
+
+	In dieser Anlage standen zeitweise 169 solcher Register in der Abfrageliste. Das Ergebnis waren rund **3.200 Logzeilen pro Minute**. Weil der Docker-Container ohne Rotation lief, war die Logdatei nach einigen Monaten auf etwa 68 GB angewachsen und ``docker logs`` praktisch unbenutzbar.
+
+	Zwei Lehren daraus:
+
+	* Die Abfrageliste gehört geprüft, nicht blind aus dem Export übernommen. Ein kurzer Testlauf über alle Kandidaten zeigt, welche Register antworten.
+	* Für jeden Container, der dauerhaft läuft, gehört eine Logrotation konfiguriert. In :file:`/etc/docker/daemon.json` über ``log-opts`` mit ``max-size`` und ``max-file``. Diese Einstellung wirkt allerdings nur für **neu erstellte** Container; ein bestehender behält seine Konfiguration, bis er neu angelegt wird.
+
+.. hint::
+
+	Ein ``truncate`` auf eine laufende Container-Logdatei gibt zwar den Plattenplatz frei, macht ``docker logs`` aber unbrauchbar: Der Daemon schreibt an der alten Position weiter, die Datei wird dünn besetzt, und das Lesen arbeitet sich durch den Leerraum. Erst ein Neustart des Containers setzt den Schreibzeiger zurück.
 

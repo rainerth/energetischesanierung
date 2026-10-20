@@ -118,12 +118,17 @@ Damit die Werte aus der NIBE S1256 gut in die bestehende Hausautomatisierung int
 		url: tcp://NIBE-06571123352007.web-me.local:502
 		slave_id: 1
 	poll:
-		interval: 30
+		interval: 60
 		coils:
 		- current-outdoor-temperature-bt1-30002
+		- ... (Stand Oktober 2026: 942 Register)
 
 
 .. code:: bash
 
-	docker run -ti --pull=always --rm -p 9999:9999/udp -v "/home/rainerth/prj/nibe-mqtt/config.yaml:/config/nibe-mqtt/config.yaml:ro" yozik04/nibe-mqtt:latest
+	docker run -d --name nibe-mqtt --restart=unless-stopped \
+		-v "/home/rainerth/prj/nibe-mqtt/config.yaml:/config/nibe-mqtt/config.yaml" \
+		yozik04/nibe-mqtt:latest
+
+Hinweise zum Dauerbetrieb, insbesondere zu toten Registern und zur Logrotation, stehen in :doc:`nibe-mqtt`.
 
