@@ -1,0 +1,565 @@
+<!doctype html>
+<html class="no-js" lang="de" data-content_root="../">
+  <head><meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Stichwortverzeichnis" href="../genindex.html"><link rel="search" title="Suche" href="../search.html"><link rel="next" title="Einbindung der NIBE-S1256 Wärmempumpe via MQTT" href="nibe-mqtt.html"><link rel="prev" title="Aufbau der Heizung" href="heizung.html">
+
+    <!-- Generated with Sphinx 9.1.1 and Furo 2025.12.19 -->
+        <title>Die Raumtemperatur beeinflussen - EnergetischeSanierung 2024-04 Dokumentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d111a655" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=7bdb33bb" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=8dab3a3b" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/trumpf.css" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f2f2f2;
+  --color-code-foreground: #1e1e1e;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle site navigation sidebar">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc" aria-label="Toggle table of contents sidebar">
+<label class="overlay sidebar-overlay" for="__navigation"></label>
+<label class="overlay toc-overlay" for="__toc"></label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <span class="icon"><svg><use href="#svg-menu"></use></svg></span>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">EnergetischeSanierung 2024-04 Dokumentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle" aria-label="Toggle Light / Dark / Auto color theme">
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  <span class="sidebar-brand-text">EnergetischeSanierung 2024-04 Dokumentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder="Suche" name="q" aria-label="Suche">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Inhaltsverzeichnis:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../einleitung/index.html">Einleitung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../grundlagen/index.html">Grundlagen</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../planung/index.html">Planung</a><input aria-label="Toggle navigation of Planung" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../planung/photovoltaik.html">Photovoltaik</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../planung/akku.html">Akkuspeicher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../planung/inverter.html">Wechselrichter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../planung/einspeisung.html">Einspeisung ins öffentliche und Hausnetz</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../planung/anmeldung-pv-netze-bw.html">Anmeldung der Anlagen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../planung/kollektor.html">Kollektor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../planung/wallbox.html">Wallbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../planung/waermepumpe.html">Wärmepumpe</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Durchführung</a><input aria-label="Toggle navigation of Durchführung" checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="anlagenschema.html">Anlagenschema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="energiezaehler.html">Auslesen der Energiewerte der EHZ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deye-mqtt.html">Deye Wechselrichter MQTT Einbindung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="heizung.html">Aufbau der Heizung</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Die Raumtemperatur beeinflussen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nibe-mqtt.html">Einbindung der NIBE-S1256 Wärmempumpe via MQTT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="telegraf-influxdb.html">Persistierung und Visualisierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modbus.html">Geräte mit Modbus Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mqtt.html">Geräte mit MQTT Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="smarthome.html">Smart Home</a></li>
+<li class="toctree-l2"><a class="reference internal" href="support.html">Anfragen an den Support</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ergebnisse/index.html">Ergebnisse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../diskussion/index.html">Diskussion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literaturverzeichnis/index.html">Literaturverzeichnis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../anhang/index.html">Anhang</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossar.html">Glossar</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="view-this-page">
+  <a class="muted-link" href="../_sources/durchfuehrung/raumtemperatur.rst.txt" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div>
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle" aria-label="Toggle Light / Dark / Auto color theme">
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <section id="die-raumtemperatur-beeinflussen">
+<h1>Die Raumtemperatur beeinflussen<a class="headerlink" href="#die-raumtemperatur-beeinflussen" title="Link to this heading">¶</a></h1>
+<p>Dieser Abschnitt beschreibt, welche Stellgrößen die Raumtemperatur in dieser Anlage tatsächlich verändern, welche Register dazugehören und welche Stolperstellen es gibt. Die Angaben sind entweder aus dem Herstellerhandbuch belegt oder an der Anlage gemessen; gemessene Aussagen sind als solche gekennzeichnet.</p>
+<section id="wer-bestimmt-die-temperatur-im-haus">
+<h2>Wer bestimmt die Temperatur im Haus<a class="headerlink" href="#wer-bestimmt-die-temperatur-im-haus" title="Link to this heading">¶</a></h2>
+<p>Die Anlage hat drei Klimatisierungssysteme, aber nur zwei Verbraucherkreise. Das ist der Schlüssel zum Verständnis:</p>
+<div class="table-wrapper docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head stub"><p>System</p></th>
+<th class="head"><p>daran hängt</p></th>
+<th class="head"><p>Stellglied</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>CS1</p></th>
+<td><p><strong>kein Verbraucher</strong>. CS1 ist die Führungsgröße für die Puffertemperatur</p></td>
+<td><p>die Wärmeerzeugung selbst</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>CS2</p></th>
+<td><p>Fußbodenheizung, 16 Kreise in EG und UG, über EP21</p></td>
+<td><p>Mischventil, regelt den eigenen Vorlauf</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>CS3</p></th>
+<td><p>Heizkörper im Obergeschoss, über EP22</p></td>
+<td><p>keines, bekommt Puffertemperatur</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition-gemessen-am-20-10-2026 admonition">
+<p class="admonition-title">Gemessen am 20.10.2026</p>
+<p>Die Wärmeerzeugung folgt <strong>ausschließlich</strong> CS1. Die Gradminuten, also der Integrator, der den Verdichter startet und stoppt, werden aus der Abweichung zwischen dem externen Vorlauffühler <code class="docutils literal notranslate"><span class="pre">BT25</span></code> und dem Sollwert von CS1 gebildet:</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}\,GM}{\mathrm{d}t} = T_{\mathrm{BT25}} - T_{\mathrm{Soll,CS1}}\]</div>
+</div>
+<p>Geprüft über 563 Minutenschritte: Korrelation 0,975, Steigung 1,05, ein Kelvin Abweichung ergibt eine Gradminute pro Minute. Die Gegenkandidaten scheiden deutlich aus. Für CS2 wäre die mittlere Abweichung −5,7 K gewesen, die Gradminuten hätten um etwa 340 pro Stunde fallen müssen, tatsächlich lagen sie bei −6. Auch das Maximum über alle Klimatisierungssysteme scheidet aus: <strong>die Anlage bildet kein Maximum.</strong> Und maßgeblich ist <code class="docutils literal notranslate"><span class="pre">BT25</span></code> hinter dem Puffer, nicht <code class="docutils literal notranslate"><span class="pre">BT2</span></code> am Wärmepumpenausgang, dessen Korrelation sogar negativ ist.</p>
+<p>Es gibt überdies nur <strong>einen</strong> Gradminutenwert für die ganze Anlage (<code class="docutils literal notranslate"><span class="pre">vid</span> <span class="pre">781</span></code>, Holding 40940 im Lesepfad <code class="docutils literal notranslate"><span class="pre">degree-minutes-40012</span></code>), nicht einen pro System.</p>
+</div>
+<p>Daraus folgt die Reihenfolge, in der die Stellgrößen wirken:</p>
+<ol class="arabic simple">
+<li><p><strong>CS1</strong> legt fest, wie warm der Puffer wird. Das wirkt auf <strong>beide</strong> Kreise.</p></li>
+<li><p><strong>CS2</strong> kann davon für die Fußbodenheizung nach unten abweichen, solange sein Sollwert <strong>unter</strong> der Puffertemperatur liegt.</p></li>
+<li><p><strong>CS3</strong> kann nicht abweichen.</p></li>
+</ol>
+<div class="admonition attention">
+<p class="admonition-title">Achtung</p>
+<p>Liegt der Sollwert von CS2 <strong>über</strong> der Puffertemperatur, steht sein Mischventil dauerhaft offen und die Fußbodenheizung läuft auf Puffertemperatur. Kurve und Offset von CS2 sind dann <strong>ohne jede Wirkung</strong>. Ein Mischventil kann nur beimischen, also absenken, niemals anheben. Dieser Zustand ist von außen leicht zu übersehen, weil alle Parameter plausibel aussehen und sich beim Verstellen nichts ändert.</p>
+<p>Erkennen lässt er sich am Mischerhub, also der Differenz zwischen Puffertemperatur und Vorlauf hinter dem Mischventil. Liegt er in der Größenordnung des Leitungsverlusts, regelt nichts mehr.</p>
+</div>
+</section>
+<section id="die-register-je-klimatisierungssystem">
+<h2>Die Register je Klimatisierungssystem<a class="headerlink" href="#die-register-je-klimatisierungssystem" title="Link to this heading">¶</a></h2>
+<p>Modbus-Adressen in der 1-basierten Schreibweise, wie sie die NIBE-Dokumentation verwendet: Holding-Register <code class="docutils literal notranslate"><span class="pre">40001</span> <span class="pre">+</span> <span class="pre">ID</span></code>, Input-Register <code class="docutils literal notranslate"><span class="pre">30001</span> <span class="pre">+</span> <span class="pre">ID</span></code>. Die <code class="docutils literal notranslate"><span class="pre">vid</span></code> ist die Variablennummer, die das Display und die lokale REST-Schnittstelle verwenden.</p>
+<div class="table-wrapper docutils container" id="id1">
+<table class="docutils align-default" id="id1">
+<caption><span class="caption-text">Einstellgrößen, alle schreibbar</span><a class="headerlink" href="#id1" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head stub"><p>Größe</p></th>
+<th class="head"><p>CS1</p></th>
+<th class="head"><p>CS2</p></th>
+<th class="head"><p>CS3</p></th>
+<th class="head"><p>Bereich</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>Heizkurve</p></th>
+<td><p>40027</p></td>
+<td><p>40026</p></td>
+<td><p>40025</p></td>
+<td><p>0 bis 15</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>Heizungsoffset</p></th>
+<td><p>40031</p></td>
+<td><p><strong>nicht verfügbar</strong></p></td>
+<td><p>40029</p></td>
+<td><p>−10 bis 10</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>Min. Vorlauf Heizung</p></th>
+<td><p>40035</p></td>
+<td><p>40034</p></td>
+<td><p>40033</p></td>
+<td><p>5,0 bis 80,0 °C</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>Max. Vorlauf Heizung</p></th>
+<td><p>40039</p></td>
+<td><p>40038</p></td>
+<td><p>40037</p></td>
+<td><p>5,0 bis 80,0 °C</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>Raumfühler verwenden</p></th>
+<td><p>40203</p></td>
+<td><p>40202</p></td>
+<td><p>40201</p></td>
+<td><p>0 oder 1</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>Raumsollwert</p></th>
+<td><p>40207</p></td>
+<td><p>40206</p></td>
+<td><p>40205</p></td>
+<td><p>5,0 bis 30,0 °C</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>Raumfühlerfaktor</p></th>
+<td><p>40211</p></td>
+<td><p>40210</p></td>
+<td><p>40209</p></td>
+<td><p>0,0 bis 6,0</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>externe Verstellung</p></th>
+<td><p>40052</p></td>
+<td><p>40051</p></td>
+<td><p>40050</p></td>
+<td><p>−10 bis 10</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="table-wrapper docutils container" id="id2">
+<table class="docutils align-default" id="id2">
+<caption><span class="caption-text">Lesegrößen</span><a class="headerlink" href="#id2" title="Link to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head stub"><p>Größe</p></th>
+<th class="head"><p>CS1</p></th>
+<th class="head"><p>CS2</p></th>
+<th class="head"><p>CS3</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>berechneter Vorlauf</p></th>
+<td><p>31018</p></td>
+<td><p>31017</p></td>
+<td><p>31016</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Wichtig</p>
+<p><strong>Für CS2 gibt es keinen Heizungsoffset über Modbus.</strong> Nach dem Registermuster müsste er auf Holding 40030 liegen, zwischen CS3 auf 40029 und CS1 auf 40031, und die Bibliothek <code class="docutils literal notranslate"><span class="pre">yozik04/nibe</span></code> führt ihn auch unter diesem Namen. Das Gerät antwortet darauf aber mit einer Modbus-Ausnahme, und in der lokalen REST-Schnittstelle fehlt die zugehörige <code class="docutils literal notranslate"><span class="pre">vid</span></code> ebenfalls. Bei Min- und Max-Vorlauf sind demgegenüber alle drei Systeme vorhanden.</p>
+<p>Der Offset für CS2 ist nur über das Display oder über myUplink erreichbar. <strong>Die Cloud-Anbindung kann hier mehr als die lokale Schnittstelle.</strong> Wer ausschließlich über Modbus arbeitet, kann diesen Wert weder lesen noch setzen und auch nicht prüfen, ob eine Änderung angekommen ist.</p>
+</div>
+</section>
+<section id="der-empfohlene-weg-der-offset">
+<h2>Der empfohlene Weg: der Offset<a class="headerlink" href="#der-empfohlene-weg-der-offset" title="Link to this heading">¶</a></h2>
+<p>Für eine Korrektur der Raumtemperatur ist der Offset das vorgesehene Mittel, nicht die Vorlaufgrenze. Das Installateurhandbuch beschreibt in Menü 1.1.1 für den Betrieb ohne aktivierten Raumfühler:</p>
+<blockquote class="epigraph">
+<div><p>Einstellbereich: -10 – 10</p>
+<p>Das Display zeigt den eingestellten Wert für die Heizung (Parallelverschiebung). Um die Innenraumtemperatur anzuheben oder abzusenken, erhöhen bzw. verringern Sie den Wert im Display. Die Anzahl der Stufen, um die der Wert geändert werden muss, damit eine Änderung der Innenraumtemperatur um ein Grad erreicht wird, richtet sich nach Ihrem Klimatisierungssystem. Normalerweise genügt eine Stufe. In bestimmten Fällen können jedoch mehrere Stufen erforderlich sein.</p>
+<p class="attribution">—NIBE S1256 Installateurhandbuch, Menü 1.1.1</p>
+</div></blockquote>
+<p>Die Einstellung erfolgt je Klimatisierungssystem. Als Richtgröße gilt also: <strong>eine Stufe entspricht etwa einem Kelvin Raumtemperatur.</strong></p>
+<div class="admonition hint">
+<p class="admonition-title">Hinweis</p>
+<p>Die Anzeige wechselt die Einheit, wenn ein Raumfühler installiert und aktiviert ist. Dann stellt man in Menü 1.1.1 eine Solltemperatur zwischen 5 und 30 °C ein. Ohne aktivierten Raumfühler ist der Wert eine dimensionslose Parallelverschiebung zwischen −10 und 10.</p>
+</div>
+<p>Eine Senkung der <strong>Kurvennummer</strong> ist für eine Korrektur in der Übergangszeit das falsche Werkzeug. Die Kurven laufen bei milder Witterung zusammen und spreizen erst bei Kälte auf. Eine flachere Kurve senkt deshalb vor allem dort, wo die Wärme gebraucht wird, und kaum dort, wo es zu warm ist. Der Offset verschiebt dagegen parallel über den ganzen Bereich.</p>
+</section>
+<section id="vorlaufgrenzen-sind-keine-einstellparameter">
+<h2>Vorlaufgrenzen sind keine Einstellparameter<a class="headerlink" href="#vorlaufgrenzen-sind-keine-einstellparameter" title="Link to this heading">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">Min.</span> <span class="pre">Vorlauf</span></code> und <code class="docutils literal notranslate"><span class="pre">Max.</span> <span class="pre">Vorlauf</span></code> begrenzen den berechneten Sollwert nach unten beziehungsweise oben. Sie sind Grenzen, keine Regelgrößen, und wirken deshalb nur zeitweise.</p>
+<div class="admonition-gemessen-am-20-10-2026 admonition">
+<p class="admonition-title">Gemessen am 20.10.2026</p>
+<p>Bei einer Min-Vorlaufgrenze von 28,0 °C auf CS1 lag der Sollwert in <strong>46 Prozent</strong> der Messpunkte exakt auf dieser Grenze, war also begrenzt. In den übrigen 54 Prozent lag er im Mittel 2,6 K darüber. Eine Absenkung der Grenze wirkt daher nur in knapp der Hälfte der Zeit, ein Offset dagegen immer.</p>
+<p>Ein Testlauf hat zusätzlich gezeigt, wie weit die Grenze eingreift: bei 7,7 °C Außentemperatur rechnete die Kurve für CS1 und CS3 je <strong>25,9 °C</strong>, die Grenze hob den Sollwert also um 2,1 K an.</p>
+</div>
+</section>
+<section id="stolperstellen">
+<h2>Stolperstellen<a class="headerlink" href="#stolperstellen" title="Link to this heading">¶</a></h2>
+<section id="der-berechnete-vorlauf-ist-rampenbegrenzt">
+<h3>Der berechnete Vorlauf ist rampenbegrenzt<a class="headerlink" href="#der-berechnete-vorlauf-ist-rampenbegrenzt" title="Link to this heading">¶</a></h3>
+<div class="admonition-gemessen-am-20-10-2026 admonition">
+<p class="admonition-title">Gemessen am 20.10.2026</p>
+<p>Nach einer Änderung an Kurve, Offset oder Vorlaufgrenze ändert sich der angezeigte Sollwert <strong>nicht sofort</strong>. In einem Test blieb der Wert nach dem Anheben einer Max-Vorlaufgrenze rund acht Minuten unverändert und stieg danach mit etwa 0,04 K pro Minute auf das neue Niveau.</p>
+<p>Wer zwei Minuten nach einer Änderung nachsieht und keine Wirkung findet, schließt daraus leicht fälschlich, die Änderung sei nicht angekommen.</p>
+</div>
+</section>
+<section id="eine-grenze-kann-die-messgrosze-verdecken">
+<h3>Eine Grenze kann die Messgröße verdecken<a class="headerlink" href="#eine-grenze-kann-die-messgrosze-verdecken" title="Link to this heading">¶</a></h3>
+<p>Steht der berechnete Sollwert an einer Vorlaufgrenze, ist er für die Diagnose unbrauchbar: jede Änderung einer anderen Stellgröße wird abgeschnitten und bleibt unsichtbar. Vor einem Test an Kurve oder Offset lohnt es sich zu prüfen, ob der Sollwert gerade an einer Grenze klebt.</p>
+</section>
+<section id="die-externe-verstellung-braucht-einen-aux-eingang">
+<h3>Die externe Verstellung braucht einen AUX-Eingang<a class="headerlink" href="#die-externe-verstellung-braucht-einen-aux-eingang" title="Link to this heading">¶</a></h3>
+<p>Die Register der externen Verstellung (40050 bis 40052) sind beschreibbar, wirken aber nur, wenn ein AUX-Eingang auf die Funktion <code class="docutils literal notranslate"><span class="pre">Activate</span> <span class="pre">external</span> <span class="pre">adjustment</span></code> konfiguriert ist. Ohne diese Zuordnung bleibt der Wert ohne Folge. Der wirksame Wert lässt sich an den zugehörigen Input-Registern kontrollieren.</p>
+</section>
+<section id="ein-raumfuhler-verandert-die-regelstruktur">
+<h3>Ein Raumfühler verändert die Regelstruktur<a class="headerlink" href="#ein-raumfuhler-verandert-die-regelstruktur" title="Link to this heading">¶</a></h3>
+<p>Mit <code class="docutils literal notranslate"><span class="pre">Raumfühler</span> <span class="pre">verwenden</span></code> = 1 korrigiert die Anlage den berechneten Vorlauf anhand der Abweichung zwischen Raumsollwert und gemessener Raumtemperatur, gewichtet mit dem Raumfühlerfaktor. Das Handbuch warnt ausdrücklich:</p>
+<blockquote class="epigraph">
+<div><p>Ein träges Heizsystem, wie z.B. eine Fußbodenheizung, kann für eine Steuerung per Raumfühler ungeeignet sein.</p>
+<p class="attribution">—NIBE S1256 Installateurhandbuch, Menü 1.3</p>
+</div></blockquote>
+<p>Ein zweiter Hinweis betrifft die Platzierung: steht der Raumfühler in einem Raum mit Fußbodenheizung, soll er laut Handbuch nur anzeigen und nicht regeln.</p>
+<div class="admonition attention">
+<p class="admonition-title">Achtung</p>
+<p>Wird der Raumfühler abgeschaltet, verliert ein gemischter Kreis seine raumbezogene Korrektur und regelt nur noch auf seine Kurve. Fällt dadurch der Sollwert über die Puffertemperatur, geht zugleich die Mischerregelung verloren, ohne dass sich der Vorlauf im ersten Moment ändert. Der Vorlauf bleibt zunächst gleich, der Regelweg ist aber ein anderer. Ein unveränderter Messwert heißt nicht, dass die Regelung unverändert arbeitet.</p>
+</div>
+</section>
+</section>
+<section id="vorgehen-bei-zu-warmen-raumen">
+<h2>Vorgehen bei zu warmen Räumen<a class="headerlink" href="#vorgehen-bei-zu-warmen-raumen" title="Link to this heading">¶</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Prüfen, welcher Kreis die Räume tatsächlich versorgt.</strong> Bei einer Mischanlage ist das nicht zwangsläufig der Kreis, dessen Nummer zu den Räumen passt.</p></li>
+<li><p><strong>Mischerhub messen.</strong> Ist er in der Größenordnung des Leitungsverlusts, regelt der gemischte Kreis nicht, und sein Offset ist wirkungslos. Dann wirkt nur CS1.</p></li>
+<li><p><strong>Prüfen, ob der Sollwert an einer Vorlaufgrenze klebt.</strong> Wenn ja, zuerst die Grenze lösen, sonst ist jede weitere Messung blind.</p></li>
+<li><p><strong>Offset in Einzelschritten ändern</strong>, Richtgröße eine Stufe je Kelvin.</p></li>
+<li><p><strong>Drei bis fünf Tage warten.</strong> Ein Estrich reagiert träge; wer nach einem Tag nachjustiert, regelt gegen die Trägheit.</p></li>
+<li><p><strong>Heizkörperkreise im Auge behalten.</strong> Ein Heizkörper gibt bei niedriger Puffertemperatur kaum noch Leistung ab. Wo Fußbodenheizung und Heizkörper am gleichen Puffer hängen, begrenzen die Heizkörper, wie weit man gehen kann.</p></li>
+</ol>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="nibe-mqtt.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Einbindung der NIBE-S1256 Wärmempumpe via MQTT</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="heizung.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Aufbau der Heizung</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2024, Rainer Thieringer | Creative Commons Lizenz 4.0 (BY-NC-SA 4.0)
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Die Raumtemperatur beeinflussen</a><ul>
+<li><a class="reference internal" href="#wer-bestimmt-die-temperatur-im-haus">Wer bestimmt die Temperatur im Haus</a></li>
+<li><a class="reference internal" href="#die-register-je-klimatisierungssystem">Die Register je Klimatisierungssystem</a></li>
+<li><a class="reference internal" href="#der-empfohlene-weg-der-offset">Der empfohlene Weg: der Offset</a></li>
+<li><a class="reference internal" href="#vorlaufgrenzen-sind-keine-einstellparameter">Vorlaufgrenzen sind keine Einstellparameter</a></li>
+<li><a class="reference internal" href="#stolperstellen">Stolperstellen</a><ul>
+<li><a class="reference internal" href="#der-berechnete-vorlauf-ist-rampenbegrenzt">Der berechnete Vorlauf ist rampenbegrenzt</a></li>
+<li><a class="reference internal" href="#eine-grenze-kann-die-messgrosze-verdecken">Eine Grenze kann die Messgröße verdecken</a></li>
+<li><a class="reference internal" href="#die-externe-verstellung-braucht-einen-aux-eingang">Die externe Verstellung braucht einen AUX-Eingang</a></li>
+<li><a class="reference internal" href="#ein-raumfuhler-verandert-die-regelstruktur">Ein Raumfühler verändert die Regelstruktur</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#vorgehen-bei-zu-warmen-raumen">Vorgehen bei zu warmen Räumen</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="../_static/documentation_options.js?v=a651434f"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/scripts/furo.js?v=46bd48cc"></script>
+    <script src="../_static/translations.js?v=9bf55d28"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    </body>
+</html>
